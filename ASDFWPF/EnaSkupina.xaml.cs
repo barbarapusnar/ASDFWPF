@@ -16,22 +16,14 @@ using System.Windows.Shapes;
 namespace ASDFWPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EnaSkupina.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EnaSkupina : Page
     {
-        PrivzetiViewModel pvm = new PrivzetiViewModel();
-        
-        public MainWindow()
+        public EnaSkupina(string id)
         {
             InitializeComponent();
-            PrivzetiViewModel.NaložiRezultate();
-            mojOkvir.Navigate(new Prijava());
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
+            txtSkupina.Text = id;
         }
     }
 }

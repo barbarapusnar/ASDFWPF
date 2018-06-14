@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ASDFWPF"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1">
+      Title="Page1" Loaded="Page_Loaded">
     <Page.Resources>
         <DataTemplate x:Key="Standard80ItemTemplate">
             <Grid Margin="6">
@@ -25,8 +25,13 @@
         </DataTemplate>
     </Page.Resources>
     <Grid >
-        <ListView 
-            x:Name="itemGridView"       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="txtUporabnik" HorizontalAlignment="Right" Width="100" Height="50"/>
+        <ListView Grid.Row="1"
+        x:Name="itemGridView" SelectionMode="Single"       
             SelectionChanged="itemGridView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>

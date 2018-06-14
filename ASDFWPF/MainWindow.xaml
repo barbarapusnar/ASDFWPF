@@ -5,11 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASDFWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" WindowState="Maximized" WindowStartupLocation="CenterScreen">
     
     <Grid>
-        <local:BasicStoparica x:Name="ucStoparica"/>
-        <Button Content="Start" Click="Button_Click" Margin="0,68,597,0" Height="61" VerticalAlignment="Top"/>
-        <Button Content="Stop" Click="Button_Click_1" Margin="0,134,597,0" Height="61" VerticalAlignment="Top"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Vse skupine" Grid.Column="1" FontSize="24" FontWeight="Bold" />
+            <Button Grid.Column="2" Content="X" Width="30" Height="30" Click="Button_Click"/>
+        </Grid>
+        <Frame Grid.Row="1"  Name="mojOkvir"/>
     </Grid>
 </Window>

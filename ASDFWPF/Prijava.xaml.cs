@@ -52,7 +52,7 @@ namespace ASDFWPF
 
             //    }
             // }
-            this.NavigationService.Navigate(new Page1(),PrivzetiViewModel.Uporabnik);
+            this.NavigationService.Navigate(new Page1(PrivzetiViewModel.Uporabnik));
         }
     }
 }
