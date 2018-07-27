@@ -26,16 +26,25 @@ namespace ASDFWPF
             get { return this._groups; }
             set { this._groups = value; }
         }
-        public Page1()
+        public Page1(string up)
         {
             InitializeComponent();
-            PrivzetiViewModel.NaložiRezultate();
+            //PrivzetiViewModel.NaložiRezultate();
             var sampleDataGroups = PrivzetiViewModel.GetGroups("AllGroups");
             this.Groups = sampleDataGroups.ToList<TipkanjeDataGroup>();
             itemGridView.ItemsSource = Groups;
+            txtUporabnik.Text = up;
         }
 
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var izbran = itemGridView.SelectedIndex;
+            TipkanjeDataGroup skupina = Groups[izbran];
+            this.NavigationService.Navigate(new EnaSkupina(skupina.Id));
+            //this.Frame.Navigate(typeof(EnaSkupina), ((TipkanjeDataGroup)group).Id);
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
