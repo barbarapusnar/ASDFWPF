@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.DirectoryServices.AccountManagement;
+using System.IO;
+
 
 namespace ASDFWPF
 {
@@ -31,28 +33,34 @@ namespace ASDFWPF
                 PrivzetiViewModel.Uporabnik = txtUp.Text;
             else
                 PrivzetiViewModel.Uporabnik = UserPrincipal.Current.DisplayName;
-            //StorageFile image = UserInformation.GetAccountPicture(AccountPictureKind.SmallImage)
-            //    as StorageFile;
-            //if (image != null)
-            //{
-
-
-            //    try
-            //    {
-            //        IRandomAccessStream imageStream = await image.OpenReadAsync();
-            //        BitmapImage bitmapImage = new BitmapImage();
-            //        bitmapImage.SetSource(imageStream);
-            //        PrivzetiViewModel.UporabnikSlika = bitmapImage;
-            //        //smallImage.Source = bitmapImage;
-            //        //smallImage.Visibility = Visibility.Visible;
-
-            //    }
-            //    catch (Exception)
-            //    {
-
-            //    }
-            // }
-            this.NavigationService.Navigate(new Page1(PrivzetiViewModel.Uporabnik));
+            GetCurrentUserProfileImage();
+            this.NavigationService.Navigate(new Page1(PrivzetiViewModel.Uporabnik,PrivzetiViewModel.UporabnikSlika));
         }
+        private  void GetCurrentUserProfileImage()
+        {
+            var imageFile = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+                @"\Microsoft\User Account Pictures\user.png" );
+            if (!imageFile.Exists)
+                return;
+            string pot = imageFile.FullName;
+            ImageSource b = new BitmapImage(new Uri(pot)); ;
+            
+            PrivzetiViewModel.UporabnikSlika = b;
+        }
+        //private static void GetCurrentUserProfileImage()
+        //{
+        //    var imageFile = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+        //    @"\Microsoft\User Account Pictures\" + Environment.UserDomainName + "+" + Environment.UserName + ".dat");
+        //    if (!imageFile.Exists)
+        //        return;
+
+        //    var desktopSaveLocation = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
+        //    @"\" + Environment.UserDomainName + "+" + Environment.UserName + ".bmp");
+        //    byte[] originalImageBytes = new byte[imageFile.Length];
+        //    using (var imageInputStream = imageFile.OpenRead())
+        //        imageInputStream.Read(originalImageBytes, 0, (int)imageFile.Length);
+        //    using (var imageOutput = desktopSaveLocation.Create())
+        //        imageOutput.Write(originalImageBytes, 16, originalImageBytes.Length - 200);
+        //}
     }
 }

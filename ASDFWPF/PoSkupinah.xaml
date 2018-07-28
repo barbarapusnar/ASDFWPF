@@ -21,7 +21,7 @@
             </Grid.ColumnDefinitions>
             <!--<Button FontFamily="Segoe MDL2 Assets" Content="&#xE72B;" Margin="35,35,35,50"/>-->
             <TextBlock Text="Vse skupine" Grid.Column="1" FontSize="24" FontWeight="Bold" />
-            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding Uporabnik}"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Right" FontSize="16" Text="{Binding Uporabnik}"/>
             <Button Grid.Column="2" Content="X" Width="30" Height="30" Click="Button_Click"/>
         </Grid>
         <Frame Grid.Row="1"  Name="mojOkvir"/>

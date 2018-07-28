@@ -26,7 +26,7 @@ namespace ASDFWPF
             get { return this._groups; }
             set { this._groups = value; }
         }
-        public Page1(string up)
+        public Page1(string up,ImageSource b)
         {
             InitializeComponent();
             //PrivzetiViewModel.NaložiRezultate();
@@ -34,6 +34,11 @@ namespace ASDFWPF
             this.Groups = sampleDataGroups.ToList<TipkanjeDataGroup>();
             itemGridView.ItemsSource = Groups;
             txtUporabnik.Text = up;
+            if (b != null)
+            {
+                smallImage.Source = b;
+            }
+
         }
 
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -44,9 +49,6 @@ namespace ASDFWPF
             //this.Frame.Navigate(typeof(EnaSkupina), ((TipkanjeDataGroup)group).Id);
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }
