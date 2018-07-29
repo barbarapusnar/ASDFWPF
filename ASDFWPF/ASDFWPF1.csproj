@@ -67,19 +67,27 @@
     <Compile Include="EnaSkupina.xaml.cs">
       <DependentUpon>EnaSkupina.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\BoolToInt1.cs" />
-    <Compile Include="Model\BoolToInt2.cs" />
-    <Compile Include="Model\BoolToInt3.cs" />
-    <Compile Include="Model\BoolToInt4.cs" />
+    <Compile Include="Helperji\BoolToInt1.cs" />
+    <Compile Include="Helperji\BoolToInt2.cs" />
+    <Compile Include="Helperji\BoolToInt3.cs" />
+    <Compile Include="Helperji\BoolToInt4.cs" />
+    <Compile Include="Helperji\IntToColor.cs" />
+    <Compile Include="Helperji\Pomoc.cs" />
     <Compile Include="Model\Podatki.cs" />
+    <Compile Include="Helperji\SelektorPredlog.cs" />
+    <Compile Include="Helperji\StringFormatConverter.cs" />
+    <Compile Include="Model\ZaPagePayload.cs" />
     <Compile Include="Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PoSkupinah.xaml.cs">
-      <DependentUpon>PoSkupinah.xaml</DependentUpon>
+    <Compile Include="PoVajah.xaml.cs">
+      <DependentUpon>PoVajah.xaml</DependentUpon>
     </Compile>
     <Compile Include="Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SkupinaZaEnDan.xaml.cs">
+      <DependentUpon>SkupinaZaEnDan.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestTipkovnice.xaml.cs">
       <DependentUpon>TestTipkovnice.xaml</DependentUpon>
@@ -114,11 +122,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PoSkupinah.xaml">
+    <Page Include="PoVajah.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Prijava.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SkupinaZaEnDan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,9 +144,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\BooleanNegationConverter.cs" />
-    <Compile Include="Model\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Model\CasSteviloKonverter.cs" />
+    <Compile Include="Helperji\BooleanNegationConverter.cs" />
+    <Compile Include="Helperji\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Helperji\CasSteviloKonverter.cs" />
     <Compile Include="Model\ModelStoparice.cs" />
     <Compile Include="Model\PrivzetiViewModel.cs" />
     <Compile Include="Model\StoparicaViewModel.cs" />

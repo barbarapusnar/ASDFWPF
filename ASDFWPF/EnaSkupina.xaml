@@ -7,8 +7,109 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="EnaSkupina">
+    <Page.Resources>
+        <local:IntToColor x:Key="IntToColor"/>
+        <local:StringFormatConverter x:Key="StringFormatConverter" />
+        <DataTemplate x:Key="mojaPredloga">
+            <Grid Height="110" Width="480" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border Width="110" Height="110">
+                    <Image Source="{Binding slika}" Stretch="UniformToFill" />
+                </Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Text="Vaja #" />
+                        <TextBlock Text="{Binding Id}" TextWrapping="NoWrap" />
+                    </StackPanel>
+                    <TextBlock Text="{Binding vsebina[0].tekst}" TextWrapping="NoWrap" />
+                    <TextBlock Text="{Binding vsebina[1].tekst}"  MaxHeight="60" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="zeReseno">
+            <Grid Height="110" Width="480" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border Width="110" Height="110">
+                    <Border.Background>
+                        <SolidColorBrush Color="{Binding napake, Converter={StaticResource IntToColor}}" Opacity="0.75" />
+                    </Border.Background>
+                    <Button  Content="✔" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Text="Vaja #" />
+                        <TextBlock Text="{Binding Id}"  TextWrapping="NoWrap" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="18" Margin="5,0,0,0">
+                        <TextBlock Height="18" TextWrapping="Wrap" >
+                            <Run Text="Napake :" />
+                        </TextBlock>
+                        <TextBlock Height="18" Text="{Binding napake}" HorizontalAlignment="Right" Margin="10,0,0,0"
+                                    />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="18" Margin="5,0,0,0">
+                        <TextBlock Height="18" TextWrapping="Wrap" >
+                            <Run Text="Udarci :" />
+                        </TextBlock>
+                        <TextBlock Text="{Binding porabljencas}" HorizontalAlignment="Right" Height="18"
+                                   Margin="10,0,0,0"  />
+                    </StackPanel>
+                    <TextBlock Height="18" TextWrapping="Wrap" 
+                               Margin="5,0,0,0">
+                        <Run Text="Zadnjič rešeno :" />
+                    </TextBlock>
+                    <TextBlock
+                        Text="{Binding zadnjicReseno, ConverterParameter=\{0:dd MMM yy\}, Converter={StaticResource StringFormatConverter}}"
+                        Height="18" HorizontalAlignment="Right" TextWrapping="Wrap"
+                         />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <local:SelektorPredlog MojaPredloga="{StaticResource mojaPredloga}" ZeReseno="{StaticResource zeReseno}"
+                               x:Key="selTemplateSelector" />
+    </Page.Resources>
+    <Grid 
+          DataContext="{Binding Group}"
+         >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <TextBlock Name="txtUporabnik"   Height="35" FontSize="20" Margin="0,0,5,0" />
+            <Image x:Name="smallImage"  Width="35" Height="35"  />
+        </StackPanel>
+        <!-- Horizontal scrolling grid used in most view states -->
+        <ListView
+            x:Name="itemGridView"
+            AutomationProperties.AutomationId="ItemGridView"
+            AutomationProperties.Name="Items In Group"
+            TabIndex="1"
+            Grid.RowSpan="2"
+            Padding="120,126,120,50"
+            ItemTemplateSelector="{StaticResource selTemplateSelector}"
+            >
 
-    <Grid>
-        <TextBlock Name="txtSkupina"/>
+            <!--<ListView.Header>
+                <StackPanel Width="480" Margin="0,4,14,0">
+                    <TextBlock Margin="0,0,18,20" Style="{StaticResource SubheaderTextStyle}" MaxHeight="60" />
+                    <Image Source="{Binding Image}" Height="400" Margin="0,0,18,20" Stretch="Fill"
+                           AutomationProperties.Name="{Binding Title}" />
+                    <TextBlock Text="{Binding Description}" Margin="0,0,18,0" Style="{StaticResource BodyTextStyle}" />
+                </StackPanel>
+            </ListView.Header>-->
+            <!--<GridView.ItemContainerStyle>
+                <Style TargetType="FrameworkElement">
+                    <Setter Property="Margin" Value="52,0,0,10" />
+                </Style>
+            </GridView.ItemContainerStyle>-->
+        </ListView>
     </Grid>
 </Page>

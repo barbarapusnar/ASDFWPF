@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,22 +16,13 @@ using System.Windows.Shapes;
 namespace ASDFWPF
 {
     /// <summary>
-    /// Interaction logic for PoSkupinah.xaml
+    /// Interaction logic for SkupinaZaEnDan.xaml
     /// </summary>
-    public partial class PoSkupinah :Window   {
-        PrivzetiViewModel pvm = new PrivzetiViewModel();
-        public PoSkupinah()
+    public partial class SkupinaZaEnDan : Page
+    {
+        public SkupinaZaEnDan(string up, ImageSource b,string vaje)
         {
             InitializeComponent();
-            mojOkvir.Navigate(new System.Uri("Prijava.xaml",
-              UriKind.RelativeOrAbsolute));
-            this.DataContext = pvm;
-        }
-
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

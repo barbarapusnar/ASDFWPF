@@ -39,21 +39,44 @@ namespace ASDFWPF
     }
     public class Rezultati
     {
-        public int Id { get; set; }
         private int _napake;
+        private int _udarci;
+        //    public int Id { get; set; }
+        public string ImeRac { get; set; }
+        public int idVaje { get; set; }
+
         public int napake
         {
-            get { return this._napake; }
-            set { _napake = value; }
+            get { return _napake; }
+            set { _napake = value; ; }
         }
+
         public decimal porabljencas { get; set; }
         public DateTime? zadnjicReseno { get; set; }
-        private int _udarci;
+
         public int udarci
         {
-            get { return this._udarci; }
-            set { _udarci = value; }
+            get { return _udarci; }
+            set { _udarci= value; }
         }
+
+        public int stCrk { get; set; }
+        public string način { get; set; }
+       
+        public Skupina skupina { get; set; }
+
+
+    }
+    public class Skupina 
+    {
+        public Skupina()
+        {
+            VajeVSkupini = new List<Vaje>();
+        }
+
+        public int SkupinaId { get; set; }
+        public string OpisSkupine { get; set; }
+        public virtual ICollection<Vaje> VajeVSkupini { get; set; } //vse vaje v eni skupini
     }
     public class Vsebina
     {

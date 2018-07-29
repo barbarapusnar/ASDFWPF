@@ -34,7 +34,15 @@ namespace ASDFWPF
             else
                 PrivzetiViewModel.Uporabnik = UserPrincipal.Current.DisplayName;
             GetCurrentUserProfileImage();
-            this.NavigationService.Navigate(new Page1(PrivzetiViewModel.Uporabnik,PrivzetiViewModel.UporabnikSlika));
+            if (radSam.IsChecked != null && (bool)radSam.IsChecked)
+            {
+                this.NavigationService.Navigate(new Page1(PrivzetiViewModel.Uporabnik, PrivzetiViewModel.UporabnikSlika));
+            }
+            else
+            {
+                this.NavigationService.Navigate(new SkupinaZaEnDan(PrivzetiViewModel.Uporabnik, PrivzetiViewModel.UporabnikSlika,txtSkupina.Text));
+            }
+           
         }
         private  void GetCurrentUserProfileImage()
         {
@@ -47,6 +55,18 @@ namespace ASDFWPF
             
             PrivzetiViewModel.UporabnikSlika = b;
         }
+
+        private void radProf_Checked(object sender, RoutedEventArgs e)
+        {
+            txtSkupina.IsEnabled = true;
+        }
+
+        private void radSam_Click(object sender, RoutedEventArgs e)
+        {
+            if (radSam.IsChecked != null && (bool)radSam.IsChecked)
+                txtSkupina.IsEnabled = false;
+        }
+
         //private static void GetCurrentUserProfileImage()
         //{
         //    var imageFile = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +

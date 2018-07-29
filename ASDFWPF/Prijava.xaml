@@ -9,6 +9,7 @@
       Title="Prijava">
 
     <Grid>
+       
         <Border BorderThickness="2" CornerRadius="5" BorderBrush="Black" HorizontalAlignment="Center"
                 Margin="50" Width="500" Height="450">
             <Border.Background>
@@ -17,12 +18,26 @@
                     <GradientStop Color="White" Offset="0.017"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <StackPanel  Orientation="Vertical">
-                <TextBlock Text="Uporabnik"  Margin="20,20,0,0" FontSize="16"/>
+            <StackPanel  Orientation="Vertical" x:Name="root">
+                <StackPanel  Orientation="Vertical" Height="103" Margin="20" >
+                    <RadioButton x:Name="radSam" Content="Vaje si bo sam izbiral " GroupName="izbor" FontSize="20"
+                               TabIndex="0" Click="radSam_Click" VerticalContentAlignment="Center" IsChecked="True"
+                             Margin="10,10,30,10" />
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton x:Name="radProf" Content="Profesor je določil vaje " GroupName="izbor" FontSize="20"
+                                  Checked="radProf_Checked"
+                                 TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                        <TextBox x:Name="txtSkupina" Margin="20" IsEnabled="False" TabIndex="2" Width="140" HorizontalAlignment="Center" FontSize="24" />
+                    </StackPanel>
+                    
+                </StackPanel>
+                <Line Stroke="White" X1="0" Y1="25" X2="{Binding ActualWidth, ElementName=root, Mode=OneWay}" Y2="25" />
+                <TextBlock Text="Uporabnik"  Margin="20,20,0,0" FontSize="20"/>
                 <TextBox x:Name="txtUp" Margin="20" FontSize="24" >
                 </TextBox>
                 <TextBlock Margin="20" TextWrapping="Wrap" Text="Če ne vneseš imena, boš delal kot uporabnik, ki je prijavljen na računalnik"/>
                 <Button x:Name="btnOK" Height="45" Width="186" Content="Prijava" Click="PrijaviSe" Margin="0,20,0,0" />
+
             </StackPanel>
         </Border>
     </Grid>
