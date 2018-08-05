@@ -89,12 +89,11 @@
         <!-- Horizontal scrolling grid used in most view states -->
         <ListView
             x:Name="itemGridView"
-            AutomationProperties.AutomationId="ItemGridView"
-            AutomationProperties.Name="Items In Group"
             TabIndex="1"
             Grid.RowSpan="2"
             Padding="120,126,120,50"
             ItemTemplateSelector="{StaticResource selTemplateSelector}"
+            SelectionChanged="itemGridView_SelectionChanged"
             >
 
             <!--<ListView.Header>

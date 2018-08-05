@@ -9,7 +9,7 @@ using System.Timers;
 
 namespace ASDFWPF
 {
-    class StoparicaViewModel : INotifyPropertyChanged
+    public class StoparicaViewModel : INotifyPropertyChanged
     {
         private ModelStoparice _stModel = new ModelStoparice();
 

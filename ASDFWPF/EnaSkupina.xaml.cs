@@ -44,15 +44,15 @@ namespace ASDFWPF
             txtUporabnik.Text = PrivzetiViewModel.Uporabnik;
             smallImage.Source = PrivzetiViewModel.UporabnikSlika;
             smallImage.Visibility = Visibility.Visible;
-            var group = PrivzetiViewModel.GetGroup(id);
+            Group = PrivzetiViewModel.GetGroup(id);
           
-            itemGridView.ItemsSource = group.Items;
-            reseno = new bool[group.Items.Count + 1];
-            napake = new int[group.Items.Count + 1];
+            itemGridView.ItemsSource = Group.Items;
+            reseno = new bool[Group.Items.Count + 1];
+            napake = new int[Group.Items.Count + 1];
 
             IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
             var i = 1;
-            foreach (var x in group.Items)
+            foreach (var x in Group.Items)
             {
                 var a = (from b in r
                          where b.idVaje == x.Id
@@ -66,6 +66,21 @@ namespace ASDFWPF
             }
             //DefaultViewModel["JeZe"] = reseno;
             //DefaultViewModel["Narobe"] = napake;
+        }
+
+        private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {  if (itemGridView != null)
+            {
+                int x = itemGridView.SelectedIndex;
+                var vaja = Group.Items[x];
+                var a = new ZaPagePayload
+                {
+                    št = vaja.Id,
+                    n = NačinDela.Ignoriraj + " " + "prosto"
+                };
+
+                this.NavigationService.Navigate(new PoVajah(a));
+            }
         }
     }
 }

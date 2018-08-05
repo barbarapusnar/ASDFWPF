@@ -4,9 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ASDFWPF"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="PoVajah">
+      mc:Ignorable="d"
+      Title="PoVajah" DataContext="{RelativeSource Self}">
     <Page.Resources>
         <Style x:Key="RoundedButton" TargetType="Button">
             <Setter Property="Template">
@@ -20,79 +19,173 @@
                             <Ellipse Name="Ellipse" Grid.Row="0" StrokeThickness="1" Fill="{TemplateBinding Background}" Height="40" Width="40"  Stroke="White"></Ellipse>
                             <ContentPresenter Name="Content" Grid.Row="0"  Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
                             <TextBlock Text="{TemplateBinding Tag}" Grid.Row="1" Margin="0,-2,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Foreground="Black" FontFamily="Segoe MDL2"></TextBlock>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal"/>
-                                    <VisualState x:Name="PointerOver">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Ellipse">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="0.8"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Pressed">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="Ellipse">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="White"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Red"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
         <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <local:StringToIntConverter x:Key="StringToIntConverter"/>
+        <local:StringToVisibilityCoverter x:Key="StringToVisibilityConverter"/>
         <DataTemplate x:Key="PredlogaVrstic">
             <StackPanel Orientation="Horizontal">
                 <Image Width="50" Height="30" Margin="5" Source="Slike/rdeča.jpg" Opacity="0" />
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Left" FontSize="26.667" Height="35" Text="{Binding tekst}"
-                               VerticalAlignment="Top" Style="{StaticResource SubheaderTextStyle}" />
-                    <Slider Maximum="{Binding tekst.Length}"
-                            Value="{Binding Text, Converter={StaticResource StringToIntConverter}, ElementName=txtVnos, Mode=TwoWay}"
-                            Height="30" TickPlacement="TopLeft" TickFrequency="0"
-                            Visibility="{Binding Path=(local:Pomoc.IsSelected),  RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBlock Name="tbPredloga" HorizontalAlignment="Left" FontSize="26.667" Height="35" Text="{Binding tekst}"
+                               VerticalAlignment="Top" />
+                    <!--<Grid Name="sld" Height="30" Visibility="Collapsed" Width="{Binding Width,ElementName=tbPredloga}" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=0,ElementName=txtVnos}"/>
+                        <Image Grid.Column="1" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=1,ElementName=txtVnos}"/>
+                        <Image Grid.Column="2" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=2,ElementName=txtVnos}"/>
+                        <Image Grid.Column="3" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=3,ElementName=txtVnos}"/>
+                        <Image Grid.Column="4" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=4,ElementName=txtVnos}"/>
+                        <Image Grid.Column="5" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=5,ElementName=txtVnos}"/>
+                        <Image Grid.Column="6" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=6,ElementName=txtVnos}"/>
+                        <Image Grid.Column="7" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=7,ElementName=txtVnos}"/>
+                        <Image Grid.Column="8" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=8,ElementName=txtVnos}"/>
+                        <Image Grid.Column="9" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=9,ElementName=txtVnos}"/>
+                        <Image Grid.Column="10" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=10,ElementName=txtVnos}"/>
+                        <Image Grid.Column="11" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=11,ElementName=txtVnos}"/>
+                        <Image Grid.Column="12" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=12,ElementName=txtVnos}"/>
+                        <Image Grid.Column="13" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=13,ElementName=txtVnos}"/>
+                        <Image Grid.Column="14" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=14,ElementName=txtVnos}"/>
+                        <Image Grid.Column="15" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=15,ElementName=txtVnos}"/>
+                        <Image Grid.Column="16" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=16,ElementName=txtVnos}"/>
+                        <Image Grid.Column="17" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=17,ElementName=txtVnos}"/>
+                        <Image Grid.Column="18" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=18,ElementName=txtVnos}"/>
+                        <Image Grid.Column="19" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=19,ElementName=txtVnos}"/>
+                        <Image Grid.Column="20" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=20,ElementName=txtVnos}"/>
+                        <Image Grid.Column="21" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=21,ElementName=txtVnos}"/>
+                        <Image Grid.Column="22" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=22,ElementName=txtVnos}"/>
+                        <Image Grid.Column="23" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=23,ElementName=txtVnos}"/>
+                        <Image Grid.Column="24" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=24,ElementName=txtVnos}"/>
+                        <Image Grid.Column="25" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=25,ElementName=txtVnos}"/>
+                        <Image Grid.Column="26" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=26,ElementName=txtVnos}"/>
+                        <Image Grid.Column="27" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=27,ElementName=txtVnos}"/>
+                        <Image Grid.Column="28" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=28,ElementName=txtVnos}"/>
+                        <Image Grid.Column="29" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=29,ElementName=txtVnos}"/>
+                        <Image Grid.Column="30" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=30,ElementName=txtVnos}"/>
+                        <Image Grid.Column="31" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=31,ElementName=txtVnos}"/>
+                        <Image Grid.Column="32" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=32,ElementName=txtVnos}"/>
+                        <Image Grid.Column="33" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=33,ElementName=txtVnos}"/>
+                        <Image Grid.Column="34" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=34,ElementName=txtVnos}"/>
+                        <Image Grid.Column="35" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=35,ElementName=txtVnos}"/>
+                        <Image Grid.Column="36" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=36,ElementName=txtVnos}"/>
+                        <Image Grid.Column="37" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=37,ElementName=txtVnos}"/>
+                        <Image Grid.Column="38" Source="Slike/gor.png" Visibility="{Binding Text,Converter={StaticResource StringToVisibilityConverter},ConverterParameter=38,ElementName=txtVnos}"/>
+                        <Image Grid.Column="39" Source="Slike/gor.png" Visibility="{Binding Text, ConverterParameter=39, Converter={StaticResource StringToVisibilityConverter}, ElementName=txtVnos}"/>
+                      
+                        
+                    </Grid>-->
+                    <Slider Name="sld" Maximum="{Binding tekst.Length}"
+                            Value="{Binding Text, Converter={StaticResource StringToIntConverter}, ElementName=txtVnos}"
+                            Height="30" TickPlacement="TopLeft" 
+                            Visibility="Collapsed"
+                           />
                 </StackPanel>
             </StackPanel>
+            <DataTemplate.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType=ListViewItem}}" Value="True" />                      
+                    </MultiDataTrigger.Conditions>
+                    <Setter TargetName="sld" Property="Visibility" Value="Visible" />
+                </MultiDataTrigger>
+            </DataTemplate.Triggers>
         </DataTemplate>
+  
+        <Style x:Key="PredlogaSeznama" TargetType="ListViewItem">
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <ItemsPresenter
+                            local:Pomoc.IsSelected="{Binding IsSelected, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}"
+                            />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="Green"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+       
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="53" />
             <RowDefinition />
-            <RowDefinition Height="77"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="750*"/>
+            <ColumnDefinition Width="50*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel HorizontalAlignment="Left" Height="34" >
-            <TextBlock x:Name="pageTitle" Grid.Column="0" FontSize="24" Width="384" />
+        <StackPanel HorizontalAlignment="Left" Margin="10,10,0,10" Width="380"  >
+            <TextBlock x:Name="pageTitle" Grid.Column="0" FontSize="24" Width="380" />
         </StackPanel>
-        <StackPanel Grid.Column="1" Orientation="Horizontal"  HorizontalAlignment="Right" VerticalAlignment="Center" Height="34" Width="249" Margin="0,10,0,9">
+        <StackPanel  Orientation="Horizontal"  HorizontalAlignment="Right" VerticalAlignment="Center" Height="36" Width="200" 
+                    Margin="0,10,0,10" Grid.ColumnSpan="2">
             <TextBlock Name="txtUporabnik"   Height="35" FontSize="20" Margin="0,0,5,0" />
             <Image x:Name="smallImage"  Width="35" Height="35"  />
         </StackPanel>
         <Grid Grid.Row="1" Margin="0" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
-               
-                <RowDefinition Height="145*" />
-                <RowDefinition Height="51*" />
-                <RowDefinition Height="432*" />
+
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="850" />
-                <ColumnDefinition Width="263" />
-                <ColumnDefinition />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition  Width="1*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="2" Grid.Column="2" BorderBrush="#FFF7F5F5" BorderThickness="2" Background="#FF3C3232"
-                    CornerRadius="5" Margin="10,10,10,14">
+            <Border Grid.Column="2" BorderBrush="#FFF7F5F5" BorderThickness="2" Background="#FF3C3232"
+                    CornerRadius="5" Margin="22,21,10,10" Grid.Row="2">
                 <StackPanel HorizontalAlignment="Right" Margin="0" Orientation="Vertical" Width="229"
                             Grid.ColumnSpan="2">
                     <StackPanel Margin="10,20,0,0" Height="35">
@@ -110,14 +203,14 @@
                             <TextBlock FontSize="16" FontWeight="Bold">
                                 <Run Text="Napake za vajo :" />
                             </TextBlock>
-                            <TextBlock Text="{Binding napake}" FontWeight="Bold" FontSize="16" TextAlignment="Right"
+                            <TextBlock x:Name="txtN" FontWeight="Bold" FontSize="16" TextAlignment="Right"
                                        Width="95" />
                         </StackPanel>
                         <StackPanel Grid.Row="3" x:Name="stcStatistikaPoVaji" Orientation="Horizontal" Margin="0,3,0,0">
                             <TextBlock FontSize="16" FontWeight="Bold">
                                 <Run Text="Hitrost :" />
                             </TextBlock>
-                            <TextBlock Text="{Binding udarci}" FontWeight="Bold" FontSize="16" TextAlignment="Right"
+                            <TextBlock x:Name="txtH" FontWeight="Bold" FontSize="16" TextAlignment="Right"
                                        Width="67" />
                         </StackPanel>
                         <StackPanel Grid.Row="1" x:Name="stcOcena" Orientation="Horizontal" Margin="0,3,0,0">
@@ -181,66 +274,68 @@
                     </Grid>
                 </StackPanel>
             </Border>
-            <ListView Grid.Row="0" x:Name="grd" HorizontalAlignment="Left" VerticalAlignment="Top" Height="200"
-                      ItemTemplate="{StaticResource PredlogaVrstic}"
-                      Width="1346"
-                      Grid.ColumnSpan="2" Margin="10,0,0,0" IsEnabled="False"
-                      ItemContainerStyle="{StaticResource PredlogaSeznama}" Grid.RowSpan="3" />
-            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2" Margin="10,0,10,15">
-                <Button x:Name="btnPrav1" Visibility="Collapsed" Content="✔" HorizontalAlignment="Center"
-                        VerticalAlignment="Center" Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
-                <Button x:Name="btnPrav2" Visibility="Collapsed" Content="✔" HorizontalAlignment="Center"
-                        VerticalAlignment="Center" Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
-                <Button x:Name="btnPrav3" Visibility="Collapsed" Content="✔" HorizontalAlignment="Center"
-                        VerticalAlignment="Center" Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
+            <ListView Grid.Row="0" x:Name="grd"
+                      ItemTemplate="{StaticResource PredlogaVrstic}" Margin="5,10,0,10" IsEnabled="False"
+                      HorizontalContentAlignment="Stretch" 
+                      VerticalAlignment="Stretch"  Grid.ColumnSpan="2"
+                      ItemContainerStyle="{StaticResource PredlogaSeznama }"
+                      />
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2"  Margin="0,10,0,10" >
+                <Button x:Name="btnPrav1" Visibility="Collapsed" Content="✔" 
+                         Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
+                <Button x:Name="btnPrav2" Visibility="Collapsed" Content="✔" 
+                         Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
+                <Button x:Name="btnPrav3" Visibility="Collapsed" Content="✔" 
+                        Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
             </StackPanel>
-            <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Orientation="Vertical">
+            <StackPanel Grid.Row="1"  Orientation="Vertical" Margin="5,10,0,10" Grid.ColumnSpan="2">
                 <!--<TextBlock x:Name="tbTrenutna" FontSize="26.667" FontWeight="Light"  HorizontalAlignment="Left" Height="46" Margin="20,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1346" />-->
-                <TextBox x:Name="txtVnos" FontSize="26.667" FontWeight="Light" HorizontalAlignment="Left" Height="46"
-                         Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1346"
-                         InputScope="AlphanumericFullWidth" IsEnabled="False" KeyDown="txtVnos_KeyDown"
-                         TextChanged="Spremeni" KeyUp="txtVnos_KeyUp" LostFocus="txtVnos_LostFocus"
-                         GotFocus="txtVnos_GotFocus" />
+                <!--<local:UserControl1  x:Name="txtVnos" FontSize="26.667" FontWeight="Light" Height="46" Foreground="Black"
+                          VerticalAlignment="Top" 
+                         IsEnabled="False" KeyDown="txtVnos_KeyDown"
+                                     TextChanged="Spremeni"
+                         KeyUp="txtVnos_KeyUp" LostFocus="txtVnos_LostFocus"
+                         GotFocus="txtVnos_GotFocus" HorizontalContentAlignment="Stretch" />-->
+                <TextBox  x:Name="txtVnos" FontSize="26.667" FontWeight="Light" Height="46" Foreground="Black"
+                          VerticalAlignment="Top" PreviewKeyDown="txtVnos_PreviewKeyDown"
+                         IsEnabled="False" 
+                                     TextChanged="Spremeni"
+                         KeyUp="txtVnos_KeyUp" LostFocus="txtVnos_LostFocus"
+                         GotFocus="txtVnos_GotFocus" HorizontalContentAlignment="Stretch" />
                 <TextBlock x:Name="tbPomoc" FontSize="26.667" FontWeight="Light" HorizontalAlignment="Left" Height="46"
-                           Margin="20,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1346"
-                           Visibility="Collapsed" />
+                           TextWrapping="Wrap" VerticalAlignment="Top"
+                           Visibility="Visible" Width="125" />
                 <TextBlock x:Name="tbOK" FontSize="26.667" FontWeight="Light" HorizontalAlignment="Left" Height="46"
-                           Margin="20,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1346" />
+                            TextWrapping="Wrap" VerticalAlignment="Top" Width="251"  />
             </StackPanel>
-            <Border x:Name="brdTipkovnica" Grid.Row="2" BorderBrush="#FFF7f5f5" BorderThickness="2" CornerRadius="4"
-                    Margin="10,10" Width="800" Height="404">
-                <StackPanel Grid.Column="0" x:Name="vsebnik">
+            <Border  x:Name="brdTipkovnica" Grid.Row="2" Grid.Column="0" BorderBrush="#FFF7f5f5" BorderThickness="2" CornerRadius="4"
+                     Margin="0,0,0,10">
+                <StackPanel  x:Name="vsebnik">
                     <!--tukaj je tipkovnica-->
                 </StackPanel>
             </Border>
             <Border x:Name="brdLegenda" Grid.Row="2" Grid.Column="1" BorderBrush="#FFF7F5F5" BorderThickness="2"
-                    Background="#FF3C3232" CornerRadius="5" Margin="10,235,10,14">
-                <Grid Margin="0,0,0,8">
-                    <!--tukaj je legenda-->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0*" />
-                        <RowDefinition Height="25*" />
-                    </Grid.RowDefinitions>
-                    <StackPanel Grid.Row="1" Margin="0,0,0,1">
-                        <Border Margin="0,35,0,30">
-                            <Image Source="Slike/Roke.png" Height="110" />
-                        </Border>
-                    </StackPanel>
-                </Grid>
+                    Background="#FF3C3232" CornerRadius="5" Margin="41,160,10,10" >
+                <Image Source="Slike/Roke.png" Height="110" />
             </Border>
-            <Button x:Name="btnZačni" Margin="0,7,7,365" Content="Začni z vajo" HorizontalAlignment="Right" Height="60"
-                    Width="249" Click="ZačniZVajo" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontSize="25"
+            <StackPanel Grid.Column="2" Grid.Row="1">
+                <Button x:Name="btnZačni" Margin="10,10,0,10" Content="Začni z vajo" HorizontalAlignment="Right"
+                     Click="ZačniZVajo" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontSize="25"
                     TabIndex="0" />
-            <Button x:Name="btnNovaVaja" Margin="0,66,7,306" Content="Začni znova" HorizontalAlignment="Right"
-                    Height="60" Width="249" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontSize="25"
+                <Button x:Name="btnNovaVaja" Margin="0,10,0,0" Content="Začni znova" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontSize="25"
                     Click="ZacniZnova" />
+            </StackPanel>
         </Grid>
-       
-        <StatusBar x:Name="barNacin" Grid.Row="2">
+
+        <StackPanel x:Name="barNacin" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left"  Width="80">
             <Button x:Name="btnIgnoriraj" Content="&#xE80F;"  Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Vaja" Background="LightGray"/>
             <Button x:Name="btnTest" Content="&#xEC31;" Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Test" Background="LightGray"/>
-        </StatusBar>
-        <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" x:Name="btnStatistika" Content="&#xE8BC;" Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Stat" Background="LightGray"/>
+        </StackPanel>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="btnStatistika" 
+                Content="&#xE8BC;" Style="{StaticResource RoundedButton}" FontSize="19" 
+                FontFamily="Segoe MDL2 Assets" Tag="Stat" Background="LightGray" 
+                Width="50" Margin="0" HorizontalContentAlignment="Stretch" 
+                Click="btnStatistika_Click"/>
 
     </Grid>
 
