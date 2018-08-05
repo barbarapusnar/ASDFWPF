@@ -460,7 +460,7 @@ namespace ASDFWPF
             tbPomoc.Visibility = Visibility.Collapsed;
         }
 
-        private async void KonecVaje()
+        private  void KonecVaje()
         {
             vm.Stop();
 
@@ -523,7 +523,7 @@ namespace ASDFWPF
             //if (!uspeh)
             //{
                 var busyIndicator = PrepareIndeterminateTask("Počakaj trenutek, rezultati samo na tem računalniku");
-                await PrivzetiViewModel.PišiRezultate();
+                PrivzetiViewModel.PišiRezultate();
                 CleanUpIndeterminateTask(busyIndicator);
           //  }
             //else
