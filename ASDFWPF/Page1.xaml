@@ -19,7 +19,7 @@
         </StackPanel>
         <ListView Grid.Row="1"
         x:Name="itemGridView" SelectionMode="Single"       
-            SelectionChanged="itemGridView_SelectionChanged">
+            SelectionChanged="itemGridView_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Width="350" Height="700" VerticalAlignment="Top">
@@ -30,13 +30,12 @@
                         </StackPanel>
                         <Image Source="{Binding GroupImage}" Width="250" Height="150" Stretch="UniformToFill" Margin="5"/>
                         <TextBlock Margin="5" Text="{Binding Description}" TextWrapping="Wrap" FontSize="24"/>
-
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal"></StackPanel>
+                    <WrapPanel Orientation="Horizontal"></WrapPanel>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
         </ListView>

@@ -79,36 +79,37 @@
           DataContext="{Binding Group}"
          >
         <Grid.RowDefinitions>
-            <RowDefinition Height="140" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <TextBlock x:Name="pageTitle" Text="Ena skupina" FontSize="24" Margin="10,0,0,0"/>
         <StackPanel Orientation="Horizontal" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center">
             <TextBlock Name="txtUporabnik"   Height="35" FontSize="20" Margin="0,0,5,0" />
             <Image x:Name="smallImage"  Width="35" Height="35"  />
         </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Image Name="imGrupe" Width="350" Height="300" Stretch="UniformToFill" Margin="5"/>
+            <TextBlock Name="txtOpis" FontSize="20" TextWrapping="Wrap" Height="300" Width="500" Margin="10"/>
+        </StackPanel>
+        
         <!-- Horizontal scrolling grid used in most view states -->
-        <ListView
+
+        <ListView 
             x:Name="itemGridView"
             TabIndex="1"
-            Grid.RowSpan="2"
-            Padding="120,126,120,50"
-            ItemTemplateSelector="{StaticResource selTemplateSelector}"
+            Grid.Row="2"
+            Padding="120,50,120,50"
+            ItemTemplateSelector="{StaticResource selTemplateSelector}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
             SelectionChanged="itemGridView_SelectionChanged"
             >
+            <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
 
-            <!--<ListView.Header>
-                <StackPanel Width="480" Margin="0,4,14,0">
-                    <TextBlock Margin="0,0,18,20" Style="{StaticResource SubheaderTextStyle}" MaxHeight="60" />
-                    <Image Source="{Binding Image}" Height="400" Margin="0,0,18,20" Stretch="Fill"
-                           AutomationProperties.Name="{Binding Title}" />
-                    <TextBlock Text="{Binding Description}" Margin="0,0,18,0" Style="{StaticResource BodyTextStyle}" />
-                </StackPanel>
-            </ListView.Header>-->
-            <!--<GridView.ItemContainerStyle>
-                <Style TargetType="FrameworkElement">
-                    <Setter Property="Margin" Value="52,0,0,10" />
-                </Style>
-            </GridView.ItemContainerStyle>-->
-        </ListView>
+            </ListView>
+       
     </Grid>
 </Page>

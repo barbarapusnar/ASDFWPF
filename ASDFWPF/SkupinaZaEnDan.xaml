@@ -7,8 +7,126 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SkupinaZaEnDan">
+    <Page.Resources>
 
-    <Grid>
-        
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+      
+        <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <local:StringFormatConverter x:Key="StringFormatConverter" />
+        <local:IntToColor x:Key="IntToColor" />
+        <local:NotBoolToVisibilityConverter x:Key="NotBoolToVisibilityConverter" />
+        <DataTemplate x:Key="mojaPredloga">
+            <Grid Height="110" Width="480" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border Width="110" Height="110">
+                    <Image Source="{Binding slika}" Stretch="UniformToFill" />
+                </Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Text="Vaja #" />
+                        <TextBlock Text="{Binding Id}" TextWrapping="NoWrap" />
+                    </StackPanel>
+                    <TextBlock Text="{Binding vsebina[0].tekst}" TextWrapping="NoWrap" />
+                    <TextBlock Text="{Binding vsebina[1].tekst}"  MaxHeight="60" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="zeReseno">
+            <Grid Height="110" Width="480" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border Width="110" Height="110">
+                    <Border.Background>
+                        <SolidColorBrush Color="{Binding napake, Converter={StaticResource IntToColor}}" Opacity="0.75" />
+                    </Border.Background>
+                    <Button  Content="✔" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                </Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Text="Vaja #" />
+                        <TextBlock Text="{Binding Id}"  TextWrapping="NoWrap" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="18" Margin="5,0,0,0">
+                        <TextBlock Height="18" TextWrapping="Wrap" >
+                            <Run Text="Napake :" />
+                        </TextBlock>
+                        <TextBlock Height="18" Text="{Binding napake}" HorizontalAlignment="Right" Margin="10,0,0,0"
+                                    />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="18" Margin="5,0,0,0">
+                        <TextBlock Height="18" TextWrapping="Wrap" >
+                            <Run Text="Udarci :" />
+                        </TextBlock>
+                        <TextBlock Text="{Binding porabljencas}" HorizontalAlignment="Right" Height="18"
+                                   Margin="10,0,0,0"  />
+                    </StackPanel>
+                    <TextBlock Height="18" TextWrapping="Wrap" 
+                               Margin="5,0,0,0">
+                        <Run Text="Zadnjič rešeno :" />
+                    </TextBlock>
+                    <TextBlock
+                        Text="{Binding zadnjicReseno, ConverterParameter=\{0:dd MMM yy\}, Converter={StaticResource StringFormatConverter}}"
+                        Height="18" HorizontalAlignment="Right" TextWrapping="Wrap"
+                         />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <local:SelektorPredlog MojaPredloga="{StaticResource mojaPredloga}" ZeReseno="{StaticResource zeReseno}"
+                               x:Key="selTemplateSelector" />
+    </Page.Resources>
+    <!--<common:LayoutAwarePage.BottomAppBar>
+
+        <CommandBar x:Name="barNacin">
+            <AppBarButton x:Name="btnIgnoriraj" Label="Vaja" Click="btnIgnoriraj_Click" Icon="Home" />
+            --><!--<AppBarButton x:Name="btnPonovno" Label="Ponovno"  Click="btnIgnoriraj_Click" Icon="Back"/>
+            <AppBarButton x:Name="btnBriši" Label="Briši"  Click="btnIgnoriraj_Click" Icon="Delete"/>
+            <AppBarButton x:Name="btnUredi" Label="Uredi" Click="btnIgnoriraj_Click" Icon="Edit"/>
+            <AppBarButton x:Name="btnLahekTest" Label="Lahek test" Click="btnIgnoriraj_Click" Icon="OneBar"/>--><!--
+            <AppBarButton x:Name="btnTest" Label="Test" Click="btnIgnoriraj_Click" Icon="Clock" />
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="btnStatistika" Icon="ShowResults" Label="Stat" Click="btnStatistika_Click" />
+            </CommandBar.SecondaryCommands>
+            --><!--</StackPanel>
+            </Grid>--><!--
+        </CommandBar>
+
+    </common:LayoutAwarePage.BottomAppBar>-->
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid 
+          DataContext="{Binding Group}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- Horizontal scrolling grid used in most view states -->
+        <TextBlock x:Name="pageTitle"  Text="Vaje za danes" FontSize="24" Margin="10,0,0,0" />
+        <StackPanel Orientation="Horizontal" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <TextBlock Name="txtUporabnik"   Height="35" FontSize="20" Margin="0,0,5,0" />
+            <Image x:Name="smallImage"  Width="35" Height="35"  />
+        </StackPanel>
+        <ListView Grid.Row="1"
+            x:Name="itemGridView"
+            TabIndex="1"
+            Grid.RowSpan="2"
+            Padding="120,126,120,50"            
+            ItemTemplateSelector="{StaticResource selTemplateSelector}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            >
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
     </Grid>
 </Page>

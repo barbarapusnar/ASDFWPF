@@ -45,7 +45,9 @@ namespace ASDFWPF
             smallImage.Source = PrivzetiViewModel.UporabnikSlika;
             smallImage.Visibility = Visibility.Visible;
             Group = PrivzetiViewModel.GetGroup(id);
-          
+            pageTitle.Text = Group.Title;
+            txtOpis.Text = Group.Description;
+            imGrupe.Source = Group.Image;
             itemGridView.ItemsSource = Group.Items;
             reseno = new bool[Group.Items.Count + 1];
             napake = new int[Group.Items.Count + 1];

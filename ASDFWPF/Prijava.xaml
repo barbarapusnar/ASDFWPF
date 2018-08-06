@@ -24,10 +24,12 @@
                                TabIndex="0" Click="radSam_Click" VerticalContentAlignment="Center" IsChecked="True"
                              Margin="10,10,30,10" />
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton x:Name="radProf" Content="Profesor je določil vaje " GroupName="izbor" FontSize="20"
+                        <RadioButton x:Name="radProf" Content="Od vaje " GroupName="izbor" FontSize="20"
                                   Checked="radProf_Checked"
                                  TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
-                        <TextBox x:Name="txtSkupina" Margin="20" IsEnabled="False" TabIndex="2" Width="140" HorizontalAlignment="Center" FontSize="24" />
+                        <TextBox x:Name="txtSkupina" Text="1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" GotFocus="txtSkupina_GotFocus" />
+                        <TextBlock Text="naprej" FontSize="20" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtStevilo" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" Text="20" GotFocus="txtStevilo_GotFocus"/>
                     </StackPanel>
                     
                 </StackPanel>
@@ -37,7 +39,6 @@
                 </TextBox>
                 <TextBlock Margin="20" TextWrapping="Wrap" Text="Če ne vneseš imena, boš delal kot uporabnik, ki je prijavljen na računalnik"/>
                 <Button x:Name="btnOK" Height="45" Width="186" Content="Prijava" Click="PrijaviSe" Margin="0,20,0,0" />
-
             </StackPanel>
         </Border>
     </Grid>

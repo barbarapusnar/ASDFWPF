@@ -93,6 +93,7 @@
     <Compile Include="Helperji\BoolToInt4.cs" />
     <Compile Include="Helperji\IntToColor1.cs" />
     <Compile Include="Helperji\IntToColor.cs" />
+    <Compile Include="Helperji\NotBoolToVisibilityConverter.cs" />
     <Compile Include="Helperji\Pomoc.cs" />
     <Compile Include="Helperji\StringToColor1.cs" />
     <Compile Include="Helperji\StringToColorConverter.cs" />

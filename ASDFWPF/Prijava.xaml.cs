@@ -36,13 +36,12 @@ namespace ASDFWPF
             GetCurrentUserProfileImage();
             if (radSam.IsChecked != null && (bool)radSam.IsChecked)
             {
-                this.NavigationService.Navigate(new Page1(PrivzetiViewModel.Uporabnik, PrivzetiViewModel.UporabnikSlika));
+                this.NavigationService.Navigate(new Page1());
             }
             else
             {
-                this.NavigationService.Navigate(new SkupinaZaEnDan(PrivzetiViewModel.Uporabnik, PrivzetiViewModel.UporabnikSlika,txtSkupina.Text));
-            }
-           
+                this.NavigationService.Navigate(new SkupinaZaEnDan(txtSkupina.Text,txtStevilo.Text));
+            }           
         }
         private  void GetCurrentUserProfileImage()
         {
@@ -59,12 +58,26 @@ namespace ASDFWPF
         private void radProf_Checked(object sender, RoutedEventArgs e)
         {
             txtSkupina.IsEnabled = true;
+            txtStevilo.IsEnabled = true;
         }
 
         private void radSam_Click(object sender, RoutedEventArgs e)
         {
             if (radSam.IsChecked != null && (bool)radSam.IsChecked)
+            {
                 txtSkupina.IsEnabled = false;
+                txtStevilo.IsEnabled = true;
+            }
+        }
+
+        private void txtSkupina_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtSkupina.Text = "";
+        }
+
+        private void txtStevilo_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtStevilo.Text = "";
         }
 
         //private static void GetCurrentUserProfileImage()

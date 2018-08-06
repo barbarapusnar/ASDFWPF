@@ -26,7 +26,7 @@ namespace ASDFWPF
             get { return this._groups; }
             set { this._groups = value; }
         }
-        public Page1(string up,ImageSource b)
+        public Page1()
         {
             InitializeComponent();
             //PrivzetiViewModel.NaložiRezultate();
@@ -34,10 +34,10 @@ namespace ASDFWPF
             PrivzetiViewModel.NaložiStareRezultateAsync();
             this.Groups = sampleDataGroups.ToList<TipkanjeDataGroup>();
             itemGridView.ItemsSource = Groups;
-            txtUporabnik.Text = up;
-            if (b != null)
+            txtUporabnik.Text = PrivzetiViewModel.Uporabnik; ;
+            if (PrivzetiViewModel.UporabnikSlika != null)
             {
-                smallImage.Source = b;
+                smallImage.Source = PrivzetiViewModel.UporabnikSlika;
             }
 
         }

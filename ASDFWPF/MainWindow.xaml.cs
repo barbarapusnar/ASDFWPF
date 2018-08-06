@@ -26,8 +26,8 @@ namespace ASDFWPF
        
         public MainWindow()
         {
-            InitializeComponent();
-            Podatki();
+            InitializeComponent();          
+            Podatki();      
             mojOkvir.Navigate(new Prijava());
         }
         public  void Podatki()
@@ -38,9 +38,7 @@ namespace ASDFWPF
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-         
-            PrivzetiViewModel.PišiRezultate();
-         
+            //pisanje rezultatov, samo, če niso še shranjeni ali če so novi
             this.Close();
         }
     }
