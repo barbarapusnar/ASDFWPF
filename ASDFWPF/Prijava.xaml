@@ -9,15 +9,9 @@
       Title="Prijava">
 
     <Grid>
-       
+
         <Border BorderThickness="2" CornerRadius="5" BorderBrush="Black" HorizontalAlignment="Center"
-                Margin="50" Width="500" Height="450">
-            <Border.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF1B511B" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.017"/>
-                </LinearGradientBrush>
-            </Border.Background>
+                Margin="50" Width="500" Height="450" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
             <StackPanel  Orientation="Vertical" x:Name="root">
                 <StackPanel  Orientation="Vertical" Height="103" Margin="20" >
                     <RadioButton x:Name="radSam" Content="Vaje si bo sam izbiral " GroupName="izbor" FontSize="20"
@@ -31,7 +25,7 @@
                         <TextBlock Text="naprej" FontSize="20" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <TextBox x:Name="txtStevilo" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" Text="20" GotFocus="txtStevilo_GotFocus"/>
                     </StackPanel>
-                    
+
                 </StackPanel>
                 <Line Stroke="White" X1="0" Y1="25" X2="{Binding ActualWidth, ElementName=root, Mode=OneWay}" Y2="25" />
                 <TextBlock Text="Uporabnik"  Margin="20,20,0,0" FontSize="20"/>

@@ -46,8 +46,6 @@ namespace ASDFWPF
         private string up = "";
         private char vnešenZnak = (char)0;
         private int vsehČrkVVaji;
-        private bool jePresledek=true;
-        private bool staDva = false;
         public bool prof { get; set; }
         public List<Vsebina> VsebinaVrstic = new List<Vsebina>();
         public string skupina { get; set; }
@@ -120,11 +118,7 @@ namespace ASDFWPF
                 pageTitle.Text = "Vaja #" + x + " - " + načinDela + " " + oba[1];
             }
             št = x;
-            if (jeProf && številkeVaj[pomžniŠtevec] != št)
-            {
-                Xceed.Wpf.Toolkit.MessageBox.Show("To ni prva vaja sklopa, lahko ponovno izbereš vaje za ta dan");
-                this.NavigationService.Navigate(new Prijava());
-            }
+            
             var item = PrivzetiViewModel.GetVsebina(x);
             if (item.Count() == 0)
             {

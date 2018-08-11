@@ -27,6 +27,8 @@ namespace ASDFWPF
         private string s;
         private int[] številkeVaj;
         private int štVaj;
+        private int vaje1 = 0;
+        List<Vaje> Group = new List<Vaje>();
         public SkupinaZaEnDan(string vaje,string st) //od vaje, st pomeni koliko vaj
         {
             InitializeComponent();
@@ -34,7 +36,7 @@ namespace ASDFWPF
             smallImage.Source = PrivzetiViewModel.UporabnikSlika;
             smallImage.Visibility = Visibility.Visible;
             //s = (string)navigationParameter;
-            int vaje1 = int.Parse(vaje);
+            vaje1 = int.Parse(vaje);
             int st1 = int.Parse(st);
             opisSkupine = vaje+" --" +(vaje+st);
             var vse = PrivzetiViewModel.GetVajeZaDanPoŠtevilki(vaje1,st1);
@@ -46,10 +48,12 @@ namespace ASDFWPF
                 številkeVaj[k] = x.Id;
                 k++;
             }
+            Group = vse.ToList();
             itemGridView.ItemsSource = vse;
             reseno = new bool[štVaj];
             napake = new int[štVaj];
-
+            načinDela = NačinDela.Ignoriraj;
+            pageTitle.Text = "Vaje za danes \t Način dela: " + načinDela;
             IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
             var i = 0;
             foreach (var x in vse)
@@ -65,6 +69,74 @@ namespace ASDFWPF
                 i++;
             }
            
+        }
+
+        private void btnStatistika_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Statistika(načinDela));
+        }
+
+        private void btnIgnoriraj_Click(object sender, RoutedEventArgs e)
+        {
+            //Izbor načina dela, v XAMLU še ni vseh gumbov
+            var x = (Button)sender;
+            switch (x.Name)
+            {
+                case "btnIgnoriraj":
+                    načinDela = NačinDela.Ignoriraj;
+                    break;
+                case "btnPonovno":
+                    načinDela = NačinDela.Ponovno;
+                    break;
+                case "btnBriši":
+                    načinDela = NačinDela.Briši;
+                    break;
+                case "btnUredi":
+                    načinDela = NačinDela.Uredi;
+                    break;
+                case "btnLahekTest":
+                    načinDela = NačinDela.LahekTest;
+                    break;
+                case "btnTest":
+                    načinDela = NačinDela.Test;
+                    break;
+                case "btnNeodvisno":
+                    načinDela = NačinDela.Neodvisno;
+                    break;
+                default:
+                    načinDela = NačinDela.Ignoriraj;
+                    break;
+            }
+            pageTitle.Text = "Vaje za danes \t Način dela: " + načinDela;
+            itemGridView.SelectedItem = null;
+
+        }
+
+        private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (itemGridView .SelectedItem!= null)
+            {
+                var a = new ZaPagePayload();
+                int x = itemGridView.SelectedIndex;
+                var vaja = Group[x];
+                a.št = vaja.Id; //številka vaje
+                if (a.št != vaje1)
+                {
+                    Xceed.Wpf.Toolkit.MessageBox.Show("To ni prva vaja sklopa, lahko ponovno izbereš vaje za ta dan");
+                    return;
+                }
+                
+                a.n = načinDela + " " + "prof";
+                a.štČrkSkupaj = 0;
+                a.napakeSkupaj = 0;
+                a.številoUdarcevSkupaj = 0;
+                a.časSkupaj = 0;
+                a.vsehVajSkupaj = štVaj;
+                a.številkeVajZaDan = številkeVaj;
+                a.trenutnaPozicijaVaj = 0;
+                a.opisS = opisSkupine;
+                this.NavigationService.Navigate(new PoVajah(a));
+            }
         }
     }
 }

@@ -9,8 +9,24 @@
       Title="SkupinaZaEnDan">
     <Page.Resources>
 
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-      
+        <Style x:Key="RoundedButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Ellipse Name="Ellipse" Grid.Row="0" StrokeThickness="1" Fill="{TemplateBinding Background}" Height="40" Width="40"  Stroke="White"></Ellipse>
+                            <ContentPresenter Name="Content" Grid.Row="0"  Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                            <TextBlock Text="{TemplateBinding Tag}" Grid.Row="1" Margin="0,-2,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Foreground="Black" FontFamily="Segoe MDL2"></TextBlock>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
         <local:StringFormatConverter x:Key="StringFormatConverter" />
         <local:IntToColor x:Key="IntToColor" />
@@ -84,16 +100,20 @@
 
         <CommandBar x:Name="barNacin">
             <AppBarButton x:Name="btnIgnoriraj" Label="Vaja" Click="btnIgnoriraj_Click" Icon="Home" />
-            --><!--<AppBarButton x:Name="btnPonovno" Label="Ponovno"  Click="btnIgnoriraj_Click" Icon="Back"/>
+            -->
+    <!--<AppBarButton x:Name="btnPonovno" Label="Ponovno"  Click="btnIgnoriraj_Click" Icon="Back"/>
             <AppBarButton x:Name="btnBriši" Label="Briši"  Click="btnIgnoriraj_Click" Icon="Delete"/>
             <AppBarButton x:Name="btnUredi" Label="Uredi" Click="btnIgnoriraj_Click" Icon="Edit"/>
-            <AppBarButton x:Name="btnLahekTest" Label="Lahek test" Click="btnIgnoriraj_Click" Icon="OneBar"/>--><!--
+            <AppBarButton x:Name="btnLahekTest" Label="Lahek test" Click="btnIgnoriraj_Click" Icon="OneBar"/>-->
+    <!--
             <AppBarButton x:Name="btnTest" Label="Test" Click="btnIgnoriraj_Click" Icon="Clock" />
             <CommandBar.SecondaryCommands>
                 <AppBarButton x:Name="btnStatistika" Icon="ShowResults" Label="Stat" Click="btnStatistika_Click" />
             </CommandBar.SecondaryCommands>
-            --><!--</StackPanel>
-            </Grid>--><!--
+            -->
+    <!--</StackPanel>
+            </Grid>-->
+    <!--
         </CommandBar>
 
     </common:LayoutAwarePage.BottomAppBar>-->
@@ -108,9 +128,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="35" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="65"/>
         </Grid.RowDefinitions>
         <!-- Horizontal scrolling grid used in most view states -->
-        <TextBlock x:Name="pageTitle"  Text="Vaje za danes" FontSize="24" Margin="10,0,0,0" />
+        <TextBlock x:Name="pageTitle"   FontSize="24" Margin="10,0,0,0" />
         <StackPanel Orientation="Horizontal" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center">
             <TextBlock Name="txtUporabnik"   Height="35" FontSize="20" Margin="0,0,5,0" />
             <Image x:Name="smallImage"  Width="35" Height="35"  />
@@ -119,14 +140,33 @@
             x:Name="itemGridView"
             TabIndex="1"
             Grid.RowSpan="2"
-            Padding="120,126,120,50"            
+            Padding="120,50,120,50"            
             ItemTemplateSelector="{StaticResource selTemplateSelector}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-            >
+            SelectionChanged="itemGridView_SelectionChanged">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" />
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
         </ListView>
+        <Border Grid.Row="2" Background="LightGray">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel x:Name="barNacin" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.ColumnSpan="2"  Width="798"  >
+                    <Button x:Name="btnIgnoriraj" Content="&#xE80F;"  Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Vaja" Background="LightGray" Margin="10,2,0,0" Click="btnIgnoriraj_Click"/>
+                    <Button x:Name="btnTest" Content="&#xEC31;" Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Test" Background="LightGray" Margin="10,2,0,0" Click="btnIgnoriraj_Click"/>
+                </StackPanel>
+                <Button Grid.Column="1"  x:Name="btnStatistika" 
+                Content="&#xE8BC;" Style="{StaticResource RoundedButton}" FontSize="19" 
+                FontFamily="Segoe MDL2 Assets" Tag="Stat" Background="LightGray" 
+                Width="50"  HorizontalContentAlignment="Stretch" Margin="0,2,10,0"
+                HorizontalAlignment="Right"
+                Click="btnStatistika_Click" />
+            </Grid>
+        </Border>
     </Grid>
 </Page>
