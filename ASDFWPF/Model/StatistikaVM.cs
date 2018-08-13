@@ -44,9 +44,10 @@ namespace ASDFWPF
 
         public static IEnumerable<RezultatiZaVajo> GetItemsPoDatumu(string s, string n)
         {
+            //zberi vse rezultate po datumu in načinu dela
             var x = (from a in _pvm.AllGroupsD
-                where a.Title == s && a.NačinDela == n
-                select a).FirstOrDefault();
+                     where a.Title == s && a.NačinDela == n
+                     select a).FirstOrDefault();
             //var y = from b in x.Items
             //        select b;
             return x.Items;
@@ -75,7 +76,7 @@ namespace ASDFWPF
             //dodani skupine in če je prosto datumi
             var dat =
                 lokalniR.Where(e => e.ImeRac == PrivzetiViewModel.Uporabnik)
-                    .Select(e => new {Datum = e.zadnjicReseno.Value.Date, S = e.skupina.OpisSkupine, e.način})
+                    .Select(e => new { Datum = e.zadnjicReseno.Value.Date, S = e.skupina.OpisSkupine, e.način })
                     .Distinct();
             foreach (var a in dat)
             {
@@ -105,8 +106,8 @@ namespace ASDFWPF
                 r.Skupina = item.skupina;
                 r.StCrk = item.stCrk;
                 r.Udarci = item.udarci;
-                r.Procent = (decimal) r.Napake/r.StCrk;
-                if (item.zadnjicReseno != null) r.ZadnjičRešeno = (DateTime) item.zadnjicReseno;
+                r.Procent = (decimal)r.Napake / r.StCrk;
+                if (item.zadnjicReseno != null) r.ZadnjičRešeno = (DateTime)item.zadnjicReseno;
                 if (r.ImeRac == PrivzetiViewModel.Uporabnik)
                 {
                     _pvm.VajaR.Add(r);
@@ -151,9 +152,9 @@ namespace ASDFWPF
                     x.Cas = x.Items.Select(e => e.Cas).Sum();
 
                     x.StCrk = x.Items.Select(e => e.StCrk).Sum();
-                    x.Procent = x.Napake/(decimal) x.StCrk;
+                    x.Procent = x.Napake / (decimal)x.StCrk;
                     x.Udarci = x.Items.Select(e => e.Udarci).Sum();
-                    x.Hitrost = (x.Udarci - x.Napake*25)/(double) (x.Cas/60);
+                    x.Hitrost = (x.Udarci - x.Napake * 25) / (double)(x.Cas / 60);
 
                     //lahko še kaj
                     if (x.Procent <= 0.002m)
@@ -185,117 +186,13 @@ namespace ASDFWPF
                     var sd1 = sd.Items.OrderBy(e => e.Id);
                     sd.Od = sd1.FirstOrDefault().Id;
                     sd.Do = sd1.LastOrDefault().Id;
-                    sd.Cas = sd.Cas/60;
+                    sd.Cas = sd.Cas / 60;
                 }
             }
         }
 
         // še ni - ali bo sploh treba iz strežnika pobirati rezultate - so samo za prof, v primeru nesreče,
         // uporabnik jih na strežniku ne more gledati, so pa isti, kot so lokalno
-        public static async Task<bool> NaložiRezultateRemoteAsync()
-        {
-            _pvm.AllGroupsD = new ObservableCollection<SkupineRezultatovDatum>();
-            _pvm.AllGroups = new ObservableCollection<SkupineRezultatov>();
-            _pvm.VajaR = new ObservableCollection<RezultatiZaVajo>();
-
-            var client = new HttpClient();
-            client.MaxResponseContentBufferSize = 1024*1024; // Read up to 1 MB of data
-            try
-            {
-                var response = await client.GetAsync(new Uri("http://gimnazija.scng.si/strojepisje/api/rezultati"));
-                response.EnsureSuccessStatusCode();
-
-                var result = await response.Content.ReadAsStringAsync();
-            }
-            // Parse the JSON recipe data
-            //if (result != "")
-            //{
-            //    var rezultati = JsonArray.Parse(result);
-
-            //    foreach (var item in rezultati)
-            //    {
-            //        var obj = item.GetObject();
-            //        var r = new RezultatiZaVajo();
-            //        foreach (var key in obj.Keys)
-            //        {
-            //            IJsonValue val;
-            //            if (!obj.TryGetValue(key, out val))
-            //                continue;
-
-            //            switch (key)
-            //            {
-            //                case "idVaje":
-            //                    r.Id = (int) val.GetNumber();
-            //                    break;
-            //                case "napake":
-            //                    r.Napake = (int) val.GetNumber();
-            //                    break;
-            //                case "porabljencas":
-            //                    r.Cas = (decimal) val.GetNumber();
-            //                    break;
-            //                case "zadnjicReseno":
-            //                    var recipeGroup = val.GetString();
-            //                    r.ZadnjičRešeno = DateTime.Parse(recipeGroup);
-            //                    break;
-            //                case "udarci":
-            //                    r.Udarci = (int) val.GetNumber();
-            //                    break;
-            //                case "stCrk":
-            //                    r.StCrk = (int) val.GetNumber();
-            //                    break;
-            //                case "način":
-            //                    r.NacinDela = val.GetString();
-            //                    break;
-            //                case "ImeRac":
-            //                    //string skupaj = val.GetString();
-            //                    //string[] posebej = skupaj.Split(';');
-            //                    //try
-            //                    //{
-            //                    //    r.ImeRac = posebej[1]; //shranimo samo ime uporabnika za prikaz rezultatov
-            //                    //}
-            //                    //catch
-            //                    //{
-            //                    //    r.ImeRac = posebej[0];
-            //                    //}
-            //                    r.ImeRac = val.GetString();
-            //                    break;
-            //                case "skupina":
-            //                    var vse = val.GetObject();
-            //                    var s = new Skupina();
-            //                    foreach (var k in vse.Keys)
-            //                    {
-            //                        IJsonValue val1;
-            //                        if (!vse.TryGetValue(k, out val1))
-            //                            continue;
-            //                        switch (k)
-            //                        {
-            //                            case "OpisSkupine":
-            //                                s.OpisSkupine = val1.GetString();
-            //                                break;
-            //                        }
-            //                    }
-            //                    r.Skupina = s;
-            //                    break;
-            //            }
-            //        }
-            //    if (r.StCrk != 0)
-            //        r.Procent = (decimal) r.Napake/r.StCrk;
-            //    else
-            //        r.Procent = 0;
-            //    //if (r.ImeRac==PrivzetiViewModel.Uporabnik)
-            //    _pvm.VajaR.Add(r);
-            //}
-            //napolnjene vse vaje
-            // IzdelajPoDatumih();
-            //    }
-            //    return true;
-            //}
-            catch (HttpRequestException)
-            {
-                return false;
-            }
-            return true;
-        }
 
         private static SkupineRezultatovDatum CreateTipkanjeGroupD(string obj)
         {

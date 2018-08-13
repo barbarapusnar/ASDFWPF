@@ -20,18 +20,31 @@ namespace ASDFWPF
     /// </summary>
     public partial class Statistika : Page
     {
-        public List<SkupineRezultatov> Groups { get; set; }
+        //public List<SkupineRezultatov> Groups { get; set; }
         public List<SkupineRezultatovDatum> GroupsD { get; set; }
         public Statistika(NačinDela način)
         {
             InitializeComponent();
+            txtUporabnik.Text = PrivzetiViewModel.Uporabnik;
+            smallImage.Source = PrivzetiViewModel.UporabnikSlika;
+            smallImage.Visibility = Visibility.Visible;
+
             StatistikaVM.NaložiRezultateAsync();
-            var sampleDataGroups = StatistikaVM.GetGroups("AllGroups");
-            Groups= sampleDataGroups.ToList();
+           // var sampleDataGroups = (StatistikaVM.GetGroupsD("AllGroups").ToList());
+           // Groups = sampleDataGroups;
             var sampleDataGroupsD = StatistikaVM.GetGroupsD("AllGroups");
-            GroupsD= sampleDataGroupsD.ToList();
-            itemGridView.ItemsSource = Groups;
+
+            GroupsD = sampleDataGroupsD.ToList(); 
+            itemGridView.ItemsSource = GroupsD;
+            
+            
+            
             itemListView.ItemsSource = GroupsD;
+
+
+           
+        
+
         }
     }
 }

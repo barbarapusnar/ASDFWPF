@@ -31,7 +31,7 @@ namespace ASDFWPF
             InitializeComponent();
             //PrivzetiViewModel.NaložiRezultate();
             var sampleDataGroups = PrivzetiViewModel.GetGroups("AllGroups");
-            PrivzetiViewModel.NaložiStareRezultateAsync();
+           // PrivzetiViewModel.NaložiStareRezultateAsync();
             this.Groups = sampleDataGroups.ToList<TipkanjeDataGroup>();
             itemGridView.ItemsSource = Groups;
             txtUporabnik.Text = PrivzetiViewModel.Uporabnik; ;

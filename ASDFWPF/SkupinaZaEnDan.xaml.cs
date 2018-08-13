@@ -38,7 +38,7 @@ namespace ASDFWPF
             //s = (string)navigationParameter;
             vaje1 = int.Parse(vaje);
             int st1 = int.Parse(st);
-            opisSkupine = vaje+" --" +(vaje+st);
+            opisSkupine = vaje+"--" +(vaje1+st1);
             var vse = PrivzetiViewModel.GetVajeZaDanPoŠtevilki(vaje1,st1);
             štVaj = vse.Count();
             številkeVaj = new int[štVaj];

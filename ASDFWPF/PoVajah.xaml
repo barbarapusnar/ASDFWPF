@@ -194,13 +194,13 @@
                       VerticalAlignment="Stretch"  Grid.ColumnSpan="2"
                       ItemContainerStyle="{StaticResource PredlogaSeznama }"
                       />
-            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2"  Margin="0,10,0,10" >
-                <Button x:Name="btnPrav1" Visibility="Collapsed" Content="✔" 
-                         Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
-                <Button x:Name="btnPrav2" Visibility="Collapsed" Content="✔" 
-                         Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
-                <Button x:Name="btnPrav3" Visibility="Collapsed" Content="✔" 
-                        Height="50" Width="60" BorderThickness="0" IsTabStop="False" />
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2"  Margin="0,10,0,10" Width="30" HorizontalAlignment="Left">
+                <Button x:Name="btnPrav1" Visibility="Collapsed" Content="✔" Foreground="Green"
+                         Height="50" Width="30" BorderThickness="0" IsTabStop="False" />
+                <Button x:Name="btnPrav2" Visibility="Collapsed" Content="✔" Foreground="Green"
+                         Height="50" Width="30" BorderThickness="0" IsTabStop="False" />
+                <Button x:Name="btnPrav3" Visibility="Collapsed" Content="✔" Foreground="Green"
+                        Height="50" Width="30" BorderThickness="0" IsTabStop="False" />
             </StackPanel>
             <StackPanel Grid.Row="1"  Orientation="Vertical" Margin="5,10,0,10" Grid.ColumnSpan="2">
                 <!--<TextBlock x:Name="tbTrenutna" FontSize="26.667" FontWeight="Light"  HorizontalAlignment="Left" Height="46" Margin="20,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1346" />-->
@@ -241,10 +241,10 @@
             </StackPanel>
         </Grid>
 
-        <StackPanel x:Name="barNacin" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left"  Width="80">
+        <!--<StackPanel x:Name="barNacin" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left"  Width="80">
             <Button x:Name="btnIgnoriraj" Content="&#xE80F;"  Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Vaja" Background="LightGray"/>
             <Button x:Name="btnTest" Content="&#xEC31;" Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Test" Background="LightGray"/>
-        </StackPanel>
+        </StackPanel>-->
         <Button Grid.Row="2" Grid.Column="1" x:Name="btnStatistika" 
                 Content="&#xE8BC;" Style="{StaticResource RoundedButton}" FontSize="19" 
                 FontFamily="Segoe MDL2 Assets" Tag="Stat" Background="LightGray" 

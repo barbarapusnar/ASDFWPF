@@ -34,6 +34,7 @@ namespace ASDFWPF
             else
                 PrivzetiViewModel.Uporabnik = UserPrincipal.Current.DisplayName;
             GetCurrentUserProfileImage();
+            PrivzetiViewModel.NaložiStareRezultateAsync();
             if (radSam.IsChecked != null && (bool)radSam.IsChecked)
             {
                 this.NavigationService.Navigate(new Page1());

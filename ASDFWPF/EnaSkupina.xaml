@@ -39,7 +39,7 @@
                     <Border.Background>
                         <SolidColorBrush Color="{Binding napake, Converter={StaticResource IntToColor}}" Opacity="0.75" />
                     </Border.Background>
-                    <Button  Content="✔" HorizontalAlignment="Center"
+                    <Button  Content="✔" HorizontalAlignment="Center" Background="Transparent" BorderThickness="0"
                             VerticalAlignment="Center" />
                 </Border>
                 <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">

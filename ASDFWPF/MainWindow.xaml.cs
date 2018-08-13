@@ -33,7 +33,7 @@ namespace ASDFWPF
         public  void Podatki()
         {
                 PrivzetiViewModel.NaložiRezultate();
-                PrivzetiViewModel.NaložiStareRezultateAsync();
+               
         
         }
         private void Button_Click(object sender, RoutedEventArgs e)

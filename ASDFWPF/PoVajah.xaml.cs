@@ -90,8 +90,8 @@ namespace ASDFWPF
 
             if (oba[1] != "prosto")
                 jeProf = true;
-            if (jeProf)
-                barNacin.IsEnabled = false;
+            //if (jeProf)
+            //    barNacin.IsEnabled = false;
             if (!jeProf || načinDela == NačinDela.Test)
                 btnNovaVaja.Visibility = Visibility.Collapsed;
             else
@@ -244,7 +244,7 @@ namespace ASDFWPF
                 napake = 0;
                 btnNovaVaja.IsEnabled = false;
                // backButton.IsEnabled = false; mogoče v vrstici, kjer ga imaš
-                barNacin.IsEnabled = false;
+                //barNacin.IsEnabled = false;
                 številoUdarcev = 0;
                 vsehČrkVVaji += trenutnaVrstica.tekst.Length;
             }
@@ -459,7 +459,7 @@ namespace ASDFWPF
             vm.Stop();
 
             var čas = (int)vm.Sekunde + vm.Minute * 60;
-            var hitrost = (int)(številoUdarcev / (čas / 60.0));
+            var hitrost = (int)((številoUdarcev - napake * 25) / (čas / 60.0)); //preveri
             nvProcentih.Text = string.Format("{0,5:P2}", (double)napake / vsehČrkVVaji);
             ud.Text = številoUdarcev + "";
 
@@ -484,48 +484,26 @@ namespace ASDFWPF
             trenutnaVrstica = null;
             txtVnos.IsEnabled = false;
             btnZačni.Content = "Naslednja vaja";
+           
             btnZačni.IsEnabled = true;
             //if (načinDela != NačinDela.Test)
             //    backButton.IsEnabled = true;
             if (jeProf && načinDela != NačinDela.Test)
             {
                 btnNovaVaja.IsEnabled = true;
-                //v bistvu z vrstnim redom omogočanja gumbov, določaš fokus
-                //string f= (FocusManager.GetFocusedElement() as Button).Content.ToString();
-                //FocusManager.TryMoveFocus(FocusNavigationDirection.Next);
-                //FocusManager.TryMoveFocus(FocusNavigationDirection.Next);               
+                          
             }
             //lahko začne znova, samo če ima cikel vaj, sicer iz vaje ne more iti na drugo vajo kot eno naprej      
-
-            if (!jeProf)
-                barNacin.IsEnabled = true;
             tbOK.Text = "";
             grd.SelectedIndex = 0;
             var način = načinDela + " " + oba[1];
             //prava pozicija
             var nov = PrivzetiViewModel.SetItemR(št, napake, čas, številoUdarcev, vsehČrkVVaji, način, up, opisS);
-            // tudi tukaj je treba poskrbeti, da se bodo rezultati pisali tudi, ko ni strežnika
-            //  samo lokalni zapis po vsaki vaji, po vseh vajah v eni skupini ali ko se gre na novo stran, zapis na strežnik,če obstaja
-            // pišemo samo na strežnik vsako vajo, lokalno je že v memory , 
-            // pišemo, ko zapustimo sklop ali še bolje zapremo program
-            // await PrivzetiViewModel.PišiRezultate(nov);
-            //var uspeh = false;
-            //if (App.IsInternet() && PrivzetiViewModel.JeServis)
-            //{
-            //    uspeh = await PrivzetiViewModel.PišiRezultateRemote(nov);
-            //}
-            //if (!uspeh)
-            //{
-                var busyIndicator = PrepareIndeterminateTask("Počakaj trenutek, rezultati samo na tem računalniku");
-                PrivzetiViewModel.PišiRezultate();
-                CleanUpIndeterminateTask(busyIndicator);
-          //  }
-            //else
-            //{
+            //var busyIndicator = PrepareIndeterminateTask("Počakaj trenutek, rezultati samo na tem računalniku");
+            PrivzetiViewModel.PišiRezultate();
+           // CleanUpIndeterminateTask(busyIndicator);
 
-            //}
-            //tukaj je problem, če prehitro pritisneš na enter, preden zapie karkoli - disable???
-            //  btnZačni.Focus(FocusState.Programmatic);
+            btnZačni.Focus();
         }
 
         private void CleanUpIndeterminateTask(BusyIndicator busyIndicator)
@@ -604,9 +582,9 @@ namespace ASDFWPF
             {
                 //izbrisati je treba vse stare rezultate in začeti znova  
                 var ZaOdstrani = from b in PrivzetiViewModel.GetVsiRezultatiUp(PrivzetiViewModel.Uporabnik)
-                                 where b.skupina.OpisSkupine == opisS && b.način == načinDela + " prof "
+                                 where b.skupina.OpisSkupine == opisS && b.način == načinDela + " prof"
                                  select b;
-                foreach (var x in ZaOdstrani)
+                foreach (var x in ZaOdstrani.ToList())
                     PrivzetiViewModel.Briši(x);
                 //TO IZBRIŠE SAMO LOKALNO - STREŽNIK???
                 pomžniŠtevec = 0;
@@ -726,7 +704,7 @@ namespace ASDFWPF
                     if (vnešenZnak != praviZnak)
                     {
                         napake++;
-                        txtNapake.Text = napake.ToString();
+                        txtN.Text = napake.ToString();
                         m.PobarvajNapačno(e.Key);
                         narobe.Add(e.Key);
                         e.Handled = true;
