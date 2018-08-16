@@ -36,15 +36,16 @@ namespace ASDFWPF
 
             GroupsD = sampleDataGroupsD.ToList(); 
             itemGridView.ItemsSource = GroupsD;
-            
-            
-            
-            itemListView.ItemsSource = GroupsD;
-
-
            
-        
 
+        }
+
+        private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var a = new ZaPagePayload1();
+            a.title = ((SkupineRezultatovDatum)itemGridView.SelectedItem).Title;
+            a.n = ((SkupineRezultatovDatum)itemGridView.SelectedItem).NačinDela;
+            this.NavigationService.Navigate(new RezultatiPoVajahZaEnDan(a));
         }
     }
 }

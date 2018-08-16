@@ -20,4 +20,9 @@ namespace ASDFWPF
         public string opisS { get; set; }
 
     }
+    public class ZaPagePayload1
+    {
+        public string title { get; set; }
+        public string n { get; set; }
+    }
 }

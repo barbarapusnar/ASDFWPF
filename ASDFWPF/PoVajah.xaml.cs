@@ -607,7 +607,7 @@ namespace ASDFWPF
 
         private void txtVnos_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            številoUdarcev++;
+           
             int pomožna = (int)(KeyInterop.VirtualKeyFromKey(e.Key));
             vnešenZnak = (char)(pomožna);
             praviZnak = trenutnaVrstica.tekst[štČrk];
@@ -692,7 +692,7 @@ namespace ASDFWPF
                 vnešenZnak = '(';
             if (vnešenZnak == 57 && (jeS))
                 vnešenZnak = ')';
-
+            številoUdarcev++;
             switch (načinDela)
             {
                 case NačinDela.Ignoriraj:
@@ -747,6 +747,7 @@ namespace ASDFWPF
                     }
                     break;
             }
+           
             štČrk++;
         }
     }

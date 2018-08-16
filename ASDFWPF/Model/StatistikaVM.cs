@@ -85,6 +85,9 @@ namespace ASDFWPF
                 {
                     b.Title = a.S;
                     b.NačinDela = a.način;
+                    var d = a.Datum;
+                    var d1 = string.Format("{0:dd/MMM/yy}", d.Date);
+                    b.Datum = d1;
                 }
                 else
                 {
@@ -92,6 +95,7 @@ namespace ASDFWPF
                     var d1 = string.Format("{0:dd/MMM/yy}", d.Date);
                     b.Title = d1;
                     b.NačinDela = a.način;
+                    b.Datum = d1;
                 }
                 _pvm.AllGroupsD.Add(b);
             }

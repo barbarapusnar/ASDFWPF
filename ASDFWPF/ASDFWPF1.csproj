@@ -118,6 +118,9 @@
     <Compile Include="Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RezultatiPoVajahZaEnDan.xaml.cs">
+      <DependentUpon>RezultatiPoVajahZaEnDan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SkupinaZaEnDan.xaml.cs">
       <DependentUpon>SkupinaZaEnDan.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Prijava.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RezultatiPoVajahZaEnDan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

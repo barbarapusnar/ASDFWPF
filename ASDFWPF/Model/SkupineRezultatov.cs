@@ -19,13 +19,18 @@ namespace ASDFWPF
         private decimal procent;
         private int stCrk;
         private int udarci;
+        private string _datum;
 
         public string Title
         {
             get { return _title; }
             set { _title=value; }
         }
-
+        public string Datum
+        {
+            get { return _datum; }
+            set { _datum = value; }
+        }
         public string NačinDela
         {
             get { return _načinDela; }
@@ -112,7 +117,7 @@ namespace ASDFWPF
             get { return _title; }
             set { _title = value; }
         }
-
+        
         public ObservableCollection<SkupineRezultatovDatum> ItemsD
         {
             get { return _itemsD; }
