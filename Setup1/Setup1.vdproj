@@ -218,6 +218,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
         "Release"
@@ -687,7 +695,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Strojepisje"
         "ProductCode" = "8:{0F29D5B7-849A-4DA0-997A-50B6866179BE}"
-        "PackageCode" = "8:{4297B1FB-9774-47E3-B517-54B220F5A88F}"
+        "PackageCode" = "8:{565211AC-F0B6-4580-A818-E0A0CA3DF293}"
         "UpgradeCode" = "8:{766111E8-147E-46F6-A68C-EB669FB91553}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -807,7 +815,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_23E0D33207B64C399ECF1F2376B18DC4"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6FE408DA89C54F27AE0A14756012411E"
             {
             "Name" = "8:Strojepisje"
             "Arguments" = "8:"
@@ -815,8 +823,22 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_ED82179E1E24433396F824B8075AA460"
-            "Folder" = "8:_ED82179E1E24433396F824B8075AA460"
+            "Target" = "8:_095827AEDFCA401FBDFAB0FE3E5AA784"
+            "Folder" = "8:_26776D000841425D9C38FA31FFE8AB31"
+            "WorkingFolder" = "8:_ED82179E1E24433396F824B8075AA460"
+            "Icon" = "8:_03BAE8E3AC0C4685BD5BE690A3DCF178"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F52818F64C7641FBACB5B402E5FCFF2B"
+            {
+            "Name" = "8:Strojepisje"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_095827AEDFCA401FBDFAB0FE3E5AA784"
+            "Folder" = "8:_45285D4237E1447687B00F72229314F8"
             "WorkingFolder" = "8:_ED82179E1E24433396F824B8075AA460"
             "Icon" = "8:_03BAE8E3AC0C4685BD5BE690A3DCF178"
             "Feature" = "8:"
@@ -1222,7 +1244,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_095827AEDFCA401FBDFAB0FE3E5AA784"
             {
-            "SourcePath" = "8:..\\ASDFWPF\\obj\\Release\\ASDFWPF.exe"
+            "SourcePath" = "8:..\\ASDFWPF\\obj\\Debug\\ASDFWPF.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_ED82179E1E24433396F824B8075AA460"
