@@ -258,7 +258,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Resource Include="Slike\user-32.png" />
+    <Content Include="Slike\user-32.png" />
     <Content Include="Slike\vaje.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
