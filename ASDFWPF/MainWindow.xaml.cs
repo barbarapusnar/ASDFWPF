@@ -20,7 +20,7 @@ namespace ASDFWPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Page
     {
         PrivzetiViewModel pvm = new PrivzetiViewModel();
        
@@ -39,7 +39,7 @@ namespace ASDFWPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //pisanje rezultatov, samo, če niso še shranjeni ali če so novi
-            this.Close();
+           // this.Close();
         }
     }
 }

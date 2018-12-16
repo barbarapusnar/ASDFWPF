@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ASDFWPF"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="EnaSkupina">
+      Title="EnaSkupina" Loaded="Page_Loaded">
     <Page.Resources>
         <local:IntToColor x:Key="IntToColor"/>
         <local:StringFormatConverter x:Key="StringFormatConverter" />

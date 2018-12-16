@@ -105,10 +105,17 @@ namespace ASDFWPF
             številkeVaj = y.številkeVajZaDan;
             pomžniŠtevec = y.trenutnaPozicijaVaj;
             //tukaj bo vseeno treba nekaj narediti
-            //if (načinDela == NačinDela.Test)
-            //{
-            //    backButton.IsEnabled = false;
-            //}
+            if (načinDela == NačinDela.Test)
+            {
+                Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Render, new Action(() =>
+                {
+                    // var navWindow = this as Page;
+                    
+                    var navWindow = Window.GetWindow(this) as NavigationWindow;
+                    if (navWindow != null) navWindow.ShowsNavigationUI = false;
+                   //this.ShowsNavigationUI = false;
+                }));
+            }
             if (načinDela == NačinDela.Ignoriraj)
             {
                 pageTitle.Text = "Vaja #" + x + " - Vaje " + oba[1];
@@ -501,6 +508,7 @@ namespace ASDFWPF
             var nov = PrivzetiViewModel.SetItemR(št, napake, čas, številoUdarcev, vsehČrkVVaji, način, up, opisS);
             //var busyIndicator = PrepareIndeterminateTask("Počakaj trenutek, rezultati samo na tem računalniku");
             PrivzetiViewModel.PišiRezultate();
+            
            // CleanUpIndeterminateTask(busyIndicator);
 
             btnZačni.Focus();

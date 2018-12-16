@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:ASDFWPF"
              xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" 
              x:Class="ASDFWPF.App"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Window1.xaml">
     <Application.Resources>
 
         <LinearGradientBrush x:Key="NavigationWindowNavigationChromeBackground" EndPoint="0,1" StartPoint="0,0">

@@ -49,28 +49,15 @@ namespace ASDFWPF
                 k++;
             }
             Group = vse.ToList();
-            itemGridView.ItemsSource = vse;
+           // itemGridView.ItemsSource = vse;
             reseno = new bool[štVaj];
             napake = new int[štVaj];
             načinDela = NačinDela.Ignoriraj;
             pageTitle.Text = "Vaje za danes \t Način dela: " + načinDela;
-            IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
-            var i = 0;
-            foreach (var x in vse)
-            {
-                var a = (from b in r
-                         where b.idVaje == x.Id
-                         select b).FirstOrDefault();
-                if (a != null)
-                {
-                    napake[i] = a.napake;
-                    reseno[i] = true;
-                }
-                i++;
-            }
+            
            
         }
-
+        
         private void btnStatistika_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Statistika(načinDela));
@@ -137,6 +124,26 @@ namespace ASDFWPF
                 a.opisS = opisSkupine;
                 this.NavigationService.Navigate(new PoVajah(a));
             }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
+            var i = 0;
+            foreach (var x in Group)
+            {
+                var a = (from b in r
+                         where b.idVaje == x.Id
+                         select b).FirstOrDefault();
+                if (a != null)
+                {
+                    napake[i] = a.napake;
+                    reseno[i] = true;
+                }
+                i++;
+            }
+            itemGridView.ItemsSource = null;
+            itemGridView.ItemsSource = Group;
         }
     }
 }

@@ -48,10 +48,45 @@ namespace ASDFWPF
             pageTitle.Text = Group.Title;
             txtOpis.Text = Group.Description;
             imGrupe.Source = Group.Image;
-            itemGridView.ItemsSource = Group.Items;
+           // itemGridView.ItemsSource = Group.Items;
             reseno = new bool[Group.Items.Count + 1];
             napake = new int[Group.Items.Count + 1];
 
+            //IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
+            //var i = 1;
+            //foreach (var x in Group.Items)
+            //{
+            //    var a = (from b in r
+            //             where b.idVaje == x.Id
+            //             select b).FirstOrDefault();
+            //    if (a != null)
+            //    {
+            //        napake[i] = a.napake;
+            //        reseno[i] = true;
+            //    }
+            //    i++;
+            //}
+            //DefaultViewModel["JeZe"] = reseno;
+            //DefaultViewModel["Narobe"] = napake;
+        }
+
+        private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {  if (itemGridView != null &itemGridView.SelectedIndex!=-1)
+            {
+                int x = itemGridView.SelectedIndex;
+                var vaja = Group.Items[x];
+                var a = new ZaPagePayload
+                {
+                    št = vaja.Id,
+                    n = NačinDela.Ignoriraj + " " + "prosto"
+                };
+
+                this.NavigationService.Navigate(new PoVajah(a));
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
             IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
             var i = 1;
             foreach (var x in Group.Items)
@@ -66,23 +101,10 @@ namespace ASDFWPF
                 }
                 i++;
             }
-            //DefaultViewModel["JeZe"] = reseno;
-            //DefaultViewModel["Narobe"] = napake;
-        }
+           
+            itemGridView.ItemsSource = null;
+            itemGridView.ItemsSource = Group.Items;
 
-        private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {  if (itemGridView != null)
-            {
-                int x = itemGridView.SelectedIndex;
-                var vaja = Group.Items[x];
-                var a = new ZaPagePayload
-                {
-                    št = vaja.Id,
-                    n = NačinDela.Ignoriraj + " " + "prosto"
-                };
-
-                this.NavigationService.Navigate(new PoVajah(a));
-            }
         }
     }
 }

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ASDFWPF"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SkupinaZaEnDan">
+      Title="SkupinaZaEnDan" Loaded="Page_Loaded">
     <Page.Resources>
 
         <Style x:Key="RoundedButton" TargetType="Button">
