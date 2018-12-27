@@ -32,7 +32,11 @@
                 <Image Width="50" Height="30" Margin="5" Source="Slike/rdeča.jpg" Opacity="0" />
                 <StackPanel>
                     <TextBlock Name="tbPredloga" HorizontalAlignment="Left" FontSize="26.667" Height="35" Text="{Binding tekst}"
-                               VerticalAlignment="Top" />
+                               VerticalAlignment="Top" Cursor="Arrow" >
+                        <TextBlock.TextEffects>
+                            <TextEffect Foreground="Blue" PositionCount="{Binding Text, Converter={StaticResource StringToIntConverter}, ElementName=txtVnos}"/>
+                        </TextBlock.TextEffects>
+                    </TextBlock>
                     <Slider Name="sld" Maximum="{Binding tekst.Length}"
                             Value="{Binding Text, Converter={StaticResource StringToIntConverter}, ElementName=txtVnos}"
                             Height="30" TickPlacement="TopLeft" 

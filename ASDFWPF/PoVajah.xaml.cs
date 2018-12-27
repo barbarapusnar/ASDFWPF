@@ -615,7 +615,7 @@ namespace ASDFWPF
 
         private void txtVnos_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-           
+            
             int pomožna = (int)(KeyInterop.VirtualKeyFromKey(e.Key));
             vnešenZnak = (char)(pomožna);
             praviZnak = trenutnaVrstica.tekst[štČrk];
