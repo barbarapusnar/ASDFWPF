@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" KeyUp="Preveri">
     <UserControl.Resources>
+        <local:BoolToColor x:Key="BoolToColor"/>
         <local:BoolToInt2 x:Key="BoolToInt2"/>
         <local:BoolToInt1 x:Key="BoolToInt1"/>
         <local:BoolToInt3 x:Key="BoolToInt3"/>
@@ -247,22 +248,16 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnCapsLock" Command="{Binding CapsLockCommand}" Grid.Column="0" Style="{StaticResource specialKeyStyle}" HorizontalAlignment="Stretch">
+            <Button x:Name="btnCapsLock" Grid.Column="0" Foreground="White" FontSize="12" Margin="0,0,2,1"
+                    HorizontalAlignment="Stretch" IsTabStop="False" Style="{StaticResource specialKeyStyle}">
+                <Button.Background>
+                    <SolidColorBrush Color="{Binding IsCapsLock,Converter={StaticResource BoolToColor}}" />
+                </Button.Background>
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Center"  Text="Caps" />
-                    <!--<Line Stroke="Yellow" X1="0" Y1="6" X2="50" Y2="6"  />-->
+                    <TextBlock HorizontalAlignment="Center" Text="Caps" />
                 </StackPanel>
             </Button>
             <Button x:Name="btnVK_A" Content="A" Grid.Column="1" Width="Auto">
-                <!--<Button.OpacityMask>
-                    <LinearGradientBrush StartPoint="0.1,0.1" EndPoint="0.75,0.75">
-                        <LinearGradientBrush.GradientStops>
-                            <GradientStop Offset="0" Color="Black"/>
-                            <GradientStop Offset="1" Color="Transparent"/>
-                        </LinearGradientBrush.GradientStops>
-                    </LinearGradientBrush>
-
-                </Button.OpacityMask>-->
                 <Button.Background>
                     <SolidColorBrush Color="{Binding OzadjeA}"/>
                 </Button.Background>
@@ -313,8 +308,15 @@
                 </Button.Background>
             </Button>
             <Button x:Name="btnVK_Oem7" Content="Ć" Grid.Column="11" Width="Auto">
+                <Button.Background>
+                    <SolidColorBrush Color="{Binding OzadjeCcc}"/>
+                </Button.Background>
             </Button>
-            <Button x:Name="btnVK_Oem8" Content="Ž" Grid.Column="12" Margin="0" Width="Auto" />
+            <Button x:Name="btnVK_Oem8" Content="Ž" Grid.Column="12" Margin="0" Width="Auto" >
+                <Button.Background>
+                    <SolidColorBrush Color="{Binding OzadjeZz}"/>
+                </Button.Background>
+            </Button>
             <Button x:Name="btnEnter"  Command="{Binding KeyPressedCommand}"  Grid.Column="13" Style="{StaticResource specialKeyStyle}" Content="Enter" HorizontalAlignment="Stretch" Margin="1,0,2,1" />
         </Grid>
         <Grid x:Name="VrsticaTekstA" Grid.Row="3">
@@ -429,7 +431,6 @@
 				Style="{StaticResource specialKeyStyle}" HorizontalAlignment="Stretch">
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center" Text="Shift" />
-                    <!--<Line Stroke="Yellow" X1="0" Y1="6" X2="50" Y2="6"  />-->
                 </StackPanel>
             </Button>
             <Button x:Name="btnVK_Z" Content="Y" Grid.Column="1" Visibility="{Binding tekstY,Converter={StaticResource BooleanToVisibilityConverter}}" Width="Auto">

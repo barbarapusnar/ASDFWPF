@@ -50,6 +50,7 @@ namespace ASDFWPF
         public List<Vsebina> VsebinaVrstic = new List<Vsebina>();
         public string skupina { get; set; }
         public double udarci { get; set; }
+       
         public PoVajah(ZaPagePayload navigationParameter)
         {
             InitializeComponent();
@@ -362,24 +363,25 @@ namespace ASDFWPF
                     break;
                 case NačinDela.Ponovno:
                     var enako = true;
-                    tbPomoc.Text = "";
-                    tbOK.Text = "";
-                    tbPomoc.Text = trenutnaVrstica.tekst;
-                    tbOK.Visibility = Visibility.Collapsed;
+                    //tbPomoc.Text = "";
+                    //tbOK.Text = "";
+                    //tbPomoc.Text = trenutnaVrstica.tekst;
+                    //tbOK.Visibility = Visibility.Collapsed;
                     for (var a = 0; a < trenutnaVrstica.tekst.Length; a++)
                     {
                         if (trenutnaVrstica.tekst[a] != txtVnos.Text[a])
                         //zamenjaj barvo ozadja
                         {
-                            tbOK.Inlines.Add(
-                                (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Red) }));
+
+                            //tbOK.Inlines.Add(
+                            //    (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Red) }));
                             napake++;
                             enako = false;
                         }
                         else
                         {
-                            tbOK.Inlines.Add(
-                                (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Green) }));
+                            //tbOK.Inlines.Add(
+                            //    (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Green) }));
                         }
                     }
                     txtNapake.Text = napake.ToString();
@@ -389,8 +391,8 @@ namespace ASDFWPF
                     }
                     else
                     {
-                        tbPomoc.Visibility = Visibility.Visible;
-                        tbOK.Visibility = Visibility.Visible;
+                        //tbPomoc.Visibility = Visibility.Visible;
+                        //tbOK.Visibility = Visibility.Visible;
                         štČrk = 0;
                         txtVnos.Text = "";
                     }
@@ -399,24 +401,24 @@ namespace ASDFWPF
                 case NačinDela.Uredi:
                 case NačinDela.LahekTest:
                     var enako1 = true;
-                    tbPomoc.Text = "";
-                    tbOK.Text = "";
-                    tbPomoc.Text = trenutnaVrstica.tekst;
-                    tbOK.Visibility = Visibility.Collapsed;
+                    ////tbPomoc.Text = "";
+                    ////tbOK.Text = "";
+                    ////tbPomoc.Text = trenutnaVrstica.tekst;
+                    ////tbOK.Visibility = Visibility.Collapsed;
                     for (var a = 0; a < trenutnaVrstica.tekst.Length; a++)
                     {
                         if (trenutnaVrstica.tekst[a] != txtVnos.Text[a])
                         //zamenjaj barvo ozadja
                         {
-                            tbOK.Inlines.Add(
-                                (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Red) }));
+                            //tbOK.Inlines.Add(
+                            //    (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Red) }));
                             napake++;
                             enako1 = false;
                         }
                         else
                         {
-                            tbOK.Inlines.Add(
-                                (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Green) }));
+                            //tbOK.Inlines.Add(
+                            //    (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Green) }));
                         }
                     }
                     txtNapake.Text= napake.ToString();
@@ -426,8 +428,8 @@ namespace ASDFWPF
                     }
                     else
                     {
-                        tbPomoc.Visibility = Visibility.Visible;
-                        tbOK.Visibility = Visibility.Visible;
+                        //tbPomoc.Visibility = Visibility.Visible;
+                        //tbOK.Visibility = Visibility.Visible;
                         štČrk = txtVnos.Text.Length - 1;
                         //pri načinu dela briši je treba spremeniti trenutni položaj v textboxu vrednost spremenljivke štČrk
                         txtVnos.Focus();
@@ -457,8 +459,8 @@ namespace ASDFWPF
             trenutnaVrstica = (Vsebina)vrstice[štVrstice];
             vsehČrkVVaji += trenutnaVrstica.tekst.Length;
             grd.SelectedIndex = štVrstice;
-            tbOK.Text = "Pravilno!";
-            tbPomoc.Visibility = Visibility.Collapsed;
+            //tbOK.Text = "Pravilno!";
+            //tbPomoc.Visibility = Visibility.Collapsed;
         }
 
         private  void KonecVaje()
@@ -501,7 +503,7 @@ namespace ASDFWPF
                           
             }
             //lahko začne znova, samo če ima cikel vaj, sicer iz vaje ne more iti na drugo vajo kot eno naprej      
-            tbOK.Text = "";
+            //tbOK.Text = "";
             grd.SelectedIndex = 0;
             var način = načinDela + " " + oba[1];
             //prava pozicija
@@ -572,6 +574,7 @@ namespace ASDFWPF
         private void txtVnos_KeyUp(object sender, KeyEventArgs e)
         {
             m.VrniShift();
+
         }
 
         private void txtVnos_LostFocus(object sender, RoutedEventArgs e)

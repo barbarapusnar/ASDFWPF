@@ -12,19 +12,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition />
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Text="Strojepisje" Grid.Column="1" FontSize="34" FontWeight="Bold" Margin="0,5,0,0" />
-            <!--<Button Grid.Column="2" Content="X" Width="25" Height="25" Click="Button_Click" Margin="0,5,5,0" Padding="0" Panel.ZIndex="2" ToolTip="Zapri"/>-->
-        </Grid>
-        <!--<toolkit:BusyIndicator Name="biSHrani"
-                    IsBusy="False"
-                    BusyContent="Počakaj trenutek..." >
-        </toolkit:BusyIndicator>-->
+        <TextBlock Text="Strojepisje" FontSize="34" FontWeight="Bold" HorizontalAlignment="Center" />
         <Frame Grid.Row="1"  Name="mojOkvir" Style="{DynamicResource StilOkvira}">
         </Frame>
     </Grid>

@@ -1,18 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace ASDFWPF
+namespace ASDFWPF.Helperji
 {
-    internal class StringToIntConverter :IValueConverter
+    class DolžinaConverter : IValueConverter
     {
-      //dejansko je to ToDouble
-
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var vnos = value.ToString();
+
+            //kako dobiti tukaj širino vrtstice v pikslih???
+          
             FormattedText ft = new FormattedText(vnos,
                                             CultureInfo.CurrentCulture,
                                             FlowDirection.LeftToRight,
@@ -22,13 +27,9 @@ namespace ASDFWPF
             return ft.Width;
         }
 
-       
-
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return "";
+            throw new NotImplementedException();
         }
-
-      
     }
 }

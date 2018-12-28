@@ -120,17 +120,22 @@
     <Compile Include="EnaSkupina.xaml.cs">
       <DependentUpon>EnaSkupina.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helperji\BoolToColor.cs" />
     <Compile Include="Helperji\BoolToInt1.cs" />
     <Compile Include="Helperji\BoolToInt2.cs" />
     <Compile Include="Helperji\BoolToInt3.cs" />
     <Compile Include="Helperji\BoolToInt4.cs" />
+    <Compile Include="Helperji\DolžinaConverter.cs" />
     <Compile Include="Helperji\IntToColor1.cs" />
     <Compile Include="Helperji\IntToColor.cs" />
     <Compile Include="Helperji\NotBoolToVisibilityConverter.cs" />
     <Compile Include="Helperji\Pomoc.cs" />
     <Compile Include="Helperji\StringToColor1.cs" />
     <Compile Include="Helperji\StringToColorConverter.cs" />
+    <Compile Include="Helperji\StringToDoubleConverter.cs" />
     <Compile Include="Helperji\StringToIntConverter.cs" />
+    <Compile Include="Helperji\StringToPointConverter.cs" />
+    <Compile Include="Helperji\StringToPointConverterStart.cs" />
     <Compile Include="Helperji\StringToVisibilityCoverter.cs" />
     <Compile Include="Model\Podatki.cs" />
     <Compile Include="Helperji\SelektorPredlog.cs" />
