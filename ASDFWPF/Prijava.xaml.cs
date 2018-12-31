@@ -41,7 +41,48 @@ namespace ASDFWPF
             }
             else
             {
-                this.NavigationService.Navigate(new SkupinaZaEnDan(txtSkupina.Text,txtStevilo.Text));
+                if (radProf.IsChecked != null && (bool)radProf.IsChecked)
+                {
+                    int[] Od = new int[2];
+                    int[] Do = new int[2];
+                    try
+                    {
+                        Od[0] = int.Parse(txtSkupina.Text);
+                        Do[0] = int.Parse(txtStevilo.Text);
+                        if (Od[0] > Do[0])
+                            throw new ApplicationException("Drugo število mora biti večje");
+                        if (Do[0] > 163)
+                            Do[0] = 163;
+                        if ((bool)radProf1.IsChecked)
+                        {
+
+                            Od[1] = int.Parse(txtSkupina1.Text);
+                            Do[1] = int.Parse(txtStevilo1.Text);
+                            if (Do[1] > 163)
+                                Do[1] = 163;
+                            if (Od[1] > Do[1])
+                                throw new ApplicationException("Drugo število mora biti večje");
+                            if (Od[1] < Do[0])
+                                throw new ApplicationException("Prva vaja drugega sklopa mora biti večja od zadnje vaje prvega");
+                        }
+                        this.NavigationService.Navigate(new SkupinaZaEnDan(Od, Do));
+
+                    }
+                    catch (FormatException x)
+                    {
+                        MessageBox.Show("Izbrati moraš številko prve in zadnje vaje");
+                    }
+                    catch (ApplicationException y)
+                    {
+                        MessageBox.Show(y.Message);
+                    }
+
+                }
+                else
+                    if ((bool)radProf2.IsChecked)
+                {
+                    this.NavigationService.Navigate(new VajeTekst());
+                }
             }           
         }
         private  void GetCurrentUserProfileImage()
@@ -67,19 +108,29 @@ namespace ASDFWPF
             if (radSam.IsChecked != null && (bool)radSam.IsChecked)
             {
                 txtSkupina.IsEnabled = false;
-                txtStevilo.IsEnabled = true;
+                txtStevilo.IsEnabled = false;
             }
         }
 
-        private void txtSkupina_GotFocus(object sender, RoutedEventArgs e)
+       
+
+        private void RadProf1_Checked(object sender, RoutedEventArgs e)
         {
-            txtSkupina.Text = "";
+            if ((bool)radProf1.IsChecked)
+            {
+                txtSkupina1.IsEnabled = true;
+                txtStevilo1.IsEnabled = true;
+            }
+            else
+            {
+                txtSkupina1.IsEnabled = false;
+                txtStevilo1.IsEnabled = false;
+            }
         }
 
-        private void txtStevilo_GotFocus(object sender, RoutedEventArgs e)
-        {
-            txtStevilo.Text = "";
-        }
+
+
+
 
         //private static void GetCurrentUserProfileImage()
         //{

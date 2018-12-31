@@ -1,0 +1,104 @@
+[
+  {
+    "Id": 1,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fjfj fjfj fjfj fjfj fjfj fjfj fjfj fjfj "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "aèaè aèaè aèaè aèaè aèaè aèaè aèaè aèaè "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "afjè jèfa afjè jèfa afjè jèfa afjè jèfa "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": "",
+      "recipesCount": 6,
+      "shortTitle": "Demo1",
+      "title": "Ostalo"
+    },
+    "zadnjicReseno": "7/21/2014",
+    "reseno": false,
+    "napake": 2,
+    "porabljencas": 3,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "è", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fjfj fjfj fjfj fjfj fjfj fjfj fjfj fjfj "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "aèaè aèaè aèaè aèaè aèaè aèaè aèaè aèaè "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "afjè jèfa afjè jèfa afjè jèfa afjè jèfa "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": "",
+      "recipesCount": 6,
+      "shortTitle": "Demo1",
+      "title": "Ostalo"
+    },
+    "zadnjicReseno": "7/21/2014",
+    "reseno": false,
+    "napake": 2,
+    "porabljencas": 3,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "è", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "dkdk dkdk dkdk dkdk dkdk dkdk dkdk dkdk "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "fdjk fdjk fdjk fdjk fdjk fdjk fdjk fdjk "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "fdjk adèk fdjk adèk fdjk adèk fdjk adèk "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": "",
+      "recipesCount": 6,
+      "shortTitle": "Demo1",
+      "title": "Ostalo"
+    },
+    "zadnjicReseno": "7/21/2014",
+    "reseno": false,
+    "napake": 2,
+    "porabljencas": 3,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "è", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  }
+]

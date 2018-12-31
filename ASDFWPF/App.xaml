@@ -5,8 +5,10 @@
              xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" 
              x:Class="ASDFWPF.App"
              StartupUri="Window1.xaml">
-    <Application.Resources>
+  
 
+    <Application.Resources>
+       
         <LinearGradientBrush x:Key="NavigationWindowNavigationChromeBackground" EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFFFFF" Offset="0"/>
             <GradientStop Color="#E3E8F4" Offset="0.5"/>

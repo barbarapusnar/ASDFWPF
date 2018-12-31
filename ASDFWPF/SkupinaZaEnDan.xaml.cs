@@ -29,17 +29,23 @@ namespace ASDFWPF
         private int štVaj;
         private int vaje1 = 0;
         List<Vaje> Group = new List<Vaje>();
-        public SkupinaZaEnDan(string vaje,string st) //od vaje, st pomeni koliko vaj
+        public SkupinaZaEnDan(int[] vaje,int[] st) //od vaje, st pomeni koliko vaj
         {
             InitializeComponent();
             txtUporabnik.Text = PrivzetiViewModel.Uporabnik;
             smallImage.Source = PrivzetiViewModel.UporabnikSlika;
             smallImage.Visibility = Visibility.Visible;
             //s = (string)navigationParameter;
-            vaje1 = int.Parse(vaje);
-            int st1 = int.Parse(st);
+            vaje1 = vaje[0];
+            int st1 = st[0];
             opisSkupine = vaje+"--" +(vaje1+st1);
-            var vse = PrivzetiViewModel.GetVajeZaDanPoŠtevilki(vaje1,st1);
+            List<Vaje> vse = new List<Vaje>();
+            vse = PrivzetiViewModel.GetVajeZaDanPoŠtevilki(vaje1,st1).ToList();
+            if (vaje[1] != 0)
+            {
+                var vse1 = PrivzetiViewModel.GetVajeZaDanPoŠtevilki(vaje[1], st[1]);
+                vse.AddRange(vse1.ToList());
+            }
             štVaj = vse.Count();
             številkeVaj = new int[štVaj];
             var k = 0;

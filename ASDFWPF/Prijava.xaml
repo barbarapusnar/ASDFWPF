@@ -3,29 +3,49 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ASDFWPF"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="500"
-      Title="Prijava">
+      xmlns:local="clr-namespace:ASDFWPF"  
+      mc:Ignorable="d"
+      Title="Prijava" Height="700" Width="659" >
+    <Page.Resources>
+        <DataTemplate x:Key="PrijaviSe">
 
-    <Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid Margin="0,0,0,0">
 
         <Border BorderThickness="2" CornerRadius="5" BorderBrush="Black" HorizontalAlignment="Center"
-                Margin="50" Width="500" Height="450" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+                Margin="10,34,19,10" Width="630" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+
             <StackPanel  Orientation="Vertical" x:Name="root">
-                <StackPanel  Orientation="Vertical" Height="103" Margin="20" >
-                    <RadioButton x:Name="radSam" Content="Vaje si bo sam izbiral " GroupName="izbor" FontSize="20"
-                               TabIndex="0" Click="radSam_Click" VerticalContentAlignment="Center" IsChecked="True"
-                             Margin="10,10,30,10" />
+
+                <StackPanel  Orientation="Vertical" Height="266" Margin="20" >
+                    <RadioButton x:Name="radSam" Content="Vaje si bo sam izbiral (delo doma)" GroupName="izbor" FontSize="20" 
+                               TabIndex="0" Click="radSam_Click" VerticalContentAlignment="Center" 
+                             Margin="10,10,30,10"  />
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton x:Name="radProf" Content="Od vaje " GroupName="izbor" FontSize="20"
+                        <RadioButton x:Name="radProf" Content="Povezane vaje od " GroupName="izbor" FontSize="20" 
+                                  Checked="radProf_Checked" 
+                                 TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center" />
+                        <TextBox x:Name="txtSkupina" Text="1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24"  />
+                        <TextBlock Text="do" FontSize="20" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtStevilo" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" Text="20"  />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="78,0,0,0">
+                        <CheckBox x:Name="radProf1" Content="in še od "  FontSize="20"
+                                  Checked="RadProf1_Checked"
+                                 TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                        <TextBox x:Name="txtSkupina1" Text="1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24"  />
+                        <TextBlock Text="do" FontSize="20" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtStevilo1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" Text="20"  />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton x:Name="radProf2" Content="Teksti " GroupName="izbor" FontSize="20"
                                   Checked="radProf_Checked"
                                  TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
-                        <TextBox x:Name="txtSkupina" Text="1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" GotFocus="txtSkupina_GotFocus" />
+                        <!--<TextBox x:Name="txtSkupina2" Text="1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" GotFocus="txtSkupina_GotFocus" />
                         <TextBlock Text="naprej" FontSize="20" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBox x:Name="txtStevilo" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" Text="20" GotFocus="txtStevilo_GotFocus"/>
+                        <TextBox x:Name="txtStevilo2" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" Text="20" GotFocus="txtStevilo_GotFocus" />-->
                     </StackPanel>
-
                 </StackPanel>
                 <Line Stroke="White" X1="0" Y1="25" X2="{Binding ActualWidth, ElementName=root, Mode=OneWay}" Y2="25" />
                 <TextBlock Text="Uporabnik"  Margin="20,20,0,0" FontSize="20"/>
@@ -35,5 +55,6 @@
                 <Button x:Name="btnOK" Height="45" Width="186" Content="Prijava" Click="PrijaviSe" Margin="0,20,0,0" />
             </StackPanel>
         </Border>
+        
     </Grid>
 </Page>

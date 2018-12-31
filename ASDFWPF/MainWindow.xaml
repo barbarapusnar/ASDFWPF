@@ -4,16 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASDFWPF"
-        xmlns:toolkit="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:conv="clr-namespace:ASDFWPF.Helperji"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" >
+        Title="MainWindow" Loaded="Page_Loaded">
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
+
         </Grid.RowDefinitions>
         <TextBlock Text="Strojepisje" FontSize="34" FontWeight="Bold" HorizontalAlignment="Center" />
         <Frame Grid.Row="1"  Name="mojOkvir" Style="{DynamicResource StilOkvira}">
         </Frame>
+        <!--<xctk:BusyIndicator Grid.Row="1" Name="bi" IsBusy="True" BusyContent="Počakaj prosim...." Margin="0,34,0,0" >
+
+        </xctk:BusyIndicator>-->
+
     </Grid>
 </Page>
