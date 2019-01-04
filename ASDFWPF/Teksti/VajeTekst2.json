@@ -1,0 +1,852 @@
+﻿[
+  {
+    "Id":2001,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "Vsak čas ima svoje karakteristične značilnosti, od katerih"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "je ena takih značilnosti našega časa prav gotovo turizem."
+      },
+      {
+        "vrstica": 3,
+        "tekst": "Kot družbeni pojav se je turizem v začetku kazal v posameznih"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2002,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "potovanjih, s časom pa je prerasel v prave začasne selitve"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "prebivalstva, ki pa imajo pomembne gospodarske posledice"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "za sredine, iz katerih prihaja veliko turistov, prav tako"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2003,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "pa tudi za sredine, kamor so ta turistična gibanja usmerjena."
+      },
+      {
+        "vrstica": 2,
+        "tekst": "Turizem je gospodarski pojav, ki posredno in neposredno"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "povezuje veliko število gospodarskih in negospodarskih"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2004,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "aktivnosti, in to ne le v nacionalnih, ampak tudi v"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "mednarodnih okvirjih. Torej deluje kot množica pojavov,"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ki imajo dvojen pomen, družbeni in gospodarski, vsak od njih"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2005,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "pa ima posebno vrednost za celotno človeštvo. Nagel razvoj"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "turizma v svetu se je posebej pokazal v tistih funkcijah, ki"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "prinašajo izrazite ekonomske rezultate. Čim bolj se je dvigal"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2006,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "standard ljudi, čimveč so imeli delavci prostega časa, hitreje"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "je napredovala organizacija in tehnika v procesu človekovega"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "dela, zato so rasle tudi potrebe prebivalstva po rekreaciji,"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2007,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "potovanjih in postajale vse pomembnejše. V družinskih proračunih"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "se danes izenačujejo z drugimi sekundarnimi potrebami, kot so"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "potrebe po gospodinjskih aparatih, avtomobilu in podobno."
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2008,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "To je istočasno izzvalo vrsto različnih zahtev po ponudbi uslug"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "in proizvodov ter drugega blaga. Ko je razvijal svojo družbeno"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "in materialno osnovo, je turizem vzporedno zasnoval veliko"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2009,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "različnih dejavnosti, ki so namenjene zadovoljevanju vedno"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "bolj različnih zahtev velikega števila turističnih porabnikov."
+      },
+      {
+        "vrstica": 3,
+        "tekst": "Od začetne faze turističnega prometa, ko so turisti svoje"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2010,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "potrebe zadovoljevali neposredno s prometnimi in hotelskimi"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "organizacijami, je s časom nastopila nadaljnja faza turističnega"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "prometa, ko je posrednikova pomoč turistom potrebna ali celo"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2011,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "nujna. Da bi tako zadovoljili potrebe vedno večjega števila"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "turistov, so se danes pojavile v turizmu široke možnosti za"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "razvoj novih aktivnosti, ki jim je turistični promet osnova"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2012,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "obstoja in vir dohodka. Tako se je na turističnem tržišču"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "pojavila kot specifična organizacija potovalna agencija, ki"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ima nalogo, da posreduje med turisti, ki zahtevajo turistične"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2013,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "usluge, in hotelskimi ter prometnimi organizacijami, ki jim jih"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "ponujajo. Potovalna agencija je torej specifična gospodarska"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "organizacija turističnega prometa, za katero sta pomembni dve"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2014,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "osnovni karakteristiki, to je organizacija potovanja in"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "sprememba kraja bivanja. V začetku svojega delovanja, ko turizem"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "še ni poznal današnjega pomena in obsega, je potovalna agencija"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2015,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "za svoje delo izkoristila dva termina, ki poudarjata njeno"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "funkcijo posrednika v zvezi s potovanjem. Z razvojem"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "turističnega prometa se je razvijala tudi funkcija potovalne"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2016,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "agencije na turističnem tržišču. Iz klasične funkcije"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "posrednika je tako njena dejavnost prerasla v vlogo"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "organizatorja, pobudnika, ki z lastnimi sredstvi in"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2017,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "uslugami zadovoljuje potrebe velikega števila turistov,"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "to je potrošnikov različne kupne moči. Zato je razumljiv"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "pojav novega termina za potovalno agencijo v naši"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2018,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "turistični terminologiji. Pojem turizem je širši od"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "pojma potovanje in točneje označuje dejavnost potovalne"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "agencije v sodobnem turizmu. Iz vseh naštetih določitev"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2019,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "lahko zaključimo, da so potovalne agencije specifične"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "gospodarske organizacije, ki po funkciji in dejavnosti"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "na trgu izstopajo kot posebna gospodarska podjetja,"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2020,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "katerih osnovno dejavnost tvori organizacija potovanja"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "in bivanja ter nudenje drugih uslug potniku ali"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "turistu v turističnem prometu. Dejavniki, ki bistveno"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2021,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "vplivajo na razvojne tendence celotnega turističnega"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "gospodarstva in tudi na razvoj dejavnosti potovalnih agencij,"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "izhajajo torej iz turizma kot družbenega in ekonomskega"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2022,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "pojava. Posebno se kažejo v odnosih turističnih organizacij na"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "turističnem trgu. Turizem je zelo dinamičen, tako da ga pogosto"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "gledamo kot začasni ugodni gospodarski pojav, ne pa kot stalno "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2023,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "sestavino našega sodobnega družbenega in ekonomskega razvoja."
+      },
+      {
+        "vrstica": 2,
+        "tekst": "Rast turističnega prometa se tako odraža v neprekinjeni tendenci"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "kvantitativnega, kakor tudi kvalitativnega razvoja turističnega "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2024,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "povpraševanja na turističnem trgu. Tudi razpon motivov in"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "potreb, ki povzročajo to gibanje, se je ob širjenju turističnega"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "povpraševanja povečal. Rast turističnega povpraševanja pa je"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 2025,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "s tem izzvala tudi večje zahteve glede kvalitete turističnih"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "uslug, povečanje kapacitet oziroma zmogljivosti turistične"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ponudbe in širjenje razpona cen za določene usluge."
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 2",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo2",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo2",
+      "title": "Demo 2"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  }
+]

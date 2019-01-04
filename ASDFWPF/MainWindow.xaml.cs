@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Windows.Threading;
 
 namespace ASDFWPF
 {
@@ -31,24 +31,14 @@ namespace ASDFWPF
 
         }
         
-        private void  Page_Loaded(object sender, RoutedEventArgs e)
+        private async void  Page_Loaded(object sender, RoutedEventArgs e)
         {                    
             
-           // bi.IsBusy = true;
-            PrivzetiViewModel.NaložiRezultate();
-            //var t = Task.Run(() =>
-            //{
-            //    for (int i = 1; i <= 10; i++)
-            //    {
-
-            //        // Perform a time consuming operation and report progress.
-            //        System.Threading.Thread.Sleep(500);
-            //    }
-            //});
-
-            //t.Wait();
           
-            //bi.IsBusy = false;
+           
+            await Dispatcher.BeginInvoke(
+                (Action)(async() => { await PrivzetiViewModel.NaložiRezultate(); }));
+           
             mojOkvir.Navigate(new Prijava());
         }
     }

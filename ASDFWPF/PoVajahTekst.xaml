@@ -1,0 +1,241 @@
+﻿<Page x:Class="ASDFWPF.PoVajahTekst"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ASDFWPF"
+      xmlns:Helperji="clr-namespace:ASDFWPF.Helperji" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PoVajahTekst" DataContext="{RelativeSource Self}">
+    <Page.Resources>
+        <Helperji:StringToPointConverterStart x:Key="StringToPointConverterStart"/>
+        <Helperji:StringToPointConverter x:Key="StringToPointConverter"/>
+        <Helperji:StringToDoubleConverter x:Key="StringToDoubleConverter"/>
+        <Style x:Key="RoundedButton" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                            <Ellipse x:Name="Ellipse" Grid.Row="0" StrokeThickness="1" Fill="{TemplateBinding Background}" Height="40" Width="40"  Stroke="White"/>
+                            <ContentPresenter x:Name="Content" Grid.Row="0"  Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock Text="{TemplateBinding Tag}" Grid.Row="1" Margin="0,-2,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Foreground="Black" FontFamily="Segoe MDL2"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <local:StringToIntConverter x:Key="StringToIntConverter"/>
+        <Helperji:DolžinaConverter x:Key="DolžinaConverter"/>
+        <local:StringToVisibilityCoverter x:Key="StringToVisibilityConverter"/>
+        <DataTemplate x:Key="PredlogaVrstic">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name ="imgKazalnik" Width="50" Height="50" Margin="5" Source="Slike/rdeča.jpg"  />
+                <StackPanel>
+                    <TextBlock x:Name="tbPredloga"  HorizontalAlignment="Left" FontSize="36" Height="50" Text="{Binding tekst}"
+                               VerticalAlignment="Top" FontWeight="Bold" Foreground="Black" />
+                    <Slider x:Name="sld" Maximum="{Binding tekst, Converter={StaticResource DolžinaConverter}}"
+                            Height="30" TickPlacement="TopLeft" IsSelectionRangeEnabled="True"
+                            SelectionStart="0" SelectionEnd="{Binding Path=Value, ElementName=sld}" Foreground="Green"
+                            Visibility="Collapsed" Value="{Binding Path=Text, ElementName=txtVnos,Converter={StaticResource StringToIntConverter}}" TickFrequency="-2" SmallChange="1">
+                        <Slider.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Green" />
+                        </Slider.Resources>
+                    </Slider>
+                </StackPanel>
+            </StackPanel>
+            <DataTemplate.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}" Value="True" />
+                    </MultiDataTrigger.Conditions>
+                    <Setter TargetName="tbPredloga" Property="TextEffects">
+                        <Setter.Value>
+                            <TextEffectCollection>
+                                <TextEffect  Foreground="Green" PositionCount="{Binding Text,Converter={StaticResource StringToDoubleConverter}, ElementName=txtVnos,NotifyOnSourceUpdated=True}"/>
+                            </TextEffectCollection>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter TargetName="sld" Property="Visibility" Value="Visible" />
+                    <Setter TargetName="imgKazalnik" Property="Source" Value="Slike/desno.png"/>
+                </MultiDataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53" />
+            <RowDefinition />
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="750*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" Margin="65,10,0,10" Width="380"  >
+            <TextBlock x:Name="pageTitle" Grid.Column="0" FontSize="24" Width="380" />
+        </StackPanel>
+        <StackPanel  Orientation="Horizontal"  HorizontalAlignment="Right" VerticalAlignment="Center" Height="36" Width="200" 
+                    Margin="0,10,0,10" Grid.ColumnSpan="2">
+            <TextBlock x:Name="txtUporabnik"   Height="35" FontSize="20" Margin="0,0,5,0" />
+            <Image x:Name="smallImage"  Width="35" Height="35"  />
+        </StackPanel>
+        <Grid Grid.Row="1" Margin="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400*" />
+                <ColumnDefinition  Width="300"/>
+                <ColumnDefinition Width="125*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="2" BorderBrush="#FFF7F5F5" BorderThickness="2"
+                    CornerRadius="5" Margin="22,21,10,10" Grid.Row="2" Width="250" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+                <StackPanel HorizontalAlignment="Center" Margin="0" Orientation="Vertical" Width="229"
+                            Grid.ColumnSpan="2">
+                    <StackPanel Margin="10,20,0,0" Height="35">
+                        <local:BasicStoparica x:Name="ura" Margin="0" Height="35" />
+                    </StackPanel>
+                    <Grid Height="103" Grid.Row="1" Grid.RowSpan="2" Margin="10,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35*" />
+                            <RowDefinition Height="35*" />
+                            <RowDefinition Height="35*" />
+                            <RowDefinition Height="35*" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" x:Name="stcStatistika" Orientation="Horizontal" Margin="0,3,0,0">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Napake za vajo :" /></TextBlock>
+                            <TextBlock x:Name="txtN" FontWeight="Bold" FontSize="16" TextAlignment="Right"
+                                       Width="95" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" x:Name="stcStatistikaPoVaji" Orientation="Horizontal" Margin="0,3,0,0">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Hitrost :" /></TextBlock>
+                            <TextBlock x:Name="txtH" FontWeight="Bold" FontSize="16" TextAlignment="Right"
+                                       Width="67" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" x:Name="stcOcena" Orientation="Horizontal" Margin="0,3,0,0">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Napake v % :" /></TextBlock>
+                            <TextBlock x:Name="nvProcentih" FontWeight="Bold" FontSize="16" TextAlignment="Right"
+                                       Width="118" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" x:Name="stc1" Orientation="Horizontal" Margin="0,3,0,0">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Udarcev pri vaji :" /></TextBlock>
+                            <TextBlock x:Name="ud" FontWeight="Bold" FontSize="16" TextAlignment="Right" Width="90" />
+                        </StackPanel>
+
+                    </Grid>
+
+                    <TextBlock Visibility="{Binding prof, Converter={StaticResource BooleanToVisibilityConverter}}"
+                               Text="Skupaj za danes" Margin="10,10,10,10"
+                                FontSize="24" />
+
+                    <Grid Height="103" Grid.Row="1" Grid.RowSpan="2" Margin="10,0,0,0"
+                          Visibility="{Binding prof, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35*" />
+                            <RowDefinition Height="35*" />
+                            <RowDefinition Height="35*" />
+                            <RowDefinition Height="35*" />
+
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" x:Name="stcStatistikas" Orientation="Horizontal" Margin="0,3,0,0" HorizontalAlignment="Center">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Napake skupaj  :" /></TextBlock>
+                            <TextBlock x:Name="txtNapake" FontWeight="Bold" FontSize="16" TextAlignment="Right"
+                                       Width="95" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" x:Name="stcStatistikaPoVajis" Orientation="Horizontal" HorizontalAlignment="Left"
+                                    Margin="0,3,0,0">
+                            <TextBlock FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"><Run Text="Hitrost :" /></TextBlock>
+                            <TextBlock x:Name="txtHitrost" FontWeight="Bold" FontSize="16" TextAlignment="Right"
+                                       Width="67" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" x:Name="stcOcenas" Orientation="Horizontal" Margin="0,3,0,0" HorizontalAlignment="Center">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Napake v % :" /></TextBlock>
+                            <TextBlock x:Name="nvProcentihs" FontWeight="Bold" FontSize="16" TextAlignment="Right"
+                                       Width="118" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" x:Name="stc1s" Orientation="Horizontal" Margin="0,3,0,0" HorizontalAlignment="Center">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Udarcev skupaj :" /></TextBlock>
+                            <TextBlock x:Name="uds" FontWeight="Bold" FontSize="16" TextAlignment="Right" Width="90" />
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <ListView Grid.Row="0" x:Name="grd"
+                      ItemTemplate="{StaticResource PredlogaVrstic}" Margin="5,10,0,10" IsEnabled="False"
+                      HorizontalContentAlignment="Stretch" 
+                      VerticalAlignment="Stretch"  Grid.ColumnSpan="2"
+                      />
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2"  Margin="0,10,0,10" Width="30" HorizontalAlignment="Left">
+                <Button x:Name="btnPrav1" Visibility="Collapsed" Content="✔" Foreground="Green" 
+                         Height="50" Width="30" BorderThickness="0" IsTabStop="False" Margin="0,10" />
+                <Button x:Name="btnPrav2" Visibility="Collapsed" Content="✔" Foreground="Green"
+                         Height="50" Width="30" BorderThickness="0" IsTabStop="False"  Margin="0,10" />
+                <Button x:Name="btnPrav3" Visibility="Collapsed" Content="✔" Foreground="Green"
+                        Height="50" Width="30" BorderThickness="0" IsTabStop="False"  Margin="0,10" />
+            </StackPanel>
+            <StackPanel Grid.Row="1"  Orientation="Vertical" Margin="5,10,0,10" Grid.ColumnSpan="2">
+                <!--<TextBlock x:Name="tbTrenutna" FontSize="26.667" FontWeight="Light"  HorizontalAlignment="Left" Height="46" Margin="20,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1346" />-->
+                <!--<local:UserControl1  x:Name="txtVnos" FontSize="26.667" FontWeight="Light" Height="46" Foreground="Black"
+                          VerticalAlignment="Top" 
+                         IsEnabled="False" KeyDown="txtVnos_KeyDown"
+                                     TextChanged="Spremeni"
+                         KeyUp="txtVnos_KeyUp" LostFocus="txtVnos_LostFocus"
+                         GotFocus="txtVnos_GotFocus" HorizontalContentAlignment="Stretch" />-->
+                <TextBox  x:Name="txtVnos" FontSize="36"  Height="50" Foreground="Black"
+                          VerticalAlignment="Top" PreviewKeyDown="txtVnos_PreviewKeyDown" Margin="55,0,0,0"
+                         IsEnabled="False" FontWeight="Bold" 
+                                     TextChanged="Spremeni"
+                         KeyUp="txtVnos_KeyUp" LostFocus="txtVnos_LostFocus"
+                         GotFocus="txtVnos_GotFocus"  />
+                <!--<TextBlock x:Name="tbPomoc" FontSize="26.667" FontWeight="Light" Margin="55,0,0,0" HorizontalAlignment="Left" Height="46"
+                           TextWrapping="Wrap" VerticalAlignment="Top"
+                           Visibility="Visible" Width="125" />
+                <TextBlock x:Name="tbOK" FontSize="26.667" FontWeight="Light" HorizontalAlignment="Left" Margin="55,0,0,0" Height="46"
+                            TextWrapping="Wrap" VerticalAlignment="Top" Width="251"  />-->
+            </StackPanel>
+            <Border  x:Name="brdTipkovnica" Grid.Row="2" Grid.Column="0" BorderBrush="#FFF7f5f5" BorderThickness="2" CornerRadius="4" Width="800"
+                     Margin="0,0,0,10">
+                
+                <RichTextBox  x:Name="vsebnik" 
+                          AcceptsReturn="True"
+                          VerticalScrollBarVisibility="Auto" 
+                          IsEnabled="False">
+                    <FlowDocument Name="doc">
+                        
+                    </FlowDocument>
+                </RichTextBox>
+               
+            </Border>
+            <!--<Border x:Name="brdLegenda" Grid.Row="2" Grid.Column="1" BorderBrush="#FFF7F5F5" BorderThickness="2"
+                    Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" CornerRadius="5" Margin="41,160,10,10" >
+                <Image Source="Slike/Roke.png" Height="110" />
+            </Border>-->
+            <StackPanel Grid.Column="2" Grid.Row="1">
+                <Button x:Name="btnZačni" Margin="37,10,21,10" Content="Začni z vajo"
+                     Click="ZačniZVajo" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontSize="25" 
+                    TabIndex="0" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" HorizontalAlignment="Center" Width="224" />
+                <!--<Button x:Name="btnNovaVaja" Margin="37,10,21,0" Content="Začni znova" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontSize="25"
+                    Click="ZacniZnova" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="224" />-->
+            </StackPanel>
+        </Grid>
+        <!--<StackPanel x:Name="barNacin" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left"  Width="80">
+            <Button x:Name="btnIgnoriraj" Content="&#xE80F;"  Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Vaja" Background="LightGray"/>
+            <Button x:Name="btnTest" Content="&#xEC31;" Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Test" Background="LightGray"/>
+        </StackPanel>-->
+        <Button Grid.Row="2" Grid.Column="1" x:Name="btnStatistika" 
+                Content="&#xE8BC;" Style="{StaticResource RoundedButton}" FontSize="19" 
+                FontFamily="Segoe MDL2 Assets" Tag="Stat" Background="LightGray" 
+                Width="50" Margin="0" HorizontalContentAlignment="Stretch" 
+                Click="btnStatistika_Click"/>
+
+    </Grid>
+</Page>

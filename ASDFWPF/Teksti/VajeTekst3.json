@@ -1,0 +1,818 @@
+﻿[
+  {
+    "Id": 3001,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "Temeljno načelo pri sklepanju pogodb na trgu, to je"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "med fizičnimi osebami ali med podjetji, je svobodno"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "urejanje pogodbenih razmerij. To pomeni, da se"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3002,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "pogodbeni stranki lahko dogovorita karkoli, pri"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "čemer pa vsebina in postopek dogovarjanja ne smeta"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "biti v nasprotju z zakonskimi predpisi, moralo in"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3003,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "ustavnimi načeli. V določenih primerih, če zakon"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "predpisuje vsebino ali elemente pogodbe ali drugega"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "pravnega odnosa, pogodbene stranke ne morejo"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3004,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "popolnoma prosto določati vsebine pogodbe. Prav tako"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "lahko pravni predpisi določajo sam postopek"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "sklepanja pogodb ali faze pogajanj in zbiranja"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3005,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "ponudb, še preden je pogodba sklenjena. Tako je s"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "posebnim predpisom določeno, da se morajo Republika "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "Slovenija in občine, ko kupujejo ali oddajajo"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3006,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "material ali storitve, s pogodbo ravnati natančno po"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "določenem postopku. Postopek vsebuje številne"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "elemente, ki zavezujejo predvsem naročnika in le"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3007,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "posredno vplivajo na drugo pogodbeno stranko,"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "nekatera postopkovna določila pa določajo obvezna"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ravnanja ponudnika. Zato je tudi z vidika malega"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3008,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "podjetnika treba poznati postopek izpeljave javnega "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "razpisa za oddajo javnih naročil, saj to pomeni, da"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ponudnik pozna svoje pravice in dolžnosti, kar mu"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3009,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "omogoča enakopravno udeležbo na javnem razpisu."
+      },
+      {
+        "vrstica": 2,
+        "tekst": "Odredba za postopke za izvajanje javnega razpisa za"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "oddajo javnih naročil to področje prisilno ureja."
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3010,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "Predlog zakona na tem področju prinaša precej novosti,"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "nekatere stvari razširi, nekatere pa podrobneje uredi."
+      },
+      {
+        "vrstica": 3,
+        "tekst": "V vlogi javnega naročnika, ki mora ravnati v skladu s"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3011,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "postopkom oddaje javnih naročil, nastopajo uporabniki"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "proračuna, to so predvsem državni organi in nekateri"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "drugi pravni subjekti, ki imajo status proračunskega"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3012,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "uporabnika. Prav tako so postopki oddaje javnih naročil"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "obvezni za občine in njihove organe. Predlog zakona"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "pojem naročnika razširja in vključuje tudi javne"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3013,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "gospodarske zavode, javna podjetja in druge pravne osebe"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "javnega prava, katerih ustanovitelj oziroma soustanovitelj"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "sta država ali lokalna skupnost. Vsako oddajanje javnih"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3014,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "naročil, predložitev ponudb ter sklepanje pogodb z"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "naštetimi subjekti poteka po teh postopkih. Predmet"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "javnega naročila so nakup in najem blaga ter oddaja"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3015,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "del in storitev v najširšem smislu. Sem spadajo"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "tako nakup in najem nepremičnin in potrošnega materiala"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "kot oddaja del in storitev materialne narave, gradnja"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3016,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "objektov, vzdrževalna dela, oddaja del in storitev"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "nematerialne narave, projektantske, svetovalne in"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "druge intelektualne storitve. Predlog zakona pa vključuje"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3017,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "tudi prodajo ali oddajo v najem osnovnih sredstev, inventarja"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "in potrošnega materiala, predvideno pa je, da se z oddajo"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "javnega naročila izpelje vsako financiranje ali sofinanciranje"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3018,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "programov iz sredstev javnih financ. Odredba ali predlog"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "zakona določata različne načine oddaje javnih naročil. Izbira"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "načina javnega naročila v najširšem smislu oziroma odločitev,"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3019,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "kateri javnih razpis izpeljati, je v pristojnosti naročnika,"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "odvisna pa je od vrste in predmeta javnega naročila. Odredba"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "določa, da sme naročnik oddati ponudniku javno naročilo le s"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3020,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "pogodbo na podlagi izvedenega javnega razpisa oziroma v"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "določenih primerih brez javnega razpisa. Pri oddaji javnega"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "naročila veljavna odredba določa dva načina izvedbe javnega"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3021,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "razpisa, na podlagi javnega razpisa za izbiro izvajalca brez"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "omejitev ali pa na podlagi javnega razpisa za izbiro izvajalca"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "s predhodnim ugotavljanjem sposobnosti. Predlog zakona v tem"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3022,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "delu prinaša številne novosti, to so dvostopenjski javni"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "razpis oziroma informativni razpis, javni razpis za izbiro"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "izvajalca s predhodnim ugotavljanjem sposobnosti za tako"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3023,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "imenovane dvorne dobavitelje in javni razpis za prodajo ali"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "oddajo v najem ter za financiranje ali sofinanciranje"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "projektov. Naročnik mora z izbranim ponudnikom skleniti pisno"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 3024,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "pogodbo. Z neposredno pogodbo sme naročnik oddajati javno"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "naročilo le v primerih in ob pogojih, določenih z zakonom."
+      },
+      {
+        "vrstica": 3,
+        "tekst": "Ti primeri so v predlogu zakona točno določeni."
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 3",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo3",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo3",
+      "title": "Demo 3"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  }
+]

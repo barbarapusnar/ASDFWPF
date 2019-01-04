@@ -9,7 +9,7 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="MainWindow" Loaded="Page_Loaded">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -19,9 +19,5 @@
         <TextBlock Text="Strojepisje" FontSize="34" FontWeight="Bold" HorizontalAlignment="Center" />
         <Frame Grid.Row="1"  Name="mojOkvir" Style="{DynamicResource StilOkvira}">
         </Frame>
-        <!--<xctk:BusyIndicator Grid.Row="1" Name="bi" IsBusy="True" BusyContent="Počakaj prosim...." Margin="0,34,0,0" >
-
-        </xctk:BusyIndicator>-->
-
     </Grid>
 </Page>

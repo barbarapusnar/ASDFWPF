@@ -24,7 +24,6 @@ namespace ASDFWPF
         private int[] napake;
         private string opisSkupine = "";
         private bool[] reseno;
-        private string s;
         private int[] številkeVaj;
         private int štVaj;
         private int vaje1 = 0;

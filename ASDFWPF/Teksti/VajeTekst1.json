@@ -1,0 +1,988 @@
+﻿[
+  {
+    "Id": 1001,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fjfj fjfj fjfj fjfj fjfj fjfj fjfj fjfj"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "ačač ačač ačač ačač ačač ačač ačač ačač"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "afjč jčfa afjč jčfa afjč jčfa afjč jčfa"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1002,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fajč čajf fajč čajf fajč čajf fajč čajf"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "jafa čajč jafa čajč jafa čajč jafa čajč"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "čaj aja čaj aja čaj aja čaj aja čaj aja"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1003,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "dkdk dkdk dkdk dkdk dkdk dkdk dkdk dkdk"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "fdjk fdjk fdjk fdjk fdjk fdjk fdjk fdjk"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "fdjk adčk fdjk adčk fdjk adčk fdjk adčk"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1004,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "ajd čaj ajd čaj ajd čaj ajd čaj ajd čaj"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "ajč jad ajč jad ajč jad ajč jad ajč jad"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "jajč kajf jajč kajf jajč kajf jajč kajf"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1005,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "slsl slsl slsl slsl slsl slsl slsl slsl"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "sflj sfjl sfjl sfjl sfjl sfjl sfjl sfjl"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "asčl asčl asčl asčl asčl asčl asčl asčl"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id":1006,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "asdf jklč asdf jklč asdf jklč asdf jklč"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "ačač slsl dkdk fjfj ačač slsl dkdk fjfj"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "asad kasa asad kasa lada kajf lada kajf"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1007,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "a č d f j k l s s l k j f d č a a č d f a č d f j k l s s l"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "ač sl dk fj jf kd ls ča ač sl dk fj ač sl dk fj jf kd ls ča"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "dskl klds ačsl slač čakd kdač fjsl slfj dskl klds ačsl slač"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1008,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "dlaka jasa klas skakač lada fala sladak dajal fasada safala"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "kača ladja jajčka čakala lajala slak skala fafa jaffa las s"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "jkla kldd člkj adkl jfkd slls dadl čjks sfak kllk slds lkaf"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1009,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fgfg fgfg fgfg fgfg fgfg fgfg fgfg fgfg"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "jhjh jhjh jhjh jhjh jhjh jhjh jhjh jhjh"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "agf čhj agf čhj agf čhj agf čhj agf čhj"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1010,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "kg hl dag kg hl dag kg hl dag kg hl dag kg hl dag kg hl dag"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "lahka al ga lahka al ga lahka al ga lahka al ga lahka al ga"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "jahača glas jahača glas jahača glas jahača glas jahača glas"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1011,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "kg hl gad haha gala klada sag jh halja ga čakala dajal glas"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "glas kg hl gad halja ga čakala dajal haha gala sklad sag ja"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "gad haha gala halja ga glas kg hl čakala dajal klada aga al"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1012,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "frfr frfr frfr frfr frfr frfr frfr frfr"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "juju juju juju juju juju juju juju juju"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "frfr juju frfr juju frfr juju frfr juju"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1013,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "frju frju frju frju frju frju frju frju"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "rfuj rfuj rfuj rfuj rfuj rfuj rfuj rfuj"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "frju rfuj frju rfuj frju rfuj frju rfuj"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1014,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "deki deki deki deki deki deki deki deki"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "kide kide kide kide kide kide kide kide"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "deki kide deki kide deki kide deki kide"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1015,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "frde juki frde juki frde juki frde juki"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "lira luke lira luke lira luke lira luke"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "kič kič sel sel gel gel lek lek ček ček"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1016,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fvfv jmjm fvfv jmjm fvfv jmjm fvfv jmjm"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "frfv jujm frfv jujm frfv jujm frfv jujm"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "mjjm vffv mjjm vffv mjjm vffv mjjm vffv"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1017,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fvjm jmfv fvjm jmfv fvjm jmfv fvjm jmfv"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "fgrv jhum fgrv jhum fgrv jhum fgrv jhum"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "defv kijm defv kijm defv kijm defv kijm"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1018,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "dcdc dcdc dcdc dcdc dcdc dcdc dcdc dcdc"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "ki, ki, ki, ki, ki, ki, ki, ki, ki, ki,"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "dc, dc, dc, dc, dc, dc, dc, dc, dc, dc,"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1019,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "dedc kik, dedc kik, dedc kik, dedc kik,"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "del srca, del srca, del srca, del srca,"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "cel, vic, cel, vic, cel, vic, cel, vic,"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1020,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "lolo čpčp lolo čpčp lolo čpčp lolo čpčp"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "pčol pčol pčol pčol pčol pčol pčol pčol"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ločp ločp ločp ločp ločp ločp ločp ločp"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1021,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "popo opop popo opop popo opop popo opop"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "pel pel gor gor pav pav kov kov vol vol"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "lepa lepa pepo pepo valp valp pipa pipa"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1022,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fbfb fbfb fbfb fbfb fbfb fbfb fbfb fbfb"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "fbjn fbjn fbjn fbjn fbjn fbjn fbjn fbjn"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "fvfb jmjn fvfb jmjn fvfb jmjn fvfb jmjn"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1023,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fvfb jmjn frfb jumn fvfb jmjn frfb jumn"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "vbfg mnjh rfgb ujhn vbfg mnjh rfgb ujhn"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "fgfb jhjn defb kijn fgfb jhjn defb kijn"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1024,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "ftft ftft ftft ftft ftft ftft ftft ftft"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "jzjz jzjz jzjz jzjz jzjz jzjz jzjz jzjz"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ftjz ftjz ftjz ftjz ftjz ftjz ftjz ftjz"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1025,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "frft jujz frft jujz frft jujz frft jujz"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "fvft jnjz fvft jnjz fvft jnjz fvft jnjz"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "drft kijz drft kijz drft kijz drft kijz"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1026,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "čćčć čćčć čćčć čćčć čćčć čćčć čćčć čćčć"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "ol. ol. ol. ol. ol. ol. ol. ol. ol. ol."
+      },
+      {
+        "vrstica": 3,
+        "tekst": "čćl. čćl. čćl. čćl. čćl. čćl. čćl. čćl."
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1027,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "jčćč lol. jčćč lol. jčćč lol. jčćč lol."
+      },
+      {
+        "vrstica": 2,
+        "tekst": "lp. čć. lp. čć. lp. čć. lp. čć. lp. čć."
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ćal. sel. ćal. sel. ćal. sel. ćal. sel."
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1028,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "č-č- č-č- č-č- č-č- č-č- č-č- č-č- č-č-"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "čp- čp- čp- čp- čp- čp- čp- čp- čp- čp-"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "jčjđ jčjđ jčjđ jčjđ jčjđ jčjđ jčjđ jčjđ"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  },
+  {
+    "Id": 1029,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "aqay aqay aqay aqay aqay aqay aqay aqay"
+      },
+      {
+        "vrstica": 2,
+        "tekst": "swsx swsx swsx swsx swsx swsx swsx swsx"
+      },
+      {
+        "vrstica": 3,
+        "tekst": "aqay swsx aqay swsx aqay swsx aqay swsx"
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "Demo tekst 1",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "Demo1",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "Demo1",
+      "title": "Demo 1"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": [ "<", "n", "i", "v", "o", "h", "r", "u", "p", "a", ":", "4", "5", "d", "B", "A", ">", ",", "f", "e", "k", "c", "č", "t", "l", "+", "/", "-", "0", "1", "%", "H", "z", "D", "s", "g", "M", "F", "d", "8", "C", "R", "O", "m", "x", "6", "3", "2", "K", "E", "Y", "T", "N", "I", "S", "L" ]
+  }
+]

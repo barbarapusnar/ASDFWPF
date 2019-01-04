@@ -1,0 +1,629 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using ASDFWPF.Model;
+namespace ASDFWPF
+{
+    /// <summary>
+    /// Interaction logic for PoVajahTekst.xaml
+    /// </summary>
+    public partial class PoVajahTekst : Page
+    {
+        public StoparicaViewModel vm = new StoparicaViewModel();
+        private int časSkupaj;
+        
+        private Tipkovnica m;
+        private NačinDela načinDela;
+        public int napake { get; set; }
+        private int napakeSkupaj;
+        private List<Key> narobe = new List<Key>();
+        private string[] oba = new string[2];
+        private string opisS = "";
+        private int pomžniŠtevec;
+        private char praviZnak = (char)0;
+        private int št = 1;
+        private int štČrk;
+        private int štČrkSkupaj;
+        private int številkaVaje;
+        private int[] številkeVaj;
+        private int številoUdarcev;
+        private int štVaj;
+        private int štVrstice;
+        private Vsebina trenutnaVrstica = new Vsebina();
+        private int udarciSkupaj;
+        private string up = "";
+        private char vnešenZnak = (char)0;
+        private int vsehČrkVVaji;
+        public bool prof { get; set; }
+        public List<Vsebina> VsebinaVrstic = new List<Vsebina>();
+        public string skupina { get; set; }
+        public double udarci { get; set; }
+        string tekstDatoteke="";
+        public PoVajahTekst(ZaPagePayload2 navigationParameter)
+        {
+            InitializeComponent();
+            txtUporabnik.Text = PrivzetiViewModel.Uporabnik;
+            smallImage.Source = PrivzetiViewModel.UporabnikSlika;
+            smallImage.Visibility = Visibility.Visible;
+            up = PrivzetiViewModel.Uporabnik;
+            var y = (ZaPagePayload2)navigationParameter;
+            var x = y.št;
+            številkaVaje = x;
+            opisS = y.opisS;
+            oba = y.n.Split(' ');
+            switch (oba[0])
+            {
+                case "Ignoriraj":
+                    načinDela = NačinDela.Ignoriraj;
+                    break;
+                case "Ponovno":
+                    načinDela = NačinDela.Ponovno;
+                    break;
+                case "Briši":
+                    načinDela = NačinDela.Briši;
+                    break;
+                case "Uredi":
+                    načinDela = NačinDela.Uredi;
+                    break;
+                case "LahekTest":
+                    načinDela = NačinDela.LahekTest;
+                    break;
+                case "Test":
+                    načinDela = NačinDela.Test;
+                    break;
+                case "Neodvisno":
+                    načinDela = NačinDela.Neodvisno;
+                    break;
+            }
+            //branje iz datoteke
+            Table t1 = new Table();
+            doc.Blocks.Add(t1);
+            //vsebinaVsega.Inlines.Add( y.imeD);
+            t1.RowGroups.Add(new TableRowGroup());
+            tekstDatoteke = y.imeD;
+            string[] vrsticeTeksta = y.imeD.Split('\n');
+            t1.RowGroups[0].Rows.Add(new TableRow());
+            int štVrstic = 0;
+            TableRow currentRow;
+            int začetekOznačevanja = (x % 1000 - 1) * 3;
+            foreach (string v in vrsticeTeksta)
+            {
+                t1.RowGroups[0].Rows.Add(new TableRow());
+                currentRow = t1.RowGroups[0].Rows[štVrstic];
+                if (štVrstic == začetekOznačevanja || štVrstic == začetekOznačevanja + 1 || štVrstic == začetekOznačevanja + 2)
+                {
+                    currentRow.Background = new SolidColorBrush(Colors.Wheat);
+                    currentRow.Foreground = new SolidColorBrush(Colors.Black);
+                    currentRow.FontSize = 14;
+                    currentRow.FontWeight = FontWeights.Bold;
+                    
+                }
+                currentRow.Cells.Add(new TableCell(new Paragraph(new Run(v))));
+                štVrstic++;
+            }
+
+            var offset = (začetekOznačevanja * (14 + 2)) - vsebnik.ActualHeight / 2;
+            //Tukaj je treba nekako skrolat navzdol
+            vsebnik.ScrollToVerticalOffset(4);
+            //
+            //
+
+            vsebnik.UpdateLayout();
+           
+            časSkupaj = y.časSkupaj;
+            napakeSkupaj = y.napakeSkupaj;
+            udarciSkupaj = y.številoUdarcevSkupaj;
+            štČrkSkupaj = y.štČrkSkupaj;
+            štVaj = y.vsehVajSkupaj;
+            številkeVaj = new int[štVaj];
+            številkeVaj = y.številkeVajZaDan;
+            pomžniŠtevec = y.trenutnaPozicijaVaj;
+           
+            if (načinDela == NačinDela.Test)
+            {
+                Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Render, new Action(() =>
+                {
+                    var navWindow = Window.GetWindow(this) as NavigationWindow;
+                    if (navWindow != null) navWindow.ShowsNavigationUI = false;
+                }));
+            }
+            if (načinDela == NačinDela.Ignoriraj)
+            {
+                pageTitle.Text = "Vaja #" + x + " - Vaje " + oba[1];
+            }
+            else
+            {
+                pageTitle.Text = "Vaja #" + x + " - " + načinDela + " " + oba[1];
+            }
+            št = x;
+
+            var item = TekstViewModel.GetVsebina(x);
+            VsebinaVrstic = item.ToList();
+            grd.ItemsSource = VsebinaVrstic;
+            skupina = TekstViewModel.GetSkupinaVaje(x);
+            prof = true;
+            var dolžina = 0;
+            //rezultati skupaj
+            txtNapake.Text = napakeSkupaj.ToString();
+            txtN.Text = napake.ToString();
+            txtH.Text = udarci.ToString();
+            if (štČrkSkupaj != 0)
+                nvProcentihs.Text = string.Format("{0,5:P2}", (double)napakeSkupaj / štČrkSkupaj);
+            else
+                nvProcentihs.Text = string.Format("{0,5:P2}", 0.00);
+            uds.Text = udarciSkupaj.ToString();
+            if (časSkupaj != 0)
+                txtHitrost.Text = ((int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0))).ToString();
+            else
+                txtHitrost.Text = "0";
+            foreach (var vv in item.ToList())
+                dolžina += vv.tekst.Length;
+            //rezultati za to vajo
+            nvProcentih.Text = string.Format("{0,5:P2}", 0.00);
+            ud.Text = "0";
+            udarci = 0;
+            m = new Tipkovnica(št);
+
+           // KeyUp += m.Preveri;
+           // vsebnik.Children.Add(m);
+            switch (načinDela)
+            {
+                case NačinDela.Ignoriraj:
+                   // m.Visibility = Visibility.Visible;
+                    //brdTipkovnica.Visibility = Visibility.Visible;
+                    //brdLegenda.Visibility = Visibility.Visible;
+                    break;
+                case NačinDela.Ponovno:
+                  //  m.Visibility = Visibility.Visible;
+                    break;
+                //case NačinDela.Briši:
+                //    m.Visibility = Visibility.Visible;
+                //    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += Dispatcher_AcceleratorKeyActivated;
+                //    break;
+                //case NačinDela.Uredi:
+                //    m.Visibility = Visibility.Visible;
+                //    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += Dispatcher_AcceleratorKeyActivated;
+                //    break;
+                //case NačinDela.LahekTest:
+                //    m.Visibility = Visibility.Collapsed;
+                //    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += Dispatcher_AcceleratorKeyActivated;
+                //    break;
+                case NačinDela.Test:
+                   // m.Visibility = Visibility.Collapsed;
+                    brdTipkovnica.Visibility = Visibility.Collapsed;
+                    //brdLegenda.Visibility = Visibility.Collapsed;
+                    break;
+                    //case NačinDela.Neodvisno:
+                    //    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += Dispatcher_AcceleratorKeyActivated;
+                    //    m.Visibility = Visibility.Collapsed;
+                    //    break;
+
+            }
+            btnZačni.Focus();
+        }
+        private void ZačniZVajo(object sender, RoutedEventArgs e)
+        {
+            btnPrav1.Visibility = Visibility.Collapsed;
+            btnPrav2.Visibility = Visibility.Collapsed;
+            btnPrav3.Visibility = Visibility.Collapsed;
+            grd.SelectedIndex = 0;
+            if (btnZačni.Content.Equals("Začni z vajo"))
+            {
+                btnZačni.IsEnabled = false;
+                štVrstice = 0;
+                var vrstice = VsebinaVrstic.ToList();
+                trenutnaVrstica = (Vsebina)vrstice[štVrstice];
+                txtVnos.IsEnabled = true;
+                vm = (StoparicaViewModel)ura.Resources["vm"];
+                vm.Start();
+                txtVnos.Focus();
+                štČrk = 0;
+                napake = 0;
+                številoUdarcev = 0;
+                vsehČrkVVaji += trenutnaVrstica.tekst.Length;
+            }
+            else
+            {
+                var a = new ZaPagePayload2();
+                //če si v načinu dela je prof preveri ali je že konec sklopa vaj
+                //ne na naslednjo številko, ampak na naslednjo vajo v sklopu teh vaj - v načinu jeProf
+
+                if (pomžniŠtevec < štVaj - 1)
+                {
+                    //naslednja vaja
+                    pomžniŠtevec++;
+                    št = številkeVaj[pomžniŠtevec];
+                    a.št = št;
+                    a.n = načinDela + " " + oba[1];
+                    a.napakeSkupaj = napakeSkupaj;
+                    a.štČrkSkupaj = štČrkSkupaj;
+                    a.številoUdarcevSkupaj = udarciSkupaj;
+                    a.časSkupaj = časSkupaj;
+                    a.vsehVajSkupaj = štVaj;
+                    a.številkeVajZaDan = številkeVaj;
+                    a.trenutnaPozicijaVaj = pomžniŠtevec;
+                    a.opisS = opisS;
+                    a.imeD = tekstDatoteke;
+                }
+                else
+                {
+                    //končaj - v načinu test je treba tukaj nekaj narediti
+                    var r = "Statistika za " + načinDela + " za skupino " + opisS;
+                    r += "\nŠtevilo udarcev " + udarciSkupaj;
+                    r += "\nČas skupaj " + časSkupaj + "s";
+                    r += "\nNapake " + napakeSkupaj;
+
+                    var m =
+                        Xceed.Wpf.Toolkit.MessageBox.Show("Ta sklop si končal, lahko ga ponoviš ali se vrneš na začetni zaslon\n" +
+                                          r);
+                    return;
+                }
+
+                try
+                {
+                    this.NavigationService.Navigate(new PoVajahTekst(a));
+                }
+                catch
+                {
+                    var a1 = new ZaPagePayload2();
+                    a1.št = 1;
+                    a1.n = načinDela + " " + oba[1];
+                    this.NavigationService.Navigate(new PoVajahTekst(a1));
+                }
+            }
+        }
+        private void KonecVrstice() //ali je dovolj črk ali je enter
+        {
+            // pojdi v novo vrstico
+            //še prikaži kljukico na odtipkani vrstici
+            if (trenutnaVrstica.vrstica == 1)
+                btnPrav1.Visibility = Visibility.Visible;
+            if (trenutnaVrstica.vrstica == 2)
+                btnPrav2.Visibility = Visibility.Visible;
+            if (trenutnaVrstica.vrstica == 3)
+                btnPrav3.Visibility = Visibility.Visible;
+            switch (načinDela)
+            {
+                case NačinDela.Ignoriraj:
+                case NačinDela.Test:
+                    NovaVrstica();
+                    break;
+                case NačinDela.Ponovno:
+                    var enako = true;
+                    //tbPomoc.Text = "";
+                    //tbOK.Text = "";
+                    //tbPomoc.Text = trenutnaVrstica.tekst;
+                    //tbOK.Visibility = Visibility.Collapsed;
+                    for (var a = 0; a < trenutnaVrstica.tekst.Length; a++)
+                    {
+                        if (trenutnaVrstica.tekst[a] != txtVnos.Text[a])
+                        //zamenjaj barvo ozadja
+                        {
+
+                            //tbOK.Inlines.Add(
+                            //    (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Red) }));
+                            napake++;
+                            enako = false;
+                        }
+                        else
+                        {
+                            //tbOK.Inlines.Add(
+                            //    (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Green) }));
+                        }
+                    }
+                    txtNapake.Text = napake.ToString();
+                    if (enako)
+                    {
+                        NovaVrstica();
+                    }
+                    else
+                    {
+                        //tbPomoc.Visibility = Visibility.Visible;
+                        //tbOK.Visibility = Visibility.Visible;
+                        štČrk = 0;
+                        txtVnos.Text = "";
+                    }
+                    break;
+                case NačinDela.Briši:
+                case NačinDela.Uredi:
+                case NačinDela.LahekTest:
+                    var enako1 = true;
+                    ////tbPomoc.Text = "";
+                    ////tbOK.Text = "";
+                    ////tbPomoc.Text = trenutnaVrstica.tekst;
+                    ////tbOK.Visibility = Visibility.Collapsed;
+                    for (var a = 0; a < trenutnaVrstica.tekst.Length; a++)
+                    {
+                        if (trenutnaVrstica.tekst[a] != txtVnos.Text[a])
+                        //zamenjaj barvo ozadja
+                        {
+                            //tbOK.Inlines.Add(
+                            //    (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Red) }));
+                            napake++;
+                            enako1 = false;
+                        }
+                        else
+                        {
+                            //tbOK.Inlines.Add(
+                            //    (new Run { Text = txtVnos.Text[a] + "", Foreground = new SolidColorBrush(Colors.Green) }));
+                        }
+                    }
+                    txtNapake.Text = napake.ToString();
+                    if (enako1)
+                    {
+                        NovaVrstica();
+                    }
+                    else
+                    {
+                        //tbPomoc.Visibility = Visibility.Visible;
+                        //tbOK.Visibility = Visibility.Visible;
+                        štČrk = txtVnos.Text.Length - 1;
+                        //pri načinu dela briši je treba spremeniti trenutni položaj v textboxu vrednost spremenljivke štČrk
+                        txtVnos.Focus();
+                    }
+                    break;
+
+
+                case NačinDela.Neodvisno:
+                    NovaVrstica();
+                    break;
+            }
+        }
+
+        private void NovaVrstica()
+        {
+            štVrstice++;
+            štČrk = 0;
+            txtVnos.Text = "";
+
+            udarci = (int)((številoUdarcev - napake * 25) / ((vm.Sekunde + vm.Minute * 60) / 60));
+            if (štVrstice > 2)
+            {
+                KonecVaje();
+                return;
+            }
+            var vrstice = VsebinaVrstic.ToList();
+            trenutnaVrstica = (Vsebina)vrstice[štVrstice];
+            vsehČrkVVaji += trenutnaVrstica.tekst.Length;
+            grd.SelectedIndex = štVrstice;
+            //tbOK.Text = "Pravilno!";
+            //tbPomoc.Visibility = Visibility.Collapsed;
+        }
+
+        private void KonecVaje()
+        {
+            vm.Stop();
+
+            var čas = (int)vm.Sekunde + vm.Minute * 60;
+            var hitrost = (int)((številoUdarcev - napake * 25) / (čas / 60.0)); //preveri
+            nvProcentih.Text = string.Format("{0,5:P2}", (double)napake / vsehČrkVVaji);
+            ud.Text = številoUdarcev + "";
+
+            časSkupaj = časSkupaj + (int)vm.Sekunde + vm.Minute * 60;
+
+            napakeSkupaj = napakeSkupaj + napake;
+
+            udarciSkupaj = udarciSkupaj + številoUdarcev;
+
+            štČrkSkupaj = štČrkSkupaj + vsehČrkVVaji;
+
+            txtNapake.Text = napakeSkupaj + "";
+            txtN.Text = napake.ToString();
+            txtH.Text = hitrost.ToString();
+            if (časSkupaj != 0)
+                txtHitrost.Text = ((int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0))).ToString();
+            nvProcentihs.Text = string.Format("{0,5:P2}", (double)napakeSkupaj / štČrkSkupaj);
+            uds.Text = udarciSkupaj.ToString();
+            //piši v json datoteko nazaj
+            štČrk = 0;
+            štVrstice = 0;
+            trenutnaVrstica = null;
+            txtVnos.IsEnabled = false;
+            btnZačni.Content = "Naslednja vaja";
+
+            btnZačni.IsEnabled = true;
+            //if (načinDela != NačinDela.Test)
+            //    backButton.IsEnabled = true;
+           
+            //lahko začne znova, samo če ima cikel vaj, sicer iz vaje ne more iti na drugo vajo kot eno naprej      
+            //tbOK.Text = "";
+            grd.SelectedIndex = 0;
+            var način = načinDela + " " + oba[1];
+            //prava pozicija
+            var nov = PrivzetiViewModel.SetItemR(št, napake, čas, številoUdarcev, vsehČrkVVaji, način, up, opisS);
+            //var busyIndicator = PrepareIndeterminateTask("Počakaj trenutek, rezultati samo na tem računalniku");
+            PrivzetiViewModel.PišiRezultate();
+
+            // CleanUpIndeterminateTask(busyIndicator);
+
+            btnZačni.Focus();
+        }
+
+   
+        private void Spremeni(object sender, TextChangedEventArgs e)
+        {
+            if (trenutnaVrstica != null && štČrk == trenutnaVrstica.tekst.Length)
+            {
+                KonecVrstice();
+            }
+        }
+
+        private void btnStatistika_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Statistika(načinDela));
+        }
+
+        private void txtVnos_KeyUp(object sender, KeyEventArgs e)
+        {
+            m.VrniShift();
+
+        }
+
+        private void txtVnos_LostFocus(object sender, RoutedEventArgs e)
+        {
+            vm.Stop();
+        }
+
+        private void txtVnos_GotFocus(object sender, RoutedEventArgs e)
+        {
+            vm.Start();
+        }
+        private void txtVnos_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+
+            int pomožna = (int)(KeyInterop.VirtualKeyFromKey(e.Key));
+            vnešenZnak = (char)(pomožna);
+            praviZnak = trenutnaVrstica.tekst[štČrk];
+            if (e.Key == Key.CapsLock)
+                return; //če smo prižgali caps lock naj ne šteje črk
+            if (e.Key == Key.Enter)
+                return; //samo, da ne šteje črk
+            var jeS = false;
+            if (Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift))
+            {
+                jeS = true;
+                m.PreveriShift();
+            }
+
+
+            if (e.Key == Key.RightShift || e.Key == Key.LeftShift)
+                return;
+            var jeKapps = Console.CapsLock;
+            if (!jeKapps && !jeS)
+                vnešenZnak = char.ToLower(vnešenZnak);
+            if (vnešenZnak == 186 && !jeKapps && !jeS)
+                vnešenZnak = 'č';
+            if (vnešenZnak == 186 && (jeKapps || jeS))
+                vnešenZnak = 'Č';
+            if (vnešenZnak == 253 && !jeKapps && !jeS)
+                vnešenZnak = 'đ';
+            if (vnešenZnak == 253 && (jeKapps || jeS))
+                vnešenZnak = 'Đ';
+            if (vnešenZnak == 254 && !jeKapps && !jeS)
+                vnešenZnak = 'ć';
+            if (vnešenZnak == 254 && (jeKapps || jeS))
+                vnešenZnak = 'Ć';
+            if (vnešenZnak == 251 && !jeKapps && !jeS)
+                vnešenZnak = 'š';
+            if (vnešenZnak == 251 && (jeKapps || jeS))
+                vnešenZnak = 'Š';
+            if (vnešenZnak == 252 && !jeKapps && !jeS)
+                vnešenZnak = 'ž';
+            if (vnešenZnak == 252 && (jeKapps || jeS))
+                vnešenZnak = 'ž';
+            if (vnešenZnak == 191 && !jeKapps && !jeS)
+                vnešenZnak = '\'';
+            if (vnešenZnak == 191 && (jeKapps || jeS))
+                vnešenZnak = '?';
+            if (vnešenZnak == 226 && !jeKapps && !jeS)
+                vnešenZnak = '<';
+            if (vnešenZnak == 226 && (jeKapps || jeS))
+                vnešenZnak = '>';
+            if (vnešenZnak == 190 && jeS)
+                vnešenZnak = ':';
+            if (vnešenZnak == 190 && !jeS)
+                vnešenZnak = '.';
+            if (vnešenZnak == 188 && !jeS)
+                vnešenZnak = ',';
+            if (vnešenZnak == 188 && jeS)
+                vnešenZnak = ';';
+            if (vnešenZnak == 189 && !jeKapps && !jeS)
+                vnešenZnak = '-';
+            if (vnešenZnak == 189 && (jeKapps || jeS))
+                vnešenZnak = '_';
+            if (vnešenZnak == 187 && !jeKapps && !jeS)
+                vnešenZnak = '+';
+            if (vnešenZnak == 187 && (jeKapps || jeS))
+                vnešenZnak = '*';
+            if (vnešenZnak == 48 && (jeKapps || jeS))
+                vnešenZnak = '=';
+            if (vnešenZnak == 49 && (jeKapps || jeS))
+                vnešenZnak = '!';
+            if (vnešenZnak == 50 && (jeKapps || jeS))
+                vnešenZnak = '"';
+            if (vnešenZnak == 51 && (jeS))
+                vnešenZnak = '#';
+            if (vnešenZnak == 52 && (jeS))
+                vnešenZnak = '$';
+            if (vnešenZnak == 53 && (jeS))
+                vnešenZnak = '%';
+            if (vnešenZnak == 54 && (jeS))
+                vnešenZnak = '&';
+            if (vnešenZnak == 55 && (jeS))
+                vnešenZnak = '/';
+            if (vnešenZnak == 56 && (jeS))
+                vnešenZnak = '(';
+            if (vnešenZnak == 57 && (jeS))
+                vnešenZnak = ')';
+            številoUdarcev++;
+            switch (načinDela)
+            {
+                case NačinDela.Ignoriraj:
+                    if (e.Key == Key.Back)
+                    {
+                        e.Handled = true;
+                        return;
+                    }
+                    if (vnešenZnak != praviZnak)
+                    {
+                        napake++;
+                        txtN.Text = napake.ToString();
+                        m.PobarvajNapačno(e.Key);
+                        narobe.Add(e.Key);
+                        e.Handled = true;
+                        return;
+                    }
+                    if (vnešenZnak == praviZnak && narobe.Count > 0)
+                    {
+                        m.Ponastavi(narobe);
+                        narobe = new List<Key>();
+                    }
+                    break;
+                case NačinDela.Ponovno:
+                    //if (e.Key == VirtualKey.Enter) //dodano, ker je šlo prehitro v novo vrstico 
+                    //    return; //prenos noavzgor, verjetno je problem še kje druge
+                    break;
+                case NačinDela.Briši:
+                    if (e.Key == Key.Back)
+                    {
+                        štČrk--;
+                        return;
+                    }
+                    break;
+                case NačinDela.Uredi:
+                case NačinDela.LahekTest:
+                    if (e.Key == Key.Back)
+                    {
+                        štČrk--;
+                        return;
+                    }
+                    //če grem levo ali desno v bistvu vrivam in se nič ne spremeni
+                    //kontrola je na koncu vrtsice
+                    break;
+                case NačinDela.Test:
+                    if (vnešenZnak != praviZnak)
+                    {
+                        napake++;
+                        txtNapake.Text = napake.ToString();
+                        e.Handled = true;
+                        return;
+                    }
+                    break;
+            }
+
+            štČrk++;
+        }
+    }
+}

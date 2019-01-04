@@ -32,25 +32,22 @@
         <local:IntToColor x:Key="IntToColor" />
         <local:NotBoolToVisibilityConverter x:Key="NotBoolToVisibilityConverter" />
         <DataTemplate x:Key="mojaPredloga">
-            <Grid Height="110" Width="480" Margin="10">
+            <Grid Height="220" Width="480" Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Border Width="110" Height="110">
-                    <Image Source="{Binding slika}" Stretch="UniformToFill" />
+                <Border Width="220" Height="220">
+                    <Image Source="{Binding Slika}" Stretch="UniformToFill" />
                 </Border>
                 <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock  Text="Vaja #" />
-                        <TextBlock Text="{Binding Id}" TextWrapping="NoWrap" />
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <TextBlock Text="{Binding Ime}" TextWrapping="NoWrap" FontSize="16" FontWeight="Bold"  />
                     </StackPanel>
-                    <TextBlock Text="{Binding vsebina[0].tekst}" TextWrapping="NoWrap" />
-                    <TextBlock Text="{Binding vsebina[1].tekst}"  MaxHeight="60" />
                 </StackPanel>
             </Grid>
         </DataTemplate>
-        <DataTemplate x:Key="zeReseno">
+        <!--<DataTemplate x:Key="zeReseno">
             <Grid Height="110" Width="480" Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -92,9 +89,9 @@
                          />
                 </StackPanel>
             </Grid>
-        </DataTemplate>
-        <local:SelektorPredlog MojaPredloga="{StaticResource mojaPredloga}" ZeReseno="{StaticResource zeReseno}"
-                               x:Key="selTemplateSelector" />
+        </DataTemplate>-->
+        <!--<local:SelektorPredlog MojaPredloga="{StaticResource mojaPredloga}" ZeReseno="{StaticResource zeReseno}"
+                               x:Key="selTemplateSelector" />-->
     </Page.Resources>
     <Grid  DataContext="{Binding Group}">
         <Grid.RowDefinitions>
@@ -113,7 +110,8 @@
             TabIndex="1"
             Grid.RowSpan="2"
             Padding="120,50,120,50"            
-            ItemTemplateSelector="{StaticResource selTemplateSelector}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            ItemTemplate="{StaticResource mojaPredloga}"
             SelectionChanged="ItemGridView_SelectionChanged">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
