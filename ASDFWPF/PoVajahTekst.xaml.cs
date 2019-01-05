@@ -98,30 +98,43 @@ namespace ASDFWPF
             int štVrstic = 0;
             TableRow currentRow;
             int začetekOznačevanja = (x % 1000 - 1) * 3;
+            vrsticeTeksta = vrsticeTeksta.Skip(začetekOznačevanja - 2).ToArray<string>();
             foreach (string v in vrsticeTeksta)
             {
                 t1.RowGroups[0].Rows.Add(new TableRow());
                 currentRow = t1.RowGroups[0].Rows[štVrstic];
-                if (štVrstic == začetekOznačevanja || štVrstic == začetekOznačevanja + 1 || štVrstic == začetekOznačevanja + 2)
+                if (začetekOznačevanja == 0)
                 {
-                    currentRow.Background = new SolidColorBrush(Colors.Wheat);
-                    currentRow.Foreground = new SolidColorBrush(Colors.Black);
-                    currentRow.FontSize = 14;
-                    currentRow.FontWeight = FontWeights.Bold;
-                    
+                    if (štVrstic == 0 || štVrstic == 1 || štVrstic == 2)
+                    {
+                        currentRow.Background = new SolidColorBrush(Colors.Wheat);
+                        currentRow.Foreground = new SolidColorBrush(Colors.Black);
+                        currentRow.FontSize = 14;
+                        currentRow.FontWeight = FontWeights.Bold;
+                    }
+                }
+                else
+                {
+                    if (štVrstic == 2 || štVrstic == 3 || štVrstic == 4)
+                    {
+                        currentRow.Background = new SolidColorBrush(Colors.Wheat);
+                        currentRow.Foreground = new SolidColorBrush(Colors.Black);
+                        currentRow.FontSize = 14;
+                        currentRow.FontWeight = FontWeights.Bold;
+                    }
                 }
                 currentRow.Cells.Add(new TableCell(new Paragraph(new Run(v))));
                 štVrstic++;
             }
 
-            var offset = (začetekOznačevanja * (14 + 2)) - vsebnik.ActualHeight / 2;
+            //var offset = (začetekOznačevanja * (14 + 2)) - vsebnik.ActualHeight / 2;
             //Tukaj je treba nekako skrolat navzdol
-            vsebnik.ScrollToVerticalOffset(4);
-            //
+            //vsebnik.ScrollToVerticalOffset(4);
+            //vsebnik.UpdateLayout();
             //
 
-            vsebnik.UpdateLayout();
-           
+
+
             časSkupaj = y.časSkupaj;
             napakeSkupaj = y.napakeSkupaj;
             udarciSkupaj = y.številoUdarcevSkupaj;

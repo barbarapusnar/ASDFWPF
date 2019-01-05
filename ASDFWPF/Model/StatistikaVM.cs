@@ -163,11 +163,11 @@ namespace ASDFWPF
                     //lahko še kaj
                     if (x.Procent <= 0.002m)
                         x.OcenaP = 5;
-                    else if (x.Procent <= 0.004m)
+                    else if (x.Procent <= 0.4m)
                         x.OcenaP = 4;
-                    else if (x.Procent <= 0.007m)
+                    else if (x.Procent <= 0.7m)
                         x.OcenaP = 3;
-                    else if (x.Procent <= 0.0099m)
+                    else if (x.Procent <= 0.99m)
                         x.OcenaP = 2;
                     else
                         x.OcenaP = 1;

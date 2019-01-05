@@ -293,7 +293,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <SplashScreen Include="Slike\ozadje1.jpg">
+    <SplashScreen Include="Slike\Ozadje2.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </SplashScreen>
     <Content Include="Slike\user-32.png" />

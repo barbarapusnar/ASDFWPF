@@ -32,13 +32,13 @@ namespace ASDFWPF
         }
         
         private async void  Page_Loaded(object sender, RoutedEventArgs e)
-        {                    
-            
-          
-           
+        {
+
+
+            bi.IsBusy = true;
             await Dispatcher.BeginInvoke(
                 (Action)(async() => { await PrivzetiViewModel.NaložiRezultate(); }));
-           
+            bi.IsBusy = false;
             mojOkvir.Navigate(new Prijava());
         }
     }

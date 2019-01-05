@@ -68,7 +68,7 @@ namespace ASDFWPF
                         this.NavigationService.Navigate(new SkupinaZaEnDan(Od, Do));
 
                     }
-                    catch (FormatException x)
+                    catch (FormatException)
                     {
                         MessageBox.Show("Izbrati moraš številko prve in zadnje vaje");
                     }

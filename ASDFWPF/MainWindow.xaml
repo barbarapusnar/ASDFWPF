@@ -19,5 +19,9 @@
         <TextBlock Text="Strojepisje" FontSize="34" FontWeight="Bold" HorizontalAlignment="Center" />
         <Frame Grid.Row="1"  Name="mojOkvir" Style="{DynamicResource StilOkvira}">
         </Frame>
+        <xctk:BusyIndicator Grid.Row="1" Name="bi" IsBusy="True" BusyContent="Počakaj prosim...." Margin="0,34,0,0" >
+            
+        </xctk:BusyIndicator>
+
     </Grid>
 </Page>
