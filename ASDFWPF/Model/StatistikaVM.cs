@@ -161,13 +161,13 @@ namespace ASDFWPF
                     x.Hitrost = (x.Udarci - x.Napake * 25) / (double)(x.Cas / 60);
 
                     //lahko še kaj
-                    if (x.Procent <= 0.002m)
+                    if (x.Procent*100 <= 0.2m)
                         x.OcenaP = 5;
-                    else if (x.Procent <= 0.4m)
+                    else if (x.Procent*100 <= 0.4m)
                         x.OcenaP = 4;
-                    else if (x.Procent <= 0.7m)
+                    else if (x.Procent*100 <= 0.7m)
                         x.OcenaP = 3;
-                    else if (x.Procent <= 0.99m)
+                    else if (x.Procent*100 <= 0.99m)
                         x.OcenaP = 2;
                     else
                         x.OcenaP = 1;

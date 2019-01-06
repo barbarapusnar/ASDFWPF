@@ -37,7 +37,7 @@ namespace ASDFWPF
             //s = (string)navigationParameter;
             vaje1 = vaje[0];
             int st1 = st[0];
-            opisSkupine = vaje+"--" +(vaje1+st1);
+            opisSkupine = vaje1+"--" +st1;
             List<Vaje> vse = new List<Vaje>();
             vse = PrivzetiViewModel.GetVajeZaDanPoŠtevilki(vaje1,st1).ToList();
             if (vaje[1] != 0)
