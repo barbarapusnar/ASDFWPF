@@ -92,9 +92,6 @@
             <Image Name="imGrupe" Width="350" Height="300" Stretch="UniformToFill" Margin="5"/>
             <TextBlock Name="txtOpis" FontSize="20" TextWrapping="Wrap" Height="300" Width="500" Margin="10"/>
         </StackPanel>
-        
-        <!-- Horizontal scrolling grid used in most view states -->
-
         <ListView 
             x:Name="itemGridView"
             TabIndex="1"

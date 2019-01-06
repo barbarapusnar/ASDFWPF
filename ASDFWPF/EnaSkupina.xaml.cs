@@ -32,15 +32,6 @@ namespace ASDFWPF
         public EnaSkupina(string id)
         {
             InitializeComponent();
-            //var sampleDataGroups = PrivzetiViewModel.GetGroups("AllGroups");
-            //this.Groups = sampleDataGroups.ToList<TipkanjeDataGroup>();
-            //itemGridView.ItemsSource = Groups;
-            //txtUporabnik.Text = up;
-            //if (b != null)
-            //{
-            //    smallImage.Source = b;
-            //}
-            //txtSkupina.Text = id;
             txtUporabnik.Text = PrivzetiViewModel.Uporabnik;
             smallImage.Source = PrivzetiViewModel.UporabnikSlika;
             smallImage.Visibility = Visibility.Visible;
@@ -48,26 +39,8 @@ namespace ASDFWPF
             pageTitle.Text = Group.Title;
             txtOpis.Text = Group.Description;
             imGrupe.Source = Group.Image;
-           // itemGridView.ItemsSource = Group.Items;
             reseno = new bool[Group.Items.Count + 1];
             napake = new int[Group.Items.Count + 1];
-
-            //IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
-            //var i = 1;
-            //foreach (var x in Group.Items)
-            //{
-            //    var a = (from b in r
-            //             where b.idVaje == x.Id
-            //             select b).FirstOrDefault();
-            //    if (a != null)
-            //    {
-            //        napake[i] = a.napake;
-            //        reseno[i] = true;
-            //    }
-            //    i++;
-            //}
-            //DefaultViewModel["JeZe"] = reseno;
-            //DefaultViewModel["Narobe"] = napake;
         }
 
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)

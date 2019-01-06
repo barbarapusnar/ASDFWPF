@@ -29,9 +29,7 @@ namespace ASDFWPF
         public Page1()
         {
             InitializeComponent();
-            //PrivzetiViewModel.NaložiRezultate();
             var sampleDataGroups = PrivzetiViewModel.GetGroups("AllGroups");
-           // PrivzetiViewModel.NaložiStareRezultateAsync();
             this.Groups = sampleDataGroups.ToList<TipkanjeDataGroup>();
             itemGridView.ItemsSource = Groups;
             txtUporabnik.Text = PrivzetiViewModel.Uporabnik; ;
@@ -47,7 +45,6 @@ namespace ASDFWPF
             var izbran = itemGridView.SelectedIndex;
             TipkanjeDataGroup skupina = Groups[izbran];
             this.NavigationService.Navigate(new EnaSkupina(skupina.Id));
-            //this.Frame.Navigate(typeof(EnaSkupina), ((TipkanjeDataGroup)group).Id);
         }
 
        

@@ -205,33 +205,7 @@ namespace ASDFWPF
             }
             btnZačni.Focus();
         }
-        //private void Dispatcher_AcceleratorKeyActivated(CoreDispatcher sender, AcceleratorKeyEventArgs args)
-        //{
-        //    //tako onemogočiš akceleratorske tipke
-        //    if (načinDela == NačinDela.Ignoriraj || načinDela == NačinDela.Ponovno)
-        //    {
-        //        if (args.VirtualKey == Key.Back)
-        //        {
-        //            //sedaj prikaže ' in % dela pa tudi puščica levo, desno
-        //            args.Handled = true;
-        //        }
-        //        var shiftKey = (Window.Current.CoreWindow.GetKeyState(VirtualKey.Shift) & CoreVirtualKeyStates.Down) ==
-        //                       CoreVirtualKeyStates.Down;
-        //        if (args.VirtualKey == Key.Left && !shiftKey)
-        //            args.Handled = true;
-        //        //manjka še ' in desni smernik
-        //    }
-        //    if (načinDela == NačinDela.Briši)
-        //    {
-        //        if (args.VirtualKey == VirtualKey.Left || args.VirtualKey == VirtualKey.Right)
-        //            args.Handled = true;
-        //        var shiftKey = (Window.Current.CoreWindow.GetKeyState(VirtualKey.Shift) & CoreVirtualKeyStates.Down) ==
-        //                       CoreVirtualKeyStates.Down;
-        //        if (args.VirtualKey == VirtualKey.Left && !shiftKey)
-        //            args.Handled = true;
-        //    }
-        //}
-
+        
         private void ZačniZVajo(object sender, RoutedEventArgs e)
         {
             btnPrav1.Visibility = Visibility.Collapsed;
@@ -330,20 +304,7 @@ namespace ASDFWPF
                 }
             }
         }
-
-        //prekliči
-        //private void CommandInvokedHandler2(IUICommand command)
-        //{
-        //    Frame.Navigate(typeof(Prijava), PrivzetiViewModel.Uporabnik);
-        //}
-
-        ////ponovno začni
-        //private void CommandInvokedHandler1(IUICommand command)
-        //{
-        //    Frame.Navigate(typeof(SkupinaZaEnDan), opisS);
-        //}
-
-       
+      
 
         private void KonecVrstice() //ali je dovolj črk ali je enter
         {
@@ -508,11 +469,7 @@ namespace ASDFWPF
             var način = načinDela + " " + oba[1];
             //prava pozicija
             var nov = PrivzetiViewModel.SetItemR(št, napake, čas, številoUdarcev, vsehČrkVVaji, način, up, opisS);
-            //var busyIndicator = PrepareIndeterminateTask("Počakaj trenutek, rezultati samo na tem računalniku");
             PrivzetiViewModel.PišiRezultate();
-            
-           // CleanUpIndeterminateTask(busyIndicator);
-
             btnZačni.Focus();
         }
 
@@ -526,38 +483,6 @@ namespace ASDFWPF
             var busyIndicator = new BusyIndicator();
             return (busyIndicator);
         }
-        //bo treba napisati, a verjetno ne tukaj
-        //protected override async void GoBack(object sender, RoutedEventArgs e)
-        //{
-        //    if (jeProf)
-        //    {
-        //        // base.GoBack(sender, e);
-        //        var m = new MessageDialog("Od tu ne moreš nazaj, lahko samo ponoviš celoten sklop vaj");
-        //        m.Commands.Add(new UICommand("Ponovno začni", CommandInvokedHandler));
-        //        m.Commands.Add(new UICommand("Prekliči", CommandInvokedHandler));
-
-        //        // Set the command that will be invoked by default
-        //        m.DefaultCommandIndex = 0;
-
-        //        // Set the command to be invoked when escape is pressed
-        //        m.CancelCommandIndex = 1;
-
-        //        // Show the message dialog
-        //        await m.ShowAsync();
-        //    }
-        //    else
-        //    {
-        //        var x = PrivzetiViewModel.GetItem(št);
-        //        Frame.Navigate(typeof(EnaSkupina), x.Group.Id);
-        //    }
-        //}
-
-        //private void CommandInvokedHandler(IUICommand command)
-        //{
-        //    if (command.Label.Equals("Ponovno začni"))
-        //        Frame.Navigate(typeof(Prijava), PrivzetiViewModel.Uporabnik);
-        //}
-
         private void Spremeni(object sender, TextChangedEventArgs e)
         {
             if (trenutnaVrstica != null && štČrk == trenutnaVrstica.tekst.Length)
@@ -645,20 +570,20 @@ namespace ASDFWPF
                 vnešenZnak = 'Č';
             if (vnešenZnak == 253 && !jeKapps && !jeS)
                 vnešenZnak = 'đ';
-            if (vnešenZnak == 253 && (jeKapps || jeS))
+            if (vnešenZnak == 221 && (jeKapps || jeS))
                 vnešenZnak = 'Đ';
             if (vnešenZnak == 254 && !jeKapps && !jeS)
                 vnešenZnak = 'ć';
-            if (vnešenZnak == 254 && (jeKapps || jeS))
+            if (vnešenZnak == 222 && (jeKapps || jeS))
                 vnešenZnak = 'Ć';
             if (vnešenZnak == 251 && !jeKapps && !jeS)
                 vnešenZnak = 'š';
-            if (vnešenZnak == 251 && (jeKapps || jeS))
+            if (vnešenZnak == 219 && (jeKapps || jeS)) //!!
                 vnešenZnak = 'Š';
             if (vnešenZnak == 252 && !jeKapps && !jeS)
                 vnešenZnak = 'ž';
-            if (vnešenZnak == 252 && (jeKapps || jeS))
-                vnešenZnak = 'ž';
+            if (vnešenZnak == 220 && (jeKapps || jeS))
+                vnešenZnak = 'Ž';
             if (vnešenZnak == 191 && !jeKapps && !jeS)
                 vnešenZnak = '\'';
             if (vnešenZnak == 191 && (jeKapps || jeS))

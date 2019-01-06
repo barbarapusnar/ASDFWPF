@@ -177,9 +177,6 @@
     <Compile Include="Statistika.xaml.cs">
       <DependentUpon>Statistika.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TestTipkovnice.xaml.cs">
-      <DependentUpon>TestTipkovnice.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Tipkovnica.xaml.cs">
       <DependentUpon>Tipkovnica.xaml</DependentUpon>
     </Compile>
@@ -243,10 +240,6 @@
     <Page Include="Statistika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TestTipkovnice.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Tipkovnica.xaml">
       <SubType>Designer</SubType>

@@ -30,8 +30,6 @@ namespace ASDFWPF
             smallImage.Visibility = Visibility.Visible;
 
             StatistikaVM.NaložiRezultateAsync();
-           // var sampleDataGroups = (StatistikaVM.GetGroupsD("AllGroups").ToList());
-           // Groups = sampleDataGroups;
             var sampleDataGroupsD = StatistikaVM.GetGroupsD("AllGroups");
 
             GroupsD = sampleDataGroupsD.ToList(); 

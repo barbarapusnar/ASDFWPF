@@ -19,7 +19,9 @@ namespace ASDFWPF
                                             new Typeface(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.Bold, FontStretches.Normal),
                                             36,
                                             Brushes.Black);
-            return ft.Width;
+            //if (vnos[vnos.Length - 1] == ' ')
+            //    ft.Width = ft.Width + ft.WidthIncludingTrailingWhitespace;
+            return ft.WidthIncludingTrailingWhitespace;
         }
 
        

@@ -127,25 +127,5 @@ namespace ASDFWPF
                 txtStevilo1.IsEnabled = false;
             }
         }
-
-
-
-
-
-        //private static void GetCurrentUserProfileImage()
-        //{
-        //    var imageFile = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
-        //    @"\Microsoft\User Account Pictures\" + Environment.UserDomainName + "+" + Environment.UserName + ".dat");
-        //    if (!imageFile.Exists)
-        //        return;
-
-        //    var desktopSaveLocation = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
-        //    @"\" + Environment.UserDomainName + "+" + Environment.UserName + ".bmp");
-        //    byte[] originalImageBytes = new byte[imageFile.Length];
-        //    using (var imageInputStream = imageFile.OpenRead())
-        //        imageInputStream.Read(originalImageBytes, 0, (int)imageFile.Length);
-        //    using (var imageOutput = desktopSaveLocation.Create())
-        //        imageOutput.Write(originalImageBytes, 16, originalImageBytes.Length - 200);
-        //}
     }
 }

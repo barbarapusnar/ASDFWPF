@@ -42,9 +42,6 @@
                         <RadioButton x:Name="radProf2" Content="Teksti " GroupName="izbor" FontSize="20"
                                   Checked="radProf_Checked"
                                  TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
-                        <!--<TextBox x:Name="txtSkupina2" Text="1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" GotFocus="txtSkupina_GotFocus" />
-                        <TextBlock Text="naprej" FontSize="20" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBox x:Name="txtStevilo2" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" Text="20" GotFocus="txtStevilo_GotFocus" />-->
                     </StackPanel>
                 </StackPanel>
                 <Line Stroke="White" X1="0" Y1="25" X2="{Binding ActualWidth, ElementName=root, Mode=OneWay}" Y2="25" />

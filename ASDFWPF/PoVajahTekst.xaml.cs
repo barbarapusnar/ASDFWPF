@@ -522,20 +522,20 @@ namespace ASDFWPF
                 vnešenZnak = 'Č';
             if (vnešenZnak == 253 && !jeKapps && !jeS)
                 vnešenZnak = 'đ';
-            if (vnešenZnak == 253 && (jeKapps || jeS))
+            if (vnešenZnak == 221 && (jeKapps || jeS))
                 vnešenZnak = 'Đ';
             if (vnešenZnak == 254 && !jeKapps && !jeS)
                 vnešenZnak = 'ć';
-            if (vnešenZnak == 254 && (jeKapps || jeS))
+            if (vnešenZnak == 222 && (jeKapps || jeS))
                 vnešenZnak = 'Ć';
             if (vnešenZnak == 251 && !jeKapps && !jeS)
                 vnešenZnak = 'š';
-            if (vnešenZnak == 251 && (jeKapps || jeS))
+            if (vnešenZnak == 219 && (jeKapps || jeS)) //!!
                 vnešenZnak = 'Š';
             if (vnešenZnak == 252 && !jeKapps && !jeS)
                 vnešenZnak = 'ž';
-            if (vnešenZnak == 252 && (jeKapps || jeS))
-                vnešenZnak = 'ž';
+            if (vnešenZnak == 220 && (jeKapps || jeS))
+                vnešenZnak = 'Ž';
             if (vnešenZnak == 191 && !jeKapps && !jeS)
                 vnešenZnak = '\'';
             if (vnešenZnak == 191 && (jeKapps || jeS))
