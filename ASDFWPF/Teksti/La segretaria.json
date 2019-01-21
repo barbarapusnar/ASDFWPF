@@ -1,0 +1,478 @@
+﻿[
+  {
+    "Id": 1,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "Un segretario è un impiegato che svolge vari "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "tipi di mansioni di fiducia all'interno di un "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "ufficio, azienda, ente o altro tipo di organizzazione, "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 2,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "soprattutto per quanto riguarda la stesura e "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "gestione dei documenti, spesso per conto di uno "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "specifico superiore, al quale fa da aiutante. "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 3,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "Nella sua origine etimologica, si riferisce alla "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "parola latina secretum (segreto), volendo significare "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "colui che custodisce segreti, informazioni confidenziali. "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 4,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "In genere il segretario che svolge la sua funzione "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "in amministrazioni e società private ha il compito "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "di facilitare e organizzare il lavoro di colui "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 5,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "da cui dipende. In passato il compito principale "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "del segretario, di solito esperto di stenografia "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "e dattilografia, consisteva nella redazione e "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 6,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "conservazione di documenti cartacei relativi "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "al genere di attività che svolgeva l'ufficio "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "a cui era addetto. Questo può essere ancora "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 7,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "oggi considerato il primo livello del lavoro "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "di segreteria dove è essenziale una buona padronanza "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "della lingua e della capacità di scrivere tramite "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 8,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "i nuovi strumenti di scrittura elettronica. Acquisendo "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "sempre più esperienza, il segretario svolge compiti "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "aggiuntivi a quelli riguardanti la posta, le "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 9,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "fotocopie, e gli ordini d'acquisto per i materiali "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "di cancelleria e assume il ruolo di segretario-assistente "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "personale. Per questo lavoro l'assistente deve "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 10,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "avere doti organizzative e nozioni sul settore "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "dell'azienda in cui opera. Il segretario di uno "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "studio medico, ad esempio, deve avere almeno "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 11,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "delle conoscenze di base sulla terminologia medica; "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "il segretario di un avvocato deve avere delle "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "nozioni di giurisprudenza e così è per tutti "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 12,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "i settori. Il segretario specializzato deve "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "avere la capacità di comunicare in una o più "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "lingue straniere e di interagire con il pubblico, "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 13,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "i fornitori, i clienti e deve essere in grado "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "di emulare lo stile, la filosofia aziendale e "
+      },
+      {
+        "vrstica": 3,
+        "tekst": "societaria del dirigente per il quale lavora "
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  },
+  {
+    "Id": 14,
+    "vsebina": [
+      {
+        "vrstica": 1,
+        "tekst": "e dal quale è talora anche incaricato di tenere "
+      },
+      {
+        "vrstica": 2,
+        "tekst": "i libri contabili. "
+      },
+      {
+        "vrstica": 3,
+        "tekst": ""
+      }
+    ],
+    "group": {
+      "backgroundImage": "Slike/DvanajstaSkupina.png",
+      "description": "La segretaria",
+      "groupImage": "Slike/DvanajstaSkupina.png",
+      "key": "La segretaria",
+      "rank": null,
+      "recipesCount": 0,
+      "shortTitle": "La segretaria",
+      "title": "La segretaria"
+    },
+    "zadnjicReseno": null,
+    "reseno": false,
+    "napake": 0,
+    "porabljencas": 0,
+    "slika": "Slike/Vaja161.jpg",
+    "test": false,
+    "crke": []
+  }
+]

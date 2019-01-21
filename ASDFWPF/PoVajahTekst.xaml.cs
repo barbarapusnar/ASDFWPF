@@ -493,6 +493,7 @@ namespace ASDFWPF
         {
             vm.Start();
         }
+       
         private void txtVnos_PreviewKeyDown(object sender, KeyEventArgs e)
         {
 
@@ -504,13 +505,15 @@ namespace ASDFWPF
             if (e.Key == Key.Enter)
                 return; //samo, da ne šteje črk
             var jeS = false;
+            
             if (Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift))
             {
                 jeS = true;
                 m.PreveriShift();
             }
-
-
+           
+                
+          
             if (e.Key == Key.RightShift || e.Key == Key.LeftShift)
                 return;
             var jeKapps = Console.CapsLock;
@@ -534,8 +537,10 @@ namespace ASDFWPF
                 vnešenZnak = 'Š';
             if (vnešenZnak == 252 && !jeKapps && !jeS)
                 vnešenZnak = 'ž';
+            if (vnešenZnak == 269 && !jeKapps && !jeS)
+                vnešenZnak = 'è';
             if (vnešenZnak == 220 && (jeKapps || jeS))
-                vnešenZnak = 'Ž';
+                vnešenZnak = 'Ž';          
             if (vnešenZnak == 191 && !jeKapps && !jeS)
                 vnešenZnak = '\'';
             if (vnešenZnak == 191 && (jeKapps || jeS))

@@ -584,6 +584,8 @@ namespace ASDFWPF
                 vnešenZnak = 'ž';
             if (vnešenZnak == 220 && (jeKapps || jeS))
                 vnešenZnak = 'Ž';
+            if (vnešenZnak == 269 && !jeKapps && !jeS)
+                vnešenZnak = 'è';           
             if (vnešenZnak == 191 && !jeKapps && !jeS)
                 vnešenZnak = '\'';
             if (vnešenZnak == 191 && (jeKapps || jeS))
@@ -628,6 +630,7 @@ namespace ASDFWPF
                 vnešenZnak = '(';
             if (vnešenZnak == 57 && (jeS))
                 vnešenZnak = ')';
+
             številoUdarcev++;
             switch (načinDela)
             {
