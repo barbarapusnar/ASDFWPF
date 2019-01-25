@@ -42,10 +42,14 @@ namespace ASDFWPF
             {
                 Imena i = new Imena();
                 i.Ime = x.Name;
-                string imeS ="Slike/"+ i.Ime.Split('.')[0]+".png";
-                Uri u = new Uri(imeS,UriKind.Relative);
-                i.Slika = new BitmapImage(u);
-                vse.Add(i);
+                if (x.Extension == ".json")
+                {
+                    //string imeS ="Slike/"+ i.Ime.Split('.')[0]+".png";
+                    string imeS = "Teksti/" + i.Ime.Split('.')[0] + ".png";
+                    Uri u = new Uri(imeS, UriKind.Relative);
+                    i.Slika = new BitmapImage(u);
+                    vse.Add(i);
+                }
             }
             načinDela = NačinDela.Ignoriraj;
             itemGridView.ItemsSource = vse;
@@ -88,7 +92,7 @@ namespace ASDFWPF
                     try
                     {
                         string[] deliPoti =imeD.Split(new[] { '/', '.' });
-                        string imeD1 = Environment.CurrentDirectory + "\\TekstiStari\\" + deliPoti[1] + ".txt";
+                        string imeD1 = Environment.CurrentDirectory + "\\Teksti\\" + deliPoti[1] + ".txt";
 
                         StreamReader fs = new StreamReader(imeD1);
 
