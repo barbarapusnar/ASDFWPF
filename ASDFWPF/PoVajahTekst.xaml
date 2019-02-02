@@ -132,40 +132,41 @@
 
                     </Grid>
 
-                    <TextBlock Visibility="{Binding prof, Converter={StaticResource BooleanToVisibilityConverter}}"
-                               Text="Skupaj za danes" Margin="10,10,10,10"
-                                FontSize="24" />
-
-                    <Grid Height="103" Grid.Row="1" Grid.RowSpan="2" Margin="10,0,0,0"
+                    <StackPanel Orientation="Horizontal"  Margin="10,0,0,0">
+                        <TextBlock Visibility="{Binding prof, Converter={StaticResource BooleanToVisibilityConverter}}"
+                               Text="Skupaj vaje " Margin="0,3,0,0"
+                                FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Name="txtŠtevilke" Margin="0,3,0,0" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" Width="130" Height="100"/>
+                    </StackPanel>
+                    <Grid Height="144" Grid.Row="1" Grid.RowSpan="2" Margin="10,0,0,0"
                           Visibility="{Binding prof, Converter={StaticResource BooleanToVisibilityConverter}}">
+
                         <Grid.RowDefinitions>
                             <RowDefinition Height="35*" />
                             <RowDefinition Height="35*" />
                             <RowDefinition Height="35*" />
                             <RowDefinition Height="35*" />
-
+                            <!--<RowDefinition Height="35*" />-->
                         </Grid.RowDefinitions>
-                        <StackPanel Grid.Row="0" x:Name="stcStatistikas" Orientation="Horizontal" Margin="0,3,0,0" HorizontalAlignment="Center">
-                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Napake skupaj  :" /></TextBlock>
+                        <StackPanel Grid.Row="0" x:Name="stcStatistikas" Orientation="Horizontal" Margin="0,0,1,0" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                            <TextBlock FontSize="16" FontWeight="Bold" Text="Napake skupaj  :" ></TextBlock>
                             <TextBlock x:Name="txtNapake" FontWeight="Bold" FontSize="16" TextAlignment="Right"
                                        Width="95" />
                         </StackPanel>
-                        <StackPanel Grid.Row="3" x:Name="stcStatistikaPoVajis" Orientation="Horizontal" HorizontalAlignment="Left"
-                                    Margin="0,3,0,0">
-                            <TextBlock FontSize="16" FontWeight="Bold" HorizontalAlignment="Left"><Run Text="Hitrost :" /></TextBlock>
-                            <TextBlock x:Name="txtHitrost" FontWeight="Bold" FontSize="16" TextAlignment="Right"
-                                       Width="67" />
-                        </StackPanel>
-                        <StackPanel Grid.Row="1" x:Name="stcOcenas" Orientation="Horizontal" Margin="0,3,0,0" HorizontalAlignment="Center">
+
+                        <StackPanel Grid.Row="1" x:Name="stcOcenas" Orientation="Horizontal" Margin="2,3,2,0" HorizontalAlignment="Center" Grid.ColumnSpan="2">
                             <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Napake v % :" /></TextBlock>
                             <TextBlock x:Name="nvProcentihs" FontWeight="Bold" FontSize="16" TextAlignment="Right"
                                        Width="118" />
                         </StackPanel>
-                        <StackPanel Grid.Row="2" x:Name="stc1s" Orientation="Horizontal" Margin="0,3,0,0" HorizontalAlignment="Center">
-                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Udarcev skupaj :" /></TextBlock>
+                        <StackPanel Grid.Row="2" x:Name="stc1s" Orientation="Horizontal" Margin="2,3,9,0" HorizontalAlignment="Center" Width="208" Grid.ColumnSpan="2">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Ocena hitrost :" /></TextBlock>
                             <TextBlock x:Name="uds" FontWeight="Bold" FontSize="16" TextAlignment="Right" Width="90" />
                         </StackPanel>
-
+                        <StackPanel Grid.Row="3" x:Name="stc3s" Orientation="Horizontal" Margin="0,3,7,0" HorizontalAlignment="Center" Width="212" Grid.ColumnSpan="2">
+                            <TextBlock FontSize="16" FontWeight="Bold"><Run Text="Ocena napake :" /></TextBlock>
+                            <TextBlock x:Name="uds1" FontWeight="Bold" FontSize="16" TextAlignment="Right" Width="90" />
+                        </StackPanel>
                     </Grid>
                 </StackPanel>
             </Border>

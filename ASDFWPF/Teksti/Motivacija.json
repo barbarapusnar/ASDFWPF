@@ -1,29 +1,29 @@
 ﻿[
   {
-    "Id": 12001,
+    "Id":14001,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "Tajnik ima široko področje dela in opravlja različne "
+        "tekst": "Ko je govora o temi motivacije na delovnem mestu, "
       },
       {
         "vrstica": 2,
-        "tekst": "delovne naloge. Sprejema obiskovalce, poslovne "
+        "tekst": "bo najverjetneje večina izmed vas najprej pomislila "
       },
       {
         "vrstica": 3,
-        "tekst": "partnerje in z njimi poslovno komunicira. Komuniciranje "
+        "tekst": "na denar. Nekaj junakov bo pogumno vztrajalo "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -34,30 +34,30 @@
     "crke": []
   },
   {
-    "Id": 12002,
+    "Id": 14002,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "poteka tudi po telefonu. Telefonske klice preusmerja "
+        "tekst": "pri tezi, da je najboljša motivacija na delovnem "
       },
       {
         "vrstica": 2,
-        "tekst": "oziroma v primeru, da naslovnik ni dosegljiv, "
+        "tekst": "mestu doprinos podjetju. Za večino ljudi pa vendarle "
       },
       {
         "vrstica": 3,
-        "tekst": "prevzame za njega klic in mu preda informacijo, "
+        "tekst": "obstajajo unikatni sprožilci, ki jih motivirajo, "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -68,30 +68,30 @@
     "crke": []
   },
   {
-    "Id": 12003,
+    "Id": 14003,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "ki mora biti točna in zanesljiva. Tajnik sprejema "
+        "tekst": "da delajo po svojih najboljših zmožnostih. Ne "
       },
       {
         "vrstica": 2,
-        "tekst": "pošto, vodi evidenco, jo razvršča in jo odpošilja. "
+        "tekst": "glede na to, kaj za koga predstavlja motivacija "
       },
       {
         "vrstica": 3,
-        "tekst": "Skrbi za urejenost dokumentacije in pravilno "
+        "tekst": "na delovnem mestu, pa je pomembno, da zna dober "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -102,30 +102,30 @@
     "crke": []
   },
   {
-    "Id": 12004,
+    "Id": 14004,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "shranjevanje dokumentarnega gradiva in dokumentov. "
+        "tekst": "vodja uskladiti vire motivacije tako, da je maksimalno "
       },
       {
         "vrstica": 2,
-        "tekst": "Po navodilu ali samostojno sestavlja, piše in "
+        "tekst": "zadovoljen celoten kolektiv. Želite vedeti, kaj "
       },
       {
         "vrstica": 3,
-        "tekst": "ureja dopise, zapisnike in drugo dokumentacijo. "
+        "tekst": "je motivacija na delovnem mestu? Motivacija "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -136,30 +136,30 @@
     "crke": []
   },
   {
-    "Id": 12005,
+    "Id": 14005,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "Pripravlja in pomaga pri organizaciji delovnih "
+        "tekst": "je tista čudovita energija, zagon in navdušenje, "
       },
       {
         "vrstica": 2,
-        "tekst": "sestankov ter zagotavlja strokovno in administrativno "
+        "tekst": "ki ga kažejo zaposleni, kadar so navdihnjeni "
       },
       {
         "vrstica": 3,
-        "tekst": "podporo pri pripravi gradiv. Organizira tudi "
+        "tekst": "prispevati. Motivacija je zaznamovana s cilji, "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -170,30 +170,30 @@
     "crke": []
   },
   {
-    "Id": 12006,
+    "Id": 14006,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "službena potovanja, zagotovi rezervacije in druge "
+        "tekst": "čistimi pričakovanji, spoštovanjem, povratnimi "
       },
       {
         "vrstica": 2,
-        "tekst": "delovne obveznosti zaposlenih. Vodi rokovnik "
+        "tekst": "informacijami in spodbujanjem vodenja. Motivacija "
       },
       {
         "vrstica": 3,
-        "tekst": "in rezervacije terminov, dogovarja se za sestanke "
+        "tekst": "na delovnem mestu je bila tekom več desetletij "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -204,30 +204,30 @@
     "crke": []
   },
   {
-    "Id": 12007,
+    "Id": 14007,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "in sprotno izdeluje njihov razpored. Skrbi za "
+        "tekst": "preučevana na sto in en način. Na tematiko motivacije "
       },
       {
         "vrstica": 2,
-        "tekst": "pogostitev in postrežbo gostov in sodelavcev "
+        "tekst": "na delovnem mestu obstajajo tudi številne knjige. "
       },
       {
         "vrstica": 3,
-        "tekst": "na sestankih. Vodi kadrovsko evidenco in prisotnost "
+        "tekst": "Vse te metode lahko pomagajo oceniti in zagotoviti "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -238,30 +238,30 @@
     "crke": []
   },
   {
-    "Id": 12008,
+    "Id": 14008,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "na delu. Vzdržuje informacijski sistem in sledi "
+        "tekst": "kratkoročno in dolgoročno motivacijo, a se faktorji, "
       },
       {
         "vrstica": 2,
-        "tekst": "novostim na tem področju. Tajnica je lahko zaposlena "
+        "tekst": "ki motivirajo delavce, spreminjajo tekom njihovega "
       },
       {
         "vrstica": 3,
-        "tekst": "kot strojepiska, kot referent za kadrovske evidence, "
+        "tekst": "razvoja in doprinosa podjetju. Eden najpomembnejših "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -272,30 +272,30 @@
     "crke": []
   },
   {
-    "Id": 12009,
+    "Id": 14009,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "referent v knjigovodstvu, uradnica za nepremičnine, "
+        "tekst": "faktorjev za motivacijo zaposlenih je, kako pogosto "
       },
       {
         "vrstica": 2,
-        "tekst": "za zavarovalništvo ali kot arhivski uradnik. "
+        "tekst": "je prepoznano njihovo trdo delo. Pri tem pa ni "
       },
       {
         "vrstica": 3,
-        "tekst": "Lahko opravlja tajniška dela za enega nadrejenega "
+        "tekst": "pomembno samo, da je njihovo delo prepoznano, "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -306,30 +306,30 @@
     "crke": []
   },
   {
-    "Id": 12010,
+    "Id": 14010,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "ali več, zaposlena je v oddelku z več zaposlenimi. "
+        "tekst": "temveč je pomembno tudi, kako je prepoznano. "
       },
       {
         "vrstica": 2,
-        "tekst": "Delo tajnice je glede na njena opravila potrebno "
+        "tekst": "Nekatere nagrade so za dvig motivacije učinkovite "
       },
       {
         "vrstica": 3,
-        "tekst": "v veliki večini podjetij ali ustanov. Glede na "
+        "tekst": "bolj, druge manj. Samo bonus konec leta s strani "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -340,30 +340,30 @@
     "crke": []
   },
   {
-    "Id": 12011,
+    "Id": 14011,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "strokovna znanja, ki jih ima, lahko dela kot "
+        "tekst": "vodje žal ne bo naredil vtisa na zaposlene. Zagotovitev "
       },
       {
         "vrstica": 2,
-        "tekst": "referent za opisana področja in ni nujno zaposlena "
+        "tekst": "majhnih, konsistentnih nagrad je odličen način "
       },
       {
         "vrstica": 3,
-        "tekst": "kot tajnica. Pri delu uporablja osebni računalnik, "
+        "tekst": "za dvig motivacije. Vsakemu i zmed zaposlenih "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -374,30 +374,30 @@
     "crke": []
   },
   {
-    "Id": 12012,
+    "Id": 14012,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "telefaks, skener, tiskalnik, telefonski aparat, "
+        "tekst": "je potrebno dati natančno vedeti, koliko je njegov "
       },
       {
         "vrstica": 2,
-        "tekst": "fotokopirni stroj in druge elektronske medije "
+        "tekst": "prispevek pomagal pri napredovanju podjetja. "
       },
       {
         "vrstica": 3,
-        "tekst": "ter ustrezno programsko opremo. Svinčniki, bloki "
+        "tekst": "Pohvala mora biti specifična, razložiti mora, "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -408,30 +408,30 @@
     "crke": []
   },
   {
-    "Id": 12013,
+    "Id": 14013,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "in papir so nepogrešljivi pripomočki. Dokumente "
+        "tekst": "kaj točno je oseba naredila dobrega za podjetje. "
       },
       {
         "vrstica": 2,
-        "tekst": "lahko prejme že v končni obliki ali pa jih pripravi "
+        "tekst": "Najboljši način, da ljudje dobijo občutek pomembnosti "
       },
       {
         "vrstica": 3,
-        "tekst": "sama, jih razmnožuje, razdeljuje in arhivira. "
+        "tekst": "pa je preprost aplavz na koncu pohvale. Nemotivacijsko "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -442,30 +442,30 @@
     "crke": []
   },
   {
-    "Id": 12014,
+    "Id": 14014,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "V kolikor gre za zaupne materiale, poskrbi za "
+        "tekst": "je delati na projektu, za katerega izgleda, kot "
       },
       {
         "vrstica": 2,
-        "tekst": "njihovo zaščito in varno shranjevanje. Tajnica "
+        "tekst": "da se ne bo nikoli končal. Vizualni napredek "
       },
       {
         "vrstica": 3,
-        "tekst": "sprejema pošto, vodi evidenco, jo razvršča in "
+        "tekst": "dobro dene, poleg tega pa je tudi jasen indikator, "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -476,30 +476,30 @@
     "crke": []
   },
   {
-    "Id": 12015,
+    "Id": 14015,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "odpravlja. Skrbi za urejenost dokumentacije in "
+        "tekst": "da naše delo dela razliko. Postavitev jasnih, "
       },
       {
         "vrstica": 2,
-        "tekst": "pravilno shranjevanje dokumentarnega gradiva. "
+        "tekst": "dosegljivih ciljev zagotavlja resničen dvig "
       },
       {
         "vrstica": 3,
-        "tekst": "Tajnica zna pisno in ustno komunicirati v slovenskem "
+        "tekst": "motivacije, vsakič, ko je dosežen. Ta učinek "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -510,30 +510,30 @@
     "crke": []
   },
   {
-    "Id": 12016,
+    "Id": 14016,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "in najmanj enem tujem jeziku. Dobro pozna splošni "
+        "tekst": "lahko vodja še poveča tako, da dosežen cilj proslavi "
       },
       {
         "vrstica": 2,
-        "tekst": "in poslovni bonton. Zna uporabljati telefon, "
+        "tekst": "skupaj z zaposlenimi, hkrati pa zastavi nov cilj "
       },
       {
         "vrstica": 3,
-        "tekst": "elektronsko pošto in druge komunikacijske medije. "
+        "tekst": "v nizu korakov do uresničitve projekta. Tako "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -544,30 +544,30 @@
     "crke": []
   },
   {
-    "Id": 12017,
+    "Id": 14017,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "Pozna osnove in predpise o pisarniškem poslovanju. "
+        "tekst": "se v podjetju znebite strahu pred nedokončanim "
       },
       {
         "vrstica": 2,
-        "tekst": "Pozna osnove in predpise o varstvu arhivskega "
+        "tekst": "projektom. Navajamo najpogostejše vire motivacije "
       },
       {
         "vrstica": 3,
-        "tekst": "gradiva ter o hranjenju in izločanju dokumentarnega "
+        "tekst": "večine ljudi. Odmori, ohranjanje pozitivnosti, "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -578,30 +578,30 @@
     "crke": []
   },
   {
-    "Id": 12018,
+    "Id": 14018,
     "vsebina": [
       {
         "vrstica": 1,
-        "tekst": "gradiva. Obvlada strojepisje, pozna osnove računalništva "
+        "tekst": "transparentnost, avtonomnost, varnost, postavljanje "
       },
       {
         "vrstica": 2,
-        "tekst": "in programe za urejanje besedil. Pozna osnove "
+        "tekst": "majhnih, merljivih ciljev, spodbujanje ekipnega "
       },
       {
         "vrstica": 3,
-        "tekst": "organizacije dela in predpisov o delovnih razmerjih. "
+        "tekst": "dela ter ohranjanje zdravja, dobro vplivajo na "
       }
     ],
     "group": {
       "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
+      "description": "Motivacija",
       "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
+      "key": "Motivacija",
       "rank": null,
       "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
+      "shortTitle": "Motivacija",
+      "title": "Motivacija"
     },
     "zadnjicReseno": null,
     "reseno": false,
@@ -610,39 +610,5 @@
     "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
-  },
-  {
-    "Id": 12019,
-    "vsebina": [
-      {
-        "vrstica": 1,
-        "tekst": "Pozna osnove finančnega in knjigovodskega poslovanja, "
-      },
-      {
-        "vrstica": 2,
-        "tekst": "zna zbirati in obdelovati podatke in pozna osnove "
-      },
-      {
-        "vrstica": 3,
-        "tekst": "zunanje-trgovinskega poslovanja. "
-      }
-    ],
-    "group": {
-      "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Tajnica",
-      "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Tajnica",
-      "rank": null,
-      "recipesCount": 0,
-      "shortTitle": "Tajnica",
-      "title": "Tajnica"
-    },
-    "zadnjicReseno": null,
-    "reseno": false,
-    "napake": 0,
-    "porabljencas": 0,
-    "slika": "Slike/bluegray.jpg",
-    "test": false,
-    "crke": []
-  }
+  } 
 ]

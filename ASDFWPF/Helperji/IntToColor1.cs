@@ -21,10 +21,10 @@ namespace ASDFWPF
                 //return Color.FromArgb(0xc8, 0x84, 0x74, 0x09);
                 return Colors.Orange;
             if (r == 3)
-                return Colors.Orange;
+                return Colors.YellowGreen;
             //return Color.FromArgb(0xc8, 0xa2, 0x8e, 0x0c);
             if (r == 4)
-                return Colors.Orange;
+                return Colors.LightGreen;
             //return Color.FromArgb(0xc8, 0x70, 0xa2, 0x0c);
             // return Color.FromArgb(0xc8, 0x21, 0x66, 0x03);
             return Colors.Green;

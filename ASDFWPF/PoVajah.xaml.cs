@@ -46,6 +46,7 @@ namespace ASDFWPF
         private string up = "";
         private char vnešenZnak = (char)0;
         private int vsehČrkVVaji;
+        string zaporedneŠtevilke;
         public bool prof { get; set; }
         public List<Vsebina> VsebinaVrstic = new List<Vsebina>();
         public string skupina { get; set; }
@@ -59,6 +60,7 @@ namespace ASDFWPF
             smallImage.Source = PrivzetiViewModel.UporabnikSlika;
             smallImage.Visibility = Visibility.Visible;
             up = PrivzetiViewModel.Uporabnik;
+            
             var y = (ZaPagePayload)navigationParameter;
             var x = y.št;
             številkaVaje = x;
@@ -105,6 +107,7 @@ namespace ASDFWPF
             številkeVaj = new int[štVaj];
             številkeVaj = y.številkeVajZaDan;
             pomžniŠtevec = y.trenutnaPozicijaVaj;
+            zaporedneŠtevilke =   y.zaporedneŠtevilke;
             //tukaj bo vseeno treba nekaj narediti
             if (načinDela == NačinDela.Test)
             {
@@ -136,12 +139,6 @@ namespace ASDFWPF
             }
             VsebinaVrstic = item.ToList();
             grd.ItemsSource = VsebinaVrstic;
-            //če ni rezultatov dam na 0
-            
-            //stari rezultati - poberem, če je vaja že rešena
-            //this.DefaultViewModel["napake"] = PrivzetiViewModel.GetNapake(x);   
-            //dejansko gre za hitrost po formuli
-            //this.DefaultViewModel["udarci"] = PrivzetiViewModel.GetUdarcevNaMinuto(x);
             skupina = PrivzetiViewModel.GetSkupinaVaje(x);
             prof = jeProf;
             var dolžina = 0;
@@ -153,17 +150,59 @@ namespace ASDFWPF
                 nvProcentihs.Text = string.Format("{0,5:P2}", (double)napakeSkupaj / štČrkSkupaj);
             else
                 nvProcentihs.Text = string.Format("{0,5:P2}", 0.00);
-            uds.Text = udarciSkupaj.ToString();
-            if (časSkupaj != 0)
-                txtHitrost.Text = ((int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0))).ToString();
+            double procentS = (double)napakeSkupaj / štČrkSkupaj;
+            int hitrostS = (int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0));
+            //brez zadnje vaje
+            //test
+           // zaporedneŠtevilke = "91, 92, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114 ";
+            if (zaporedneŠtevilke != null)
+            {
+                txtŠtevilke.Text = zaporedneŠtevilke;
+            }
             else
-                txtHitrost.Text = "0";
+            {
+                txtŠtevilke.Text = "";
+            }
+            //txtŠtevilke.Text = zaporedneŠtevilke;            
+            if (udarciSkupaj != 0)
+            {
+                if (procentS * 100 <= 0.2)
+                    uds1.Text = "5";
+                else if (procentS * 100 <= 0.4)
+                    uds1.Text = "4";
+                else if (procentS * 100 <= 0.7)
+                    uds1.Text = "3";
+                else if (procentS * 100 <= 0.99)
+                    uds1.Text = "2";
+                else
+                    uds1.Text = "1";
+                if (hitrostS >= 160)
+                    uds.Text = "5";
+                else if (hitrostS >= 143)
+                    uds.Text = "4";
+                else if (hitrostS >= 126)
+                    uds.Text = "3";
+                else if (hitrostS >= 110)
+                    uds.Text = "2";
+                else
+                    uds.Text = "1";
+            }
+            else
+            {
+                uds.Text = "";
+                uds1.Text = "";
+            }
+            //uds.Text = udarciSkupaj.ToString();
+            //tukaj!! dodaj ocene
+            //if (časSkupaj != 0)
+            //    txtHitrost.Text = ((int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0))).ToString();
+            //else
+            //    txtHitrost.Text = "0";
             foreach (var vv in item.ToList())
                 dolžina += vv.tekst.Length;
             //rezultati za to vajo
             nvProcentih.Text = string.Format("{0,5:P2}", 0.00);
             ud.Text = "0";
-            //DefaultViewModel["napake"] = napake;
             udarci = 0;
             //nvProcentih.Text = String.Format("{0,5:P2}", (double)PrivzetiViewModel.GetNapake(x)/ dolžina);
             //ud.Text = PrivzetiViewModel.GetUdarcev(x).ToString() ;
@@ -238,19 +277,29 @@ namespace ASDFWPF
                 if (!jeProf)
                 {
                     št++;
-
                     a.št = št;
                     a.n = načinDela + " " + oba[1];
                     a.napakeSkupaj = napakeSkupaj;
                     a.štČrkSkupaj = štČrkSkupaj;
                     a.številoUdarcevSkupaj = udarciSkupaj;
                     a.časSkupaj = časSkupaj;
+                    a.zaporedneŠtevilke = zaporedneŠtevilke;
                 }
                 else
                 {
-                    if (pomžniŠtevec < štVaj - 1)
+                    if (št != številkeVaj[štVaj - 1]) //ni bila zadnja vaja v tem sklopu
+                        //if (pomžniŠtevec < štVaj - 1)
                     {
                         //naslednja vaja
+                        //pomžniŠtevec++;
+                        //dobi vajo z številko vaje št v tabeli številkeVaj
+                        for (int k = 0; k < štVaj; k++)
+                        {
+                            if (številkeVaj[k] == št)
+                            {   pomžniŠtevec = k;
+                                break;
+                            }
+                        }
                         pomžniŠtevec++;
                         št = številkeVaj[pomžniŠtevec];
 
@@ -264,6 +313,7 @@ namespace ASDFWPF
                         a.številkeVajZaDan = številkeVaj;
                         a.trenutnaPozicijaVaj = pomžniŠtevec;
                         a.opisS = opisS;
+                        a.zaporedneŠtevilke = zaporedneŠtevilke;
                     }
                     else
                     {
@@ -276,18 +326,6 @@ namespace ASDFWPF
                         var m =
                             Xceed.Wpf.Toolkit.MessageBox.Show("Ta sklop si končal, lahko ga ponoviš ali se vrneš na začetni zaslon\n" +
                                               r);
-                        //m.Commands.Add(new UICommand("Ponovno začni", CommandInvokedHandler1));
-                        //m.Commands.Add(new UICommand("Prekliči", CommandInvokedHandler2));
-
-                        //// Set the command that will be invoked by default
-                        //m.DefaultCommandIndex = 0;
-
-                        //// Set the command to be invoked when escape is pressed
-                        //m.CancelCommandIndex = 1;
-
-                        //// Show the message dialog
-                        //await m.ShowAsync();
-
                         return;
                     }
                 }
@@ -298,7 +336,14 @@ namespace ASDFWPF
                 catch
                 {
                     var a1 = new ZaPagePayload();
-                    a1.št = 1;
+                    if (jeProf)
+                    {   a1.št = številkeVaj[0];
+                        a1.zaporedneŠtevilke = "";
+                    }
+                    else
+                    { a1.št = št;
+                      a1.zaporedneŠtevilke = "";
+                    }
                     a1.n = načinDela + " " + oba[1];
                     this.NavigationService.Navigate(new PoVajah(a1));
                 }
@@ -431,6 +476,7 @@ namespace ASDFWPF
             var čas = (int)vm.Sekunde + vm.Minute * 60;
             var hitrost = (int)((številoUdarcev - napake * 25) / (čas / 60.0)); //preveri
             nvProcentih.Text = string.Format("{0,5:P2}", (double)napake / vsehČrkVVaji);
+           
             ud.Text = številoUdarcev + "";
 
             časSkupaj = časSkupaj + (int)vm.Sekunde + vm.Minute * 60;
@@ -440,14 +486,54 @@ namespace ASDFWPF
             udarciSkupaj = udarciSkupaj + številoUdarcev;
 
             štČrkSkupaj = štČrkSkupaj + vsehČrkVVaji;
-
+            if (zaporedneŠtevilke != null)
+            {
+                if (zaporedneŠtevilke.Length < 40)
+                {
+                    if (zaporedneŠtevilke == "")
+                        zaporedneŠtevilke = št + "";
+                    else
+                        zaporedneŠtevilke = zaporedneŠtevilke + ", " + št;
+                }
+                else
+                {
+                    int zadnja = zaporedneŠtevilke.LastIndexOf(',');
+                    if (zadnja != -1)
+                        zaporedneŠtevilke = zaporedneŠtevilke.Substring(0, zadnja) + "..." + št;
+                }
+            }
+            else
+                zaporedneŠtevilke = št + "";
+            txtŠtevilke.Text = zaporedneŠtevilke;
             txtNapake.Text = napakeSkupaj + "";
             txtN.Text = napake.ToString();
             txtH.Text = hitrost.ToString();
-            if (časSkupaj != 0)
-                txtHitrost.Text = ((int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0))).ToString();
+            //if (časSkupaj != 0)
+            //    txtHitrost.Text = ((int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0))).ToString();
             nvProcentihs.Text = string.Format("{0,5:P2}", (double)napakeSkupaj / štČrkSkupaj);
-            uds.Text = udarciSkupaj.ToString();
+            double procentS = (double)napakeSkupaj / štČrkSkupaj;
+            int hitrostS = (int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0));
+           // uds.Text = udarciSkupaj.ToString();
+            if (procentS * 100 <= 0.2)
+                uds1.Text = "5";
+            else if (procentS * 100 <= 0.4)
+                uds1.Text = "4";
+            else if (procentS * 100 <= 0.7)
+                uds1.Text = "3";
+            else if (procentS * 100 <= 0.99)
+                uds1.Text = "2";
+            else
+                uds1.Text = "1";
+            if (hitrostS >= 160)
+                uds.Text = "5";
+            else if (hitrostS >= 143)
+                uds.Text = "4";
+            else if (hitrostS >= 126)
+                uds.Text = "3";
+            else if (hitrostS >= 110)
+                uds.Text = "2";
+            else
+                uds.Text = "1";
             //piši v json datoteko nazaj
             štČrk = 0;
             štVrstice = 0;
@@ -584,8 +670,8 @@ namespace ASDFWPF
                 vnešenZnak = 'ž';
             if (vnešenZnak == 220 && (jeKapps || jeS))
                 vnešenZnak = 'Ž';
-            if (vnešenZnak == 269 && !jeKapps && !jeS)
-                vnešenZnak = 'è';           
+            //if (vnešenZnak == 269 && !jeKapps && !jeS)
+            //    vnešenZnak = 'è';           
             if (vnešenZnak == 191 && !jeKapps && !jeS)
                 vnešenZnak = '\'';
             if (vnešenZnak == 191 && (jeKapps || jeS))

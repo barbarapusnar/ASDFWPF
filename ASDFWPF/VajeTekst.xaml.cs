@@ -75,17 +75,17 @@ namespace ASDFWPF
                     k++;
                 }
                 opisSkupine = "Tekst  " + vaja.Group.Title;
-                var a = new ZaPagePayload2();
-                a.št = vaja.Id; //številka vaje
-                a.n = načinDela + " " + "prof";
-                a.štČrkSkupaj = 0;
-                a.napakeSkupaj = 0;
-                a.številoUdarcevSkupaj = 0;
-                a.časSkupaj = 0;
-                a.vsehVajSkupaj = štVaj;
-                a.številkeVajZaDan = številkeVaj;
-                a.trenutnaPozicijaVaj = 0;
-                a.opisS = opisSkupine;
+                //var a = new ZaPagePayload2();
+                //a.št = vaja.Id; //številka vaje
+                //a.n = načinDela + " " + "prof";
+                //a.štČrkSkupaj = 0;
+                //a.napakeSkupaj = 0;
+                //a.številoUdarcevSkupaj = 0;
+                //a.časSkupaj = 0;
+                //a.vsehVajSkupaj = štVaj;
+                //a.številkeVajZaDan = številkeVaj;
+                //a.trenutnaPozicijaVaj = 0;
+                //a.opisS = opisSkupine;
                 string tekstDatoteke = "";
                 if (imeD != "")
                 {
@@ -100,8 +100,8 @@ namespace ASDFWPF
                     }
                     catch { }
                 }
-                a.imeD = tekstDatoteke;
-                this.NavigationService.Navigate(new PoVajahTekst(a));
+              //  a.imeD = tekstDatoteke;
+                this.NavigationService.Navigate(new VajeTekstZaEnDan(izbrane,tekstDatoteke));
             }
         }
 

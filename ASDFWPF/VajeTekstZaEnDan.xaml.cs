@@ -16,9 +16,9 @@ using System.Windows.Shapes;
 namespace ASDFWPF
 {
     /// <summary>
-    /// Interaction logic for SkupinaZaEnDan.xaml
+    /// Interaction logic for VajeTekstZaEnDan.xaml
     /// </summary>
-    public partial class SkupinaZaEnDan : Page
+    public partial class VajeTekstZaEnDan : Page
     {
         private NačinDela načinDela;
         private int[] napake;
@@ -28,23 +28,19 @@ namespace ASDFWPF
         private int štVaj;
         private int vaje1 = 0;
         List<Vaje> Group = new List<Vaje>();
-        public SkupinaZaEnDan(int[] vaje,int[] st) //od vaje, st pomeni koliko vaj
+        string datoteka = "";
+        public VajeTekstZaEnDan(List<Vaje> izbrane,string imeD)
         {
             InitializeComponent();
+            datoteka = imeD;
             txtUporabnik.Text = PrivzetiViewModel.Uporabnik;
             smallImage.Source = PrivzetiViewModel.UporabnikSlika;
             smallImage.Visibility = Visibility.Visible;
             //s = (string)navigationParameter;
-            vaje1 = vaje[0];
-            int st1 = st[0];
-            opisSkupine = vaje1+"--" +st1;
+            
+            opisSkupine = "Teksti";
             List<Vaje> vse = new List<Vaje>();
-            vse = PrivzetiViewModel.GetVajeZaDanPoŠtevilki(vaje1,st1).ToList();
-            if (vaje[1] != 0)
-            {
-                var vse1 = PrivzetiViewModel.GetVajeZaDanPoŠtevilki(vaje[1], st[1]);
-                vse.AddRange(vse1.ToList());
-            }
+            vse = izbrane;
             štVaj = vse.Count();
             številkeVaj = new int[štVaj];
             var k = 0;
@@ -53,24 +49,72 @@ namespace ASDFWPF
                 številkeVaj[k] = x.Id;
                 k++;
             }
+            opisSkupine = "Teksti";
             Group = vse.ToList();
-           // itemGridView.ItemsSource = vse;
+            // itemGridView.ItemsSource = vse;
             reseno = new bool[štVaj];
             napake = new int[štVaj];
             načinDela = NačinDela.Ignoriraj;
             pageTitle.Text = "Vaje za danes \t Način dela: " + načinDela;
-            
-           
+
         }
-        
-        private void btnStatistika_Click(object sender, RoutedEventArgs e)
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
+            var i = 0;
+            foreach (var x in Group)
+            {
+                var a = (from b in r
+                         where b.idVaje == x.Id
+                         select b).FirstOrDefault();
+                if (a != null)
+                {
+                    napake[i] = a.napake;
+                    reseno[i] = true;
+                }
+                i++;
+            }
+            itemGridView.ItemsSource = null;
+            itemGridView.ItemsSource = Group;
+        }
+
+        private void ItemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (itemGridView.SelectedItem != null)
+            {
+                var a = new ZaPagePayload2();
+                int x = itemGridView.SelectedIndex;
+                var vaja = Group[x];
+                a.št = vaja.Id; //številka vaje
+                if (a.št != vaje1 && načinDela == NačinDela.Test)
+                {
+                    Xceed.Wpf.Toolkit.MessageBox.Show("To ni prva vaja sklopa, lahko ponovno izbereš vaje za ta dan");
+                    return;
+                }
+                opisSkupine = "Tekst  " + vaja.Group.Title;
+                a.n = načinDela + " " + "prof";
+                a.štČrkSkupaj = 0;
+                a.napakeSkupaj = 0;
+                a.številoUdarcevSkupaj = 0;
+                a.časSkupaj = 0;
+                a.vsehVajSkupaj = štVaj;
+                a.številkeVajZaDan = številkeVaj;
+                a.trenutnaPozicijaVaj = 0;
+                a.opisS = opisSkupine;
+                a.imeD = datoteka;
+                a.zaporedneŠtevilke = "";
+                this.NavigationService.Navigate(new PoVajahTekst(a));
+            }
+        }
+
+        private void BtnStatistika_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Statistika(načinDela));
         }
 
-        private void btnIgnoriraj_Click(object sender, RoutedEventArgs e)
+        private void BtnIgnoriraj_Click(object sender, RoutedEventArgs e)
         {
-            //Izbor načina dela, v XAMLU še ni vseh gumbov
             var x = (Button)sender;
             switch (x.Name)
             {
@@ -101,55 +145,8 @@ namespace ASDFWPF
             }
             pageTitle.Text = "Vaje za danes \t Način dela: " + načinDela;
             itemGridView.SelectedItem = null;
-
         }
 
-        private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (itemGridView .SelectedItem!= null)
-            {
-                var a = new ZaPagePayload();
-                int x = itemGridView.SelectedIndex;
-                var vaja = Group[x];
-                a.št = vaja.Id; //številka vaje
-                if (a.št != vaje1 && načinDela==NačinDela.Test)
-                {
-                    Xceed.Wpf.Toolkit.MessageBox.Show("To ni prva vaja sklopa, lahko ponovno izbereš vaje za ta dan");
-                    return;
-                }
-
-                a.n = načinDela + " " + "prof";
-                a.štČrkSkupaj = 0;
-                a.napakeSkupaj = 0;
-                a.številoUdarcevSkupaj = 0;
-                a.časSkupaj = 0;
-                a.vsehVajSkupaj = štVaj;
-                a.številkeVajZaDan = številkeVaj;
-                a.trenutnaPozicijaVaj = 0;
-                a.opisS = opisSkupine;
-                a.zaporedneŠtevilke = "";
-                this.NavigationService.Navigate(new PoVajah(a));
-            }
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            IEnumerable<Rezultati> r = PrivzetiViewModel.GetVsiRezultatiUp(txtUporabnik.Text).ToList();
-            var i = 0;
-            foreach (var x in Group)
-            {
-                var a = (from b in r
-                         where b.idVaje == x.Id
-                         select b).FirstOrDefault();
-                if (a != null)
-                {
-                    napake[i] = a.napake;
-                    reseno[i] = true;
-                }
-                i++;
-            }
-            itemGridView.ItemsSource = null;
-            itemGridView.ItemsSource = Group;
-        }
+       
     }
 }

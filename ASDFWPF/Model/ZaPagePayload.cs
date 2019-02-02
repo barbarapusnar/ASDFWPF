@@ -18,6 +18,7 @@ namespace ASDFWPF
         public int[] številkeVajZaDan { get; set; }
         public int trenutnaPozicijaVaj { get; set; }
         public string opisS { get; set; }
+        public string zaporedneŠtevilke { get; set; }
 
     }
     public class ZaPagePayload1
@@ -38,6 +39,7 @@ namespace ASDFWPF
         public int trenutnaPozicijaVaj { get; set; }
         public string opisS { get; set; }
         public string imeD { get; set; }
+        public string zaporedneŠtevilke { get; set; }
 
     }
 }

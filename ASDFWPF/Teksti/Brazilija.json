@@ -29,7 +29,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -63,7 +63,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -97,7 +97,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -131,7 +131,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -165,7 +165,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -199,7 +199,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -233,7 +233,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -267,7 +267,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -301,7 +301,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -335,7 +335,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -369,7 +369,7 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
   },
@@ -403,42 +403,8 @@
     "reseno": false,
     "napake": 0,
     "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
+    "slika": "Slike/bluegray.jpg",
     "test": false,
     "crke": []
-  },
-  {
-    "Id": 7013,
-    "vsebina": [
-      {
-        "vrstica": 1,
-        "tekst": "poljub predstavlja »za srečo« v iskanju soproga. "
-      },
-      {
-        "vrstica": 2,
-        "tekst": ""
-      },
-      {
-        "vrstica": 3,
-        "tekst": ""
-      }
-    ],
-    "group": {
-      "backgroundImage": "Slike/DvanajstaSkupina.png",
-      "description": "Brazilija",
-      "groupImage": "Slike/DvanajstaSkupina.png",
-      "key": "Brazilija",
-      "rank": null,
-      "recipesCount": 0,
-      "shortTitle": "Brazilija",
-      "title": "Brazilija"
-    },
-    "zadnjicReseno": null,
-    "reseno": false,
-    "napake": 0,
-    "porabljencas": 0,
-    "slika": "Slike/Vaja161.jpg",
-    "test": false,
-    "crke": []
-  }
+  } 
 ]

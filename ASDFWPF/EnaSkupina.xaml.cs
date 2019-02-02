@@ -51,9 +51,10 @@ namespace ASDFWPF
                 var a = new ZaPagePayload
                 {
                     št = vaja.Id,
-                    n = NačinDela.Ignoriraj + " " + "prosto"
+                    n = NačinDela.Ignoriraj + " " + "prosto",
+                    zaporedneŠtevilke = ""
                 };
-
+               
                 this.NavigationService.Navigate(new PoVajah(a));
             }
         }
