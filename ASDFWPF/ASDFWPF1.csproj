@@ -744,7 +744,9 @@
     <Content Include="Teksti\Motivacija.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Teksti\La segretaria.json" />
+    <Content Include="Teksti\La segretaria.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="VajeTekst.json" />
     <Resource Include="tipkovnica.ico" />
     <Content Include="Teksti\VajeTekst6.txt">
