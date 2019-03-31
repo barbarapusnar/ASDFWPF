@@ -732,9 +732,6 @@
     <Content Include="Teksti\Job description.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Teksti\La segretaria.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Teksti\Poslovni sekretar.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -747,6 +744,7 @@
     <Content Include="Teksti\Motivacija.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Teksti\La segretaria.json" />
     <None Include="VajeTekst.json" />
     <Resource Include="tipkovnica.ico" />
     <Content Include="Teksti\VajeTekst6.txt">

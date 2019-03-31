@@ -187,7 +187,7 @@ namespace ASDFWPF
                 nvProcentihs.Text = string.Format("{0,5:P2}", (double)napakeSkupaj / štČrkSkupaj);
             else
                 nvProcentihs.Text = string.Format("{0,5:P2}", 0.00);
-            double procentS = (double)napakeSkupaj / štČrkSkupaj;
+            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj * 100) / 100.0; 
             int hitrostS = (int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0));
             if (udarciSkupaj != 0)
             {
@@ -483,7 +483,7 @@ namespace ASDFWPF
             txtNapake.Text = napakeSkupaj + "";
             txtN.Text = napake.ToString();
             txtH.Text = hitrost.ToString();
-            double procentS = (double)napakeSkupaj / štČrkSkupaj;
+            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj * 100) / 100.0; ;
             int hitrostS = (int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0));
             if (zaporedneŠtevilke != null)
             {
