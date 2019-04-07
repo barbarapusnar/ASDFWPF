@@ -150,7 +150,7 @@ namespace ASDFWPF
                 nvProcentihs.Text = string.Format("{0,5:P2}", (double)napakeSkupaj / štČrkSkupaj);
             else
                 nvProcentihs.Text = string.Format("{0,5:P2}", 0.00);
-            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj * 100) / 100.0;
+            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj * 100,2) / 100.0;
             int hitrostS = (int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0));
             //brez zadnje vaje
             //test
@@ -242,9 +242,15 @@ namespace ASDFWPF
                 //    break;
                 
             }
+            txtVnos.CommandBindings.Add(new CommandBinding(ApplicationCommands.Paste, Foo));
             btnZačni.Focus();
         }
-        
+
+        private void Foo(object sender, ExecutedRoutedEventArgs e)
+        {
+            e.Handled = true;
+        }
+
         private void ZačniZVajo(object sender, RoutedEventArgs e)
         {
             btnPrav1.Visibility = Visibility.Collapsed;
@@ -326,6 +332,17 @@ namespace ASDFWPF
                         var m =
                             Xceed.Wpf.Toolkit.MessageBox.Show("Ta sklop si končal, lahko ga ponoviš ali se vrneš na začetni zaslon\n" +
                                               r);
+                        if (načinDela == NačinDela.Test)
+                        {
+                            Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Render, new Action(() =>
+                            {
+                                // var navWindow = this as Page;
+
+                                var navWindow = Window.GetWindow(this) as NavigationWindow;
+                                if (navWindow != null) navWindow.ShowsNavigationUI = true;
+                                //this.ShowsNavigationUI = false;
+                            }));
+                        }
                         return;
                     }
                 }
@@ -511,7 +528,7 @@ namespace ASDFWPF
             //if (časSkupaj != 0)
             //    txtHitrost.Text = ((int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0))).ToString();
             nvProcentihs.Text = string.Format("{0,5:P2}", (double)napakeSkupaj / štČrkSkupaj);
-            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj*100)/100.0;
+            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj*100,2)/100.0;
             int hitrostS = (int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0));
            // uds.Text = udarciSkupaj.ToString();
             if (procentS * 100 <= 0.2)
@@ -763,6 +780,11 @@ namespace ASDFWPF
                     //kontrola je na koncu vrtsice
                     break;
                 case NačinDela.Test:
+                    if (e.Key == Key.Back)
+                    {
+                        e.Handled = true;
+                        return;
+                    }
                     if (vnešenZnak != praviZnak)
                     {
                         napake++;
@@ -774,6 +796,20 @@ namespace ASDFWPF
             }
            
             štČrk++;
+        }
+
+        private void TxtVnos_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void Page_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

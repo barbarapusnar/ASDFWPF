@@ -33,7 +33,7 @@
                     <StackPanel Orientation="Horizontal" Margin="78,0,0,0">
                         <CheckBox x:Name="radProf1" Content="in še od "  FontSize="20"
                                   Checked="RadProf1_Checked"
-                                 TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                                 TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
                         <TextBox x:Name="txtSkupina1" Text="1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24"  />
                         <TextBlock Text="do" FontSize="20" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <TextBox x:Name="txtStevilo1" Margin="20" IsEnabled="False" TabIndex="2" Width="70" HorizontalAlignment="Center" FontSize="24" Text="20"  />
@@ -41,7 +41,7 @@
                     <StackPanel Orientation="Horizontal">
                         <RadioButton x:Name="radProf2" Content="Teksti " GroupName="izbor" FontSize="20"
                                   Checked="radProf_Checked"
-                                 TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                                 TabIndex="1" Margin="10,10,30,10" HorizontalAlignment="Center" VerticalContentAlignment="Center" Click="RadProf2_Click"/>
                     </StackPanel>
                 </StackPanel>
                 <Line Stroke="White" X1="0" Y1="25" X2="{Binding ActualWidth, ElementName=root, Mode=OneWay}" Y2="25" />

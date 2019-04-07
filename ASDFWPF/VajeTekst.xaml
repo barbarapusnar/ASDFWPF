@@ -128,7 +128,7 @@
 
                 <StackPanel x:Name="barNacin" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.ColumnSpan="2"  Width="798"  >
                     <Button x:Name="btnIgnoriraj" Content="&#xE80F;"  Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Vaja" Background="LightGray" Margin="10,2,0,0" Click="BtnIgnoriraj_Click"/>
-                    <Button x:Name="btnTest" Content="&#xEC31;" Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Test" Background="LightGray" Margin="10,2,0,0" Click="BtnIgnoriraj_Click"/>
+                    <!--<Button x:Name="btnTest" Content="&#xEC31;" Style="{StaticResource RoundedButton}" FontSize="19" FontFamily="Segoe MDL2 Assets" Tag="Test" Background="LightGray" Margin="10,2,0,0" Click="BtnIgnoriraj_Click"/>-->
                 </StackPanel>
                 <Button Grid.Column="1"  x:Name="btnStatistika" 
                 Content="&#xE8BC;" Style="{StaticResource RoundedButton}" FontSize="19" 

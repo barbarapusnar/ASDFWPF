@@ -25,6 +25,12 @@ namespace ASDFWPF
             InitializeComponent();
         }
 
-      
+        private void NavigationWindow_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F5)
+                e.Handled = true;
+        }
+
+        
     }
 }

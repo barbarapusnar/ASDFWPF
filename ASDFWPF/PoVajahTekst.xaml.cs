@@ -187,7 +187,7 @@ namespace ASDFWPF
                 nvProcentihs.Text = string.Format("{0,5:P2}", (double)napakeSkupaj / štČrkSkupaj);
             else
                 nvProcentihs.Text = string.Format("{0,5:P2}", 0.00);
-            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj * 100) / 100.0; 
+            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj * 100,2) / 100.0; 
             int hitrostS = (int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0));
             if (udarciSkupaj != 0)
             {
@@ -260,8 +260,15 @@ namespace ASDFWPF
                     //    break;
 
             }
+            txtVnos.CommandBindings.Add(new CommandBinding(ApplicationCommands.Paste, Foo));
             btnZačni.Focus();
         }
+
+        private void Foo(object sender, ExecutedRoutedEventArgs e)
+        {
+            e.Handled = true;
+        }
+
         private void ZačniZVajo(object sender, RoutedEventArgs e)
         {
             btnPrav1.Visibility = Visibility.Collapsed;
@@ -327,6 +334,14 @@ namespace ASDFWPF
                     var m =
                         Xceed.Wpf.Toolkit.MessageBox.Show("Teksta je konec, lahko ga ponoviš \n" +
                                           r,"Strojepisje",MessageBoxButton.OK,MessageBoxImage.Information);
+                    if (načinDela == NačinDela.Test)
+                    {
+                        Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Render, new Action(() =>
+                        {
+                            var navWindow = Window.GetWindow(this) as NavigationWindow;
+                            if (navWindow != null) navWindow.ShowsNavigationUI = true;
+                        }));
+                    }
                     this.NavigationService.Navigate(new VajeTekst());
                     return;
                 }
@@ -483,7 +498,7 @@ namespace ASDFWPF
             txtNapake.Text = napakeSkupaj + "";
             txtN.Text = napake.ToString();
             txtH.Text = hitrost.ToString();
-            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj * 100) / 100.0; ;
+            double procentS = Math.Round((double)napakeSkupaj / štČrkSkupaj * 100,2) / 100.0; ;
             int hitrostS = (int)((udarciSkupaj - napakeSkupaj * 25) / (časSkupaj / 60.0));
             if (zaporedneŠtevilke != null)
             {
@@ -728,6 +743,20 @@ namespace ASDFWPF
             }
 
             štČrk++;
+        }
+
+        private void TxtVnos_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void Page_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

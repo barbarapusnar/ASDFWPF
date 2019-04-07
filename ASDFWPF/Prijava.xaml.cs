@@ -101,6 +101,7 @@ namespace ASDFWPF
         {
             txtSkupina.IsEnabled = true;
             txtStevilo.IsEnabled = true;
+            radProf1.IsEnabled = true;
         }
 
         private void radSam_Click(object sender, RoutedEventArgs e)
@@ -109,6 +110,10 @@ namespace ASDFWPF
             {
                 txtSkupina.IsEnabled = false;
                 txtStevilo.IsEnabled = false;
+                radProf1.IsChecked = false;
+                radProf1.IsEnabled = false;
+                txtSkupina1.IsEnabled = false;
+                txtStevilo1.IsEnabled = false;
             }
         }
 
@@ -123,6 +128,19 @@ namespace ASDFWPF
             }
             else
             {
+                txtSkupina1.IsEnabled = false;
+                txtStevilo1.IsEnabled = false;
+            }
+        }
+
+        private void RadProf2_Click(object sender, RoutedEventArgs e)
+        {
+            if (radProf2.IsChecked != null && (bool)radProf2.IsChecked)
+            {
+                txtSkupina.IsEnabled = false;
+                txtStevilo.IsEnabled = false;
+                radProf1.IsChecked = false;
+                radProf1.IsEnabled = false;
                 txtSkupina1.IsEnabled = false;
                 txtStevilo1.IsEnabled = false;
             }

@@ -42,10 +42,15 @@ namespace ASDFWPF
 
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var izbran = itemGridView.SelectedIndex;
-            TipkanjeDataGroup skupina = Groups[izbran];
-            this.NavigationService.Navigate(new EnaSkupina(skupina.Id));
+            if (itemGridView.SelectedIndex != -1)
+            {
+                var izbran = itemGridView.SelectedIndex;
+                TipkanjeDataGroup skupina = Groups[izbran];
+                itemGridView.SelectedIndex = -1;
+                this.NavigationService.Navigate(new EnaSkupina(skupina.Id));
+            }
         }
+        
 
        
     }

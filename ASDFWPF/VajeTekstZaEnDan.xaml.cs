@@ -49,6 +49,7 @@ namespace ASDFWPF
                 številkeVaj[k] = x.Id;
                 k++;
             }
+            vaje1 = številkeVaj[0];
             opisSkupine = "Teksti";
             Group = vse.ToList();
             // itemGridView.ItemsSource = vse;

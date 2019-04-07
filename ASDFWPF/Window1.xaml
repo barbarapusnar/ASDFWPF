@@ -5,6 +5,4 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASDFWPF"
         mc:Ignorable="d"
-        Title="Strojepisje" Height="450" Width="800"  Source="MainWindow.xaml" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    
-</NavigationWindow>
+        Title="Strojepisje" Height="768" Width="1024"  Source="MainWindow.xaml" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" PreviewKeyDown="NavigationWindow_PreviewKeyDown" WindowState="Maximized" />

@@ -41,6 +41,7 @@ namespace ASDFWPF
             imGrupe.Source = Group.Image;
             reseno = new bool[Group.Items.Count + 1];
             napake = new int[Group.Items.Count + 1];
+           
         }
 
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -57,6 +58,7 @@ namespace ASDFWPF
                
                 this.NavigationService.Navigate(new PoVajah(a));
             }
+           
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -78,7 +80,9 @@ namespace ASDFWPF
            
             itemGridView.ItemsSource = null;
             itemGridView.ItemsSource = Group.Items;
-
+          
         }
+
+       
     }
 }

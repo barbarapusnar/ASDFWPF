@@ -98,7 +98,7 @@
             Grid.Row="2"
             Padding="120,50,120,50"
             ItemTemplateSelector="{StaticResource selTemplateSelector}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-            SelectionChanged="itemGridView_SelectionChanged"
+            SelectionChanged="itemGridView_SelectionChanged" 
             >
             <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
