@@ -220,7 +220,7 @@ namespace ASDFWPF
             foreach (var vv in item.ToList())
                 dolžina += vv.tekst.Length;
             //rezultati za to vajo
-            nvProcentih.Text = string.Format("{0,5:P2}", 0.00);
+            nvProcentih.Text = string.Format("{0,5:P2}", procentS*100);
             ud.Text = "0";
             udarci = 0;
             m = new Tipkovnica(št);
@@ -342,7 +342,7 @@ namespace ASDFWPF
                             if (navWindow != null) navWindow.ShowsNavigationUI = true;
                         }));
                     }
-                    this.NavigationService.Navigate(new VajeTekst());
+                    //this.NavigationService.Navigate(new VajeTekst());
                     return;
                 }
 

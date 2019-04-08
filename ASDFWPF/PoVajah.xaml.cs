@@ -213,8 +213,10 @@ namespace ASDFWPF
             {
                 case NačinDela.Ignoriraj:
                     m.Visibility = Visibility.Visible;
-                    brdTipkovnica.Visibility = Visibility.Visible;
-                    brdLegenda.Visibility = Visibility.Visible;
+                    //brdTipkovnica.Visibility = Visibility.Visible;
+                    //brdLegenda.Visibility = Visibility.Visible;
+                    brdTipkovnica.Opacity = 1;
+                    brdLegenda.Opacity = 1;
                     break;
                 case NačinDela.Ponovno:
                     m.Visibility = Visibility.Visible;
@@ -233,8 +235,10 @@ namespace ASDFWPF
                 //    break;
                 case NačinDela.Test:
                     m.Visibility = Visibility.Collapsed;
-                    brdTipkovnica.Visibility = Visibility.Collapsed;
-                    brdLegenda.Visibility = Visibility.Collapsed;
+                    //brdTipkovnica.Visibility = Visibility.Collapsed;
+                    //brdLegenda.Visibility = Visibility.Collapsed;
+                    brdTipkovnica.Opacity = 0;
+                    brdLegenda.Opacity = 0;
                     break;
                 //case NačinDela.Neodvisno:
                 //    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += Dispatcher_AcceleratorKeyActivated;
