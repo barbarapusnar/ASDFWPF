@@ -669,27 +669,27 @@ namespace ASDFWPF
             if (e.Key == Key.RightShift || e.Key == Key.LeftShift)
                 return;
             var jeKapps = Console.CapsLock;
-            if (!jeKapps && !jeS)
+            if ((!jeKapps && !jeS)||(jeKapps&&jeS))
                 vnešenZnak = char.ToLower(vnešenZnak);
-            if (vnešenZnak == 186 && !jeKapps && !jeS)
+            if (vnešenZnak == 186 && ((!jeKapps && !jeS)||(jeKapps&&jeS)))
                 vnešenZnak = 'č';
-            if (vnešenZnak == 186 && (jeKapps || jeS))
+            if (vnešenZnak == 186 && ((jeKapps&&!jeS) || (jeS&&!jeKapps)))
                 vnešenZnak = 'Č';
-            if (vnešenZnak == 253 && !jeKapps && !jeS)
+            if (vnešenZnak == 253 && ((!jeKapps && !jeS) || (jeKapps && jeS)))
                 vnešenZnak = 'đ';
-            if (vnešenZnak == 221 && (jeKapps || jeS))
+            if (vnešenZnak == 221 && ((jeKapps && !jeS) || (jeS && !jeKapps)))
                 vnešenZnak = 'Đ';
-            if (vnešenZnak == 254 && !jeKapps && !jeS)
+            if (vnešenZnak == 254 && ((!jeKapps && !jeS) || (jeKapps && jeS)))
                 vnešenZnak = 'ć';
-            if (vnešenZnak == 222 && (jeKapps || jeS))
+            if (vnešenZnak == 222 && ((jeKapps && !jeS) || (jeS && !jeKapps)))
                 vnešenZnak = 'Ć';
-            if (vnešenZnak == 251 && !jeKapps && !jeS)
+            if (vnešenZnak == 251 && ((!jeKapps && !jeS) || (jeKapps && jeS)))
                 vnešenZnak = 'š';
-            if (vnešenZnak == 219 && (jeKapps || jeS)) //!!
+            if (vnešenZnak == 219 && ((jeKapps && !jeS) || (jeS && !jeKapps))) //!!
                 vnešenZnak = 'Š';
-            if (vnešenZnak == 252 && !jeKapps && !jeS)
+            if (vnešenZnak == 252 && ((!jeKapps && !jeS) || (jeKapps && jeS)))
                 vnešenZnak = 'ž';
-            if (vnešenZnak == 220 && (jeKapps || jeS))
+            if (vnešenZnak == 220 && ((jeKapps && !jeS) || (jeS && !jeKapps)))
                 vnešenZnak = 'Ž';
             //if (vnešenZnak == 269 && !jeKapps && !jeS)
             //    vnešenZnak = 'è';           
@@ -814,6 +814,11 @@ namespace ASDFWPF
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void Vsebnik_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

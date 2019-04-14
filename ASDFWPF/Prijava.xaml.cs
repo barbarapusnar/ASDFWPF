@@ -62,7 +62,7 @@ namespace ASDFWPF
                                 Do[1] = 163;
                             if (Od[1] > Do[1])
                                 throw new ApplicationException("Drugo število mora biti večje");
-                            if (Od[1] < Do[0])
+                            if (Od[1] <= Do[0])
                                 throw new ApplicationException("Prva vaja drugega sklopa mora biti večja od zadnje vaje prvega");
                         }
                         this.NavigationService.Navigate(new SkupinaZaEnDan(Od, Do));
